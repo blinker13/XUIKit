@@ -16,12 +16,9 @@
 }
 
 - (void)setSelectedBackgroundColor:(UIColor *)selectedBackgroundColor {
-	UIView *selectionView = [self selectedBackgroundView];
-	
-	if (!selectionView) {
-		selectionView = [[UIView alloc] initWithFrame:CGRectZero];
-	}
+	UIView *selectionView = [[UIView alloc] initWithFrame:CGRectZero];
 	[selectionView setBackgroundColor:selectedBackgroundColor];
+	[self setSelectedBackgroundView:selectionView];
 }
 
 @end
