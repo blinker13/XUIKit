@@ -1,0 +1,20 @@
+//
+//  XUITextViewController.h
+//  XUIKit
+//
+//  Created by Felix Gabel on 23/11/13.
+//  Copyright (c) 2013 Felix Gabel. All rights reserved.
+//
+
+#import "XUIViewController.h"
+
+
+@interface XUITextViewController : XUIViewController <UITextViewDelegate>
+
+@property (nonatomic, readonly) NSTextContainer	*textContainer;
+@property (nonatomic, readonly) UITextView		*textView;
+
+@property (nonatomic) UIEdgeInsets	textViewScrollIndicatorInsets;
+@property (nonatomic) UIEdgeInsets	textViewContentInsets;
+
+@end
