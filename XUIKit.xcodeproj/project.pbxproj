@@ -24,7 +24,7 @@
 		BDA1B719183FFA1A00DA642E /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B717183FFA1A00DA642E /* XUIViewController.m */; };
 		BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA1B7631840DCD600DA642E /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B7641840DCD600DA642E /* XUITextViewController.m */; };
-		BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */; };
+		BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDBCE45E184408100095F2E2 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */; };
 /* End PBXBuildFile section */
 
