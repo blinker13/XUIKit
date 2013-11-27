@@ -20,6 +20,7 @@
 @implementation XUIViewController
 
 @synthesize addButtonItem	=	_addButtonItem;
+@synthesize titleLabel		=	_titleLabel;
 
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -35,7 +36,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[self.view setBackgroundColor:[UIColor whiteColor]];
+	[self setTitle:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,6 +59,12 @@
 	}
 }
 
+- (void)setTitle:(NSString *)title {
+	[self.titleLabel setText:title];
+	[self.titleLabel sizeToFit];
+	[super setTitle:@""];
+}
+
 
 #pragma mark -
 
@@ -66,6 +73,23 @@
 		_addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
 	}
 	return _addButtonItem;
+}
+
+- (UILabel *)titleLabel {
+	if (!_titleLabel) {
+		UINavigationBar *navigation = [self.navigationController navigationBar];
+		NSDictionary *titleAttributes = [navigation titleTextAttributes];
+		UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
+		UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
+		
+		_titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+		[_titleLabel setTextAlignment:NSTextAlignmentCenter];
+		[_titleLabel setTextColor:textColor];
+		[_titleLabel setFont:font];
+		
+		[self.navigationItem setTitleView:_titleLabel];
+	}
+	return _titleLabel;
 }
 
 - (void)viewChangedContentHeight:(CGFloat)height {
