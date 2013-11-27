@@ -11,6 +11,9 @@
 
 @interface XUIViewController ()
 
+@property (nonatomic, strong) IBOutlet UIBarButtonItem	*addButtonItem;
+@property (nonatomic, strong) IBOutlet UILabel			*titleLabel;
+
 @property (nonatomic) BOOL	implementsViewChangedContentHeight;
 @property (nonatomic) BOOL	keyboardIsDisappearing;
 
