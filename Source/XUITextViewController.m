@@ -61,9 +61,9 @@
 	[super viewWillDisappear:animated];
 	
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-	[center removeObserver:self name:UITextViewTextDidBeginEditingNotification object:nil];
-	[center removeObserver:self name:UITextViewTextDidEndEditingNotification object:nil];
-	[center removeObserver:self name:UITextViewTextDidChangeNotification object:nil];
+	[center removeObserver:self name:UITextViewTextDidBeginEditingNotification object:self.textView];
+	[center removeObserver:self name:UITextViewTextDidEndEditingNotification object:self.textView];
+	[center removeObserver:self name:UITextViewTextDidChangeNotification object:self.textView];
 	[center removeObserver:self name:UIKeyboardDidShowNotification object:nil];
 	
 	[self.textView resignFirstResponder];
@@ -114,33 +114,26 @@
 #pragma mark - private methods
 
 - (void)beginEditingText:(NSNotification *)notification {
-	if ([notification object] == self.textView) {
-		[super setEditing:YES animated:YES];
-	}
+	[super setEditing:YES animated:YES];
 }
 
 - (void)endEditingText:(NSNotification *)notification {
-	if ([notification object] == self.textView) {
-		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
-		
-		BOOL shouldReselect = [coordinator isAnimated];
-		[self setShouldReselectTextView:shouldReselect];
-		
-		if (!shouldReselect) {
-			[super setEditing:NO animated:YES];
-		}
+	id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
+	
+	BOOL shouldReselect = [coordinator isAnimated];
+	[self setShouldReselectTextView:shouldReselect];
+	
+	if (!shouldReselect) {
+		[super setEditing:NO animated:YES];
 	}
 }
 
 - (void)updateCursorVisibility:(NSNotification *)notification {
-	if ([notification object] == self.textView) {
-		CGRect caretRect = [self.textView currentCurserRect];
-		[self.textView scrollRectToVisible:caretRect animated:NO];
-	}
+	CGRect caretRect = [self.textView currentCurserRect];
+	[self.textView scrollRectToVisible:caretRect animated:NO];
 }
 
 - (void)makeCursorVisible:(NSNotification *)notification {
-	
 	if ([self.textView isFirstResponder]) {
 		[self.textView makeCursorVisibleAnimated:NO];
 	}
