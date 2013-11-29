@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import "XUIViewController.h"
+@import UIKit;
 
 
-@interface XUITextViewController : XUIViewController <UITextViewDelegate>
+@interface XUITextViewController : UIViewController <UITextViewDelegate>
 
 @property (nonatomic, readonly) NSTextContainer	*textContainer;
 @property (nonatomic, readonly) UITextView		*textView;
