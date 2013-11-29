@@ -85,11 +85,9 @@
 	scrollIndicatorInsets.bottom = (scrollIndicatorInsets.bottom + height);
 	[self.textView setScrollIndicatorInsets:scrollIndicatorInsets];
 	
-	UIEdgeInsets contentInsets = [self calculatedContentInsetsWithOffset:height];
-	[self.textView setContentInset:contentInsets];
-	
-	UIEdgeInsets containerInsets = [self calculatedcontainerInsets];
-	[self.textView setTextContainerInset:containerInsets];
+	UIEdgeInsets insets = [self textViewContentInsets];
+	insets.bottom = (insets.bottom + height);
+	[self.textView setTextContentInsets:insets];
 }
 
 
@@ -98,15 +96,12 @@
 - (UITextView *)textView {
 	if (!_textView) {
 		CGRect bounds = [[UIScreen mainScreen] bounds];
-		UIEdgeInsets containerInsets = [self calculatedcontainerInsets];
-		UIEdgeInsets contentInsets = [self calculatedContentInsetsWithOffset:0.0];
 		
 		_textView = [[UITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
 		[_textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
 		[_textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
+		[_textView setTextContentInsets:self.textViewContentInsets];
 		[_textView setBackgroundColor:[UIColor whiteColor]];
-		[_textView setTextContainerInset:containerInsets];
-		[_textView setContentInset:contentInsets];
 		[_textView setAlwaysBounceVertical:YES];
 		[_textView setScrollEnabled:YES];
 		[_textView setClipsToBounds:NO];
@@ -117,22 +112,6 @@
 
 
 #pragma mark - private methods
-
-- (UIEdgeInsets)calculatedcontainerInsets {
-	UIEdgeInsets contentInsets = [self textViewContentInsets];
-	UIEdgeInsets insets = UIEdgeInsetsZero;
-	insets.right = contentInsets.right;
-	insets.left = contentInsets.left;
-	return insets;
-}
-
-- (UIEdgeInsets)calculatedContentInsetsWithOffset:(CGFloat)offset {
-	UIEdgeInsets contentInsets = [self textViewContentInsets];
-	UIEdgeInsets insets = UIEdgeInsetsZero;
-	insets.bottom = (contentInsets.bottom + offset);
-	insets.top = contentInsets.top;
-	return insets;
-}
 
 - (void)beginEditingText:(NSNotification *)notification {
 	if ([notification object] == self.textView) {
