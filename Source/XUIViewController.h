@@ -12,6 +12,7 @@
 @interface XUIViewController : UIViewController
 
 @property (nonatomic, readonly) UIBarButtonItem	*addButtonItem;
+@property (nonatomic, readonly) UILabel			*titleLabel;
 
 - (void)viewChangedContentHeight:(CGFloat)height;
 - (void)add:(id)sender;
