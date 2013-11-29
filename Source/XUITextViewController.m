@@ -22,7 +22,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		_textViewContentInsets = UIEdgeInsetsMake(6.0, 0.0, 6.0, 0.0);
+		_textViewContentInsets = UIEdgeInsetsMake(15.0, 10.0, 15.0, 10.0);
 		_textViewScrollIndicatorInsets = UIEdgeInsetsZero;
 	}
 	return self;
@@ -75,11 +75,11 @@
 	scrollIndicatorInsets.bottom = (scrollIndicatorInsets.bottom + height);
 	[self.textView setScrollIndicatorInsets:scrollIndicatorInsets];
 	
-	UIEdgeInsets contentInsets = [self textViewContentInsets];
-	contentInsets.bottom = (contentInsets.bottom + height);
+	UIEdgeInsets contentInsets = [self calculatedContentInsetsWithOffset:height];
 	[self.textView setContentInset:contentInsets];
 	
-	[self.textView setTextContainerInset:UIEdgeInsetsZero];
+	UIEdgeInsets containerInsets = [self calculatedcontainerInsets];
+	[self.textView setTextContainerInset:containerInsets];
 }
 
 
@@ -92,11 +92,15 @@
 - (UITextView *)textView {
 	if (!_textView) {
 		CGRect bounds = [self.view bounds];
+		UIEdgeInsets containerInsets = [self calculatedcontainerInsets];
+		UIEdgeInsets contentInsets = [self calculatedContentInsetsWithOffset:0.0];
+		
 		_textView = [[UITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
 		[_textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
 		[_textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
-		[_textView setContentInset:self.textViewContentInsets];
 		[_textView setBackgroundColor:[UIColor whiteColor]];
+		[_textView setTextContainerInset:containerInsets];
+		[_textView setContentInset:contentInsets];
 		[_textView setAlwaysBounceVertical:YES];
 		[_textView setScrollEnabled:YES];
 		[_textView setClipsToBounds:NO];
@@ -107,6 +111,22 @@
 
 
 #pragma mark - private methods
+
+- (UIEdgeInsets)calculatedcontainerInsets {
+	UIEdgeInsets contentInsets = [self textViewContentInsets];
+	UIEdgeInsets insets = UIEdgeInsetsZero;
+	insets.right = contentInsets.right;
+	insets.left = contentInsets.left;
+	return insets;
+}
+
+- (UIEdgeInsets)calculatedContentInsetsWithOffset:(CGFloat)offset {
+	UIEdgeInsets contentInsets = [self textViewContentInsets];
+	UIEdgeInsets insets = UIEdgeInsetsZero;
+	insets.bottom = (contentInsets.bottom + offset);
+	insets.top = contentInsets.top;
+	return insets;
+}
 
 - (void)beginEditingText:(NSNotification *)notification {
 	if ([notification object] == self.textView) {
