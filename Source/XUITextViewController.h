@@ -17,4 +17,7 @@
 @property (nonatomic) UIEdgeInsets	textViewScrollIndicatorInsets;
 @property (nonatomic) UIEdgeInsets	textViewContentInsets;
 
+
+- (instancetype)initWithTextContainer:(NSTextContainer *)textContainer;
+
 @end

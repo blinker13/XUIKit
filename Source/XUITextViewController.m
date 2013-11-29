@@ -20,17 +20,27 @@
 
 @implementation XUITextViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
+@synthesize textContainer	=	_textContainer;
+
+
+- (instancetype)initWithTextContainer:(NSTextContainer *)textContainer {
+	if ((self = [super initWithNibName:nil bundle:nil])) {
 		_textViewContentInsets = UIEdgeInsetsMake(15.0, 10.0, 15.0, 10.0);
 		_textViewScrollIndicatorInsets = UIEdgeInsetsZero;
+		_textContainer = textContainer;
 	}
 	return self;
 }
 
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	[self.view addSubview:self.textView];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	return [self initWithTextContainer:nil];
+}
+
+
+#pragma mark -
+
+- (void)loadView {
+	[self setView:self.textView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,13 +95,9 @@
 
 #pragma mark -
 
-- (NSTextContainer *)textContainer {
-	return nil;
-}
-
 - (UITextView *)textView {
 	if (!_textView) {
-		CGRect bounds = [self.view bounds];
+		CGRect bounds = [[UIScreen mainScreen] bounds];
 		UIEdgeInsets containerInsets = [self calculatedcontainerInsets];
 		UIEdgeInsets contentInsets = [self calculatedContentInsetsWithOffset:0.0];
 		
