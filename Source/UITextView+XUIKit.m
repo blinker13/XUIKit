@@ -11,6 +11,27 @@
 
 @implementation UITextView (XUIKit)
 
+- (UIEdgeInsets)textContentInsets {
+	UIEdgeInsets contentInsets = [self contentInset];
+	UIEdgeInsets containerInsets = [self textContainerInset];
+	return UIEdgeInsetsMake(contentInsets.top, containerInsets.left, contentInsets.bottom, containerInsets.right);
+}
+
+- (void)setTextContentInsets:(UIEdgeInsets)textContentInsets {
+	UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+	contentInsets.bottom = textContentInsets.bottom;
+	contentInsets.top = textContentInsets.top;
+	[self setContentInset:contentInsets];
+	
+	UIEdgeInsets containerInsets = UIEdgeInsetsZero;
+	containerInsets.right = textContentInsets.right;
+	containerInsets.left = textContentInsets.left;
+	[self setTextContainerInset:containerInsets];
+}
+
+
+#pragma mark -
+
 - (void)makeCursorVisibleAnimated:(BOOL)animated {
 	CGRect visibleRect = [self visibleContentRect];
 	CGRect cursorRect = [self currentCurserRect];

@@ -11,7 +11,11 @@
 
 @interface UITextView (XUIKit)
 
+@property (nonatomic) UIEdgeInsets	textContentInsets;
+
+
 - (void)makeCursorVisibleAnimated:(BOOL)animated;
+
 - (CGRect)visibleContentRect;
 - (CGRect)currentCurserRect;
 
