@@ -9,7 +9,20 @@
 #import "UITableViewCell+XUIKit.h"
 
 
-@implementation UITableViewCell (XUI)
+@implementation UITableViewCell (XUIKit)
+
++ (void)registerForTableView:(UITableView *)tableView {
+	NSString *identifier = NSStringFromClass(self);
+	[tableView registerClass:self forCellReuseIdentifier:identifier];
+}
+
++ (instancetype)dequeueForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {
+	NSString *identifier = NSStringFromClass(self);
+	return [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+}
+
+
+#pragma mark -
 
 - (UIColor *)selectedBackgroundColor {
 	return [self.selectedBackgroundView backgroundColor];

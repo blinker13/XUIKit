@@ -7,6 +7,8 @@
 //
 
 #import "XUITextStorage.h"
+#import "NSTextStorage+XUIKit.h"
+#import "NSMutableAttributedString+XUIKit.h"
 
 
 @interface XUITextStorage ()
@@ -90,23 +92,11 @@
 
 #pragma mark - private methods
 
-//a line break in the middle of a highlighted range will not trigger reevaluating the new paragraph
-- (NSRange)editedParagraphsRange {
-	NSRange editedRange = [self editedRange];
-	editedRange.length = (editedRange.length + 1);
-	NSRange stringRange = NSMakeRange(0, [self.string length]);
-	NSRange range = NSIntersectionRange(stringRange, editedRange);
-	return [self.string paragraphRangeForRange:range];
-}
-
 - (void)processHighlighting:(NSString *)string range:(NSRange)range {
 	for (NSString *pattern in self.allPatterns) {
 		NSRegularExpression *regex = [self.regularExpressions objectForKey:pattern];
 		UIColor *color = [self.highlightingColors objectForKey:pattern];
-		
-		[regex enumerateMatchesInString:string options:0 range:range usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-			[self addAttribute:NSForegroundColorAttributeName value:color range:result.range];
-		}];
+		[self addHighlighting:color usingRegex:regex];
 	}
 }
 

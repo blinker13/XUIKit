@@ -9,7 +9,7 @@
 @import UIKit;
 
 
-@interface UIBarButtonItem (XUI)
+@interface UIBarButtonItem (XUIKit)
 
 + (instancetype)fixedSpaceItemWithWidth:(CGFloat)width;
 + (instancetype)flexibleSpaceItem;

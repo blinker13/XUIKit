@@ -9,8 +9,13 @@
 @import UIKit;
 
 
-@interface UITableViewCell (XUI)
+@interface UITableViewCell (XUIKit)
+
 
 @property (nonatomic, strong) UIColor	*selectedBackgroundColor;
+
+
++ (void)registerForTableView:(UITableView *)tableView;
++ (instancetype)dequeueForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 
 @end

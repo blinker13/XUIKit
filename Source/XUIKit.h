@@ -12,6 +12,9 @@
 #import <XUIKit/XUITextView.h>
 #import <XUIKit/XUITextStorage.h>
 
+#import <XUIKit/NSTextStorage+XUIKit.h>
+#import <XUIKit/NSMutableAttributedString+XUIKit.h>
+
 #import <XUIKit/UIViewController+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
 #import <XUIKit/UITableViewCell+XUIKit.h>
