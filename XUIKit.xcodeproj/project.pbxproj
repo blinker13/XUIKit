@@ -20,8 +20,12 @@
 		BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */; };
 		BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */; };
-		BDA1B718183FFA1A00DA642E /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA1B716183FFA1A00DA642E /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDA1B719183FFA1A00DA642E /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B717183FFA1A00DA642E /* XUIViewController.m */; };
+		BD75EB4618492DC500B42FF5 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB4418492DC500B42FF5 /* UIViewController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD75EB4718492DC500B42FF5 /* UIViewController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB4518492DC500B42FF5 /* UIViewController+XUIKit.m */; };
+		BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB52184ACE2E00B42FF5 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB53184ACE2E00B42FF5 /* XUITextView.m */; };
+		BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */; };
 		BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA1B7631840DCD600DA642E /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B7641840DCD600DA642E /* XUITextViewController.m */; };
 		BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,8 +57,12 @@
 		BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XUIKit.m"; sourceTree = "<group>"; };
 		BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+XUIKit.h"; sourceTree = "<group>"; };
 		BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+XUIKit.m"; sourceTree = "<group>"; };
-		BDA1B716183FFA1A00DA642E /* XUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIViewController.h; sourceTree = "<group>"; };
-		BDA1B717183FFA1A00DA642E /* XUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIViewController.m; sourceTree = "<group>"; };
+		BD75EB4418492DC500B42FF5 /* UIViewController+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XUIKit.h"; sourceTree = "<group>"; };
+		BD75EB4518492DC500B42FF5 /* UIViewController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XUIKit.m"; sourceTree = "<group>"; };
+		BD75EB52184ACE2E00B42FF5 /* XUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextView.h; sourceTree = "<group>"; };
+		BD75EB53184ACE2E00B42FF5 /* XUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextView.m; sourceTree = "<group>"; };
+		BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextStorage.h; sourceTree = "<group>"; };
+		BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextStorage.m; sourceTree = "<group>"; };
 		BDA1B7631840DCD600DA642E /* XUITextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextViewController.h; sourceTree = "<group>"; };
 		BDA1B7641840DCD600DA642E /* XUITextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextViewController.m; sourceTree = "<group>"; };
 		BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XUIKit.h"; sourceTree = "<group>"; };
@@ -117,12 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				BD733503183E9EB00064C74D /* XUIKit.h */,
-				BDA1B716183FFA1A00DA642E /* XUIViewController.h */,
-				BDA1B717183FFA1A00DA642E /* XUIViewController.m */,
 				BD733513183EA60F0064C74D /* XUITableViewController.h */,
 				BD733514183EA60F0064C74D /* XUITableViewController.m */,
-				BDA1B7631840DCD600DA642E /* XUITextViewController.h */,
-				BDA1B7641840DCD600DA642E /* XUITextViewController.m */,
+				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD733518183EA79A0064C74D /* Categories */,
 			);
 			path = Source;
@@ -140,6 +145,8 @@
 		BD733518183EA79A0064C74D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BD75EB4418492DC500B42FF5 /* UIViewController+XUIKit.h */,
+				BD75EB4518492DC500B42FF5 /* UIViewController+XUIKit.m */,
 				BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */,
 				BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */,
 				BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */,
@@ -150,6 +157,19 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		BD75EB51184ACDE200B42FF5 /* Text View */ = {
+			isa = PBXGroup;
+			children = (
+				BDA1B7631840DCD600DA642E /* XUITextViewController.h */,
+				BDA1B7641840DCD600DA642E /* XUITextViewController.m */,
+				BD75EB52184ACE2E00B42FF5 /* XUITextView.h */,
+				BD75EB53184ACE2E00B42FF5 /* XUITextView.m */,
+				BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */,
+				BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */,
+			);
+			name = "Text View";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -158,12 +178,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD73350D183EA4120064C74D /* XUIKit.h in Headers */,
+				BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */,
 				BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */,
+				BD75EB4618492DC500B42FF5 /* UIViewController+XUIKit.h in Headers */,
 				BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */,
+				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
-				BDA1B718183FFA1A00DA642E /* XUIViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,10 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */,
+				BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */,
+				BD75EB4718492DC500B42FF5 /* UIViewController+XUIKit.m in Sources */,
+				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
 				BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */,
-				BDA1B719183FFA1A00DA642E /* XUIViewController.m in Sources */,
 				BDBCE45E184408100095F2E2 /* UITextView+XUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

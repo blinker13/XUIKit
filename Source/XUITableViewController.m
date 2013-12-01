@@ -11,36 +11,27 @@
 
 @interface XUITableViewController ()
 
-@property (nonatomic, readwrite) IBOutlet UITableView	*tableView;
-@property (nonatomic) UITableViewStyle	style;
+@property (nonatomic) BOOL	shouldClearSelection;
 
 @end
 
 
 @implementation XUITableViewController
 
-
-#pragma mark - initialization
-
 - (instancetype)initWithStyle:(UITableViewStyle)style {
-    if ((self = [super initWithNibName:nil bundle:nil])) {
-		_clearsSelectionOnViewWillAppear = YES;
-		_style = style;
-    }
-    return self;
+	if ((self = [super initWithStyle:style])) {
+		_shouldClearSelection = YES;
+	}
+	return self;
 }
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	return [self initWithStyle:UITableViewStylePlain];
-}
-
-
-#pragma mark -
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	[self.view addSubview:self.tableView];
+	[super viewDidLoad];
+	[super setClearsSelectionOnViewWillAppear:NO];
+	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	[self.tableView setBackgroundColor:[UIColor whiteColor]];
 }
+	
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
@@ -67,53 +58,15 @@
 	}
 }
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-	[self.tableView setEditing:editing animated:animated];
-	[super setEditing:editing animated:animated];
+
+#pragma mark - 
+
+- (BOOL)clearsSelectionOnViewWillAppear {
+	return self.shouldClearSelection;
 }
 
-- (void)viewChangedContentHeight:(CGFloat)height {
-	UIEdgeInsets insets = UIEdgeInsetsMake(0.0, 0.0, height, 0.0);
-	[self.tableView setScrollIndicatorInsets:insets];
-	[self.tableView setContentInset:insets];
+- (void)setClearsSelectionOnViewWillAppear:(BOOL)clearsSelectionOnViewWillAppear {
+	[self setShouldClearSelection:clearsSelectionOnViewWillAppear];
 }
-
-
-#pragma mark -
-
-- (UITableView *)tableView {
-	if (!_tableView) {
-		CGRect bounds = [self.view bounds];
-		_tableView = [[UITableView alloc] initWithFrame:bounds style:self.style];
-		[_tableView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-		[_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[_tableView setBackgroundColor:[UIColor whiteColor]];
-		[_tableView setDataSource:self];
-		[_tableView setDelegate:self];
-	}
-	return _tableView;
-}
-
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
-}
-
-
-//#pragma mark - OBUITableViewDelegate
-//
-//- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-//	[self setEditing:YES animated:YES];
-//}
-//
-//- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
-//	[self setEditing:NO animated:YES];
-//}
 
 @end
