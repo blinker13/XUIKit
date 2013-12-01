@@ -12,7 +12,7 @@
 
 @interface XUITextViewController ()
 
-@property (nonatomic, readwrite) IBOutlet UITextView	*textView;
+@property (nonatomic, readwrite) IBOutlet XUITextView	*textView;
 
 @property (nonatomic) BOOL	shouldReselectTextView;
 @property (nonatomic) BOOL	keyboardIsDisappearing;
@@ -25,17 +25,12 @@
 @synthesize textContainer	=	_textContainer;
 
 
-- (instancetype)initWithTextContainer:(NSTextContainer *)textContainer {
-	if ((self = [super initWithNibName:nil bundle:nil])) {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		_textViewContentInsets = UIEdgeInsetsMake(15.0, 10.0, 15.0, 10.0);
 		_textViewScrollIndicatorInsets = UIEdgeInsetsZero;
-		_textContainer = textContainer;
 	}
 	return self;
-}
-
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	return [self initWithTextContainer:nil];
 }
 
 
@@ -88,11 +83,15 @@
 
 #pragma mark -
 
+- (NSTextContainer *)textContainer {
+	return nil;
+}
+
 - (UITextView *)textView {
 	if (!_textView) {
 		CGRect bounds = [[UIScreen mainScreen] bounds];
 		
-		_textView = [[UITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
+		_textView = [[XUITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
 		[_textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
 		[_textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
 		[_textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
