@@ -7,7 +7,9 @@
 //
 
 #import <XUIKit/XUITableViewController.h>
+
 #import <XUIKit/XUITextViewController.h>
+#import <XUIKit/XUITextView.h>
 
 #import <XUIKit/UIViewController+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
