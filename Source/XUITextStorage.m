@@ -90,6 +90,7 @@
 
 #pragma mark - private methods
 
+//a line break in the middle of a highlighted range will not trigger reevaluating the new paragraph
 - (NSRange)editedParagraphsRange {
 	NSRange editedRange = [self editedRange];
 	editedRange.length = (editedRange.length + 1);

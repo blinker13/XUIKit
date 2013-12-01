@@ -61,6 +61,7 @@
 - (void)setTextColor:(UIColor *)textColor {
 	[super setTextColor:textColor];
 	
+	//forward textColor to this views related textStorage
 	if ([self.textStorage isKindOfClass:[XUITextStorage class]]) {
 		[(XUITextStorage *)self.textStorage setTextColor:textColor];
 	}
