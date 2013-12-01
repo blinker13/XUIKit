@@ -7,96 +7,63 @@
 //
 
 #import "XUITextView.h"
-
-
-@interface XUITextView ()
-
-@property (nonatomic, strong) NSMutableDictionary	*highlightingColors;
-@property (nonatomic, strong) NSMutableDictionary	*regularExpressions;
-
-@property (nonatomic, strong) UIColor	*defaultTextColor;
-
-@end
+#import "XUITextStorage.h"
 
 
 @implementation XUITextView
 
-- (instancetype)initWithFrame:(CGRect)frame textContainer:(NSTextContainer *)textContainer {
-	if ((self = [super initWithFrame:frame textContainer:textContainer])) {
-		_highlightingColors = [[NSMutableDictionary alloc] init];
-		_regularExpressions = [[NSMutableDictionary alloc] init];
-		_defaultTextColor = [UIColor blackColor];
+- (CGRect)firstRectForRange:(UITextRange *)range {
+	CGRect r1= [self caretRectForPosition:[self positionWithinRange:range farthestInDirection:UITextLayoutDirectionRight]];
+	CGRect r2= [self caretRectForPosition:[self positionWithinRange:range farthestInDirection:UITextLayoutDirectionLeft]];
+	return CGRectUnion(r1,r2);
+}
+
+- (NSUInteger)characterIndexForPoint:(CGPoint)point {
+	if (self.text.length) {
+		CGRect r1;
+		if ([[self.text substringFromIndex:self.text.length-1] isEqualToString:@"\n"]) {
+			r1 = [super caretRectForPosition:[super positionFromPosition:self.endOfDocument offset:-1]];
+			CGRect sr = [super caretRectForPosition:[super positionFromPosition:self.beginningOfDocument offset:0]];
+			r1.origin.x = sr.origin.x;
+			r1.origin.y += self.font.lineHeight;
+		} else {
+			r1 = [super caretRectForPosition:[super positionFromPosition:self.endOfDocument offset:0]];
+		}
 		
-		SEL action = @selector(processEditing:);
-		NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-		[center addObserver:self selector:action name:NSTextStorageDidProcessEditingNotification object:self.textStorage];
+		if ((point.x > r1.origin.x && point.y >= r1.origin.y) || point.y >= r1.origin.y+r1.size.height) {
+			return [super offsetFromPosition:self.beginningOfDocument toPosition:self.endOfDocument];
+		}
+		
+		CGFloat fraction;
+		NSUInteger index = [self.textStorage.layoutManagers[0] characterIndexForPoint:point inTextContainer:self.textContainer fractionOfDistanceBetweenInsertionPoints:&fraction];
+		
+		return index;
 	}
-	return self;
+	return 0;
 }
 
-- (void)dealloc {
-	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-	[center removeObserver:self name:NSTextStorageDidProcessEditingNotification object:self.textStorage];
+- (UITextPosition *)closestPositionToPoint:(CGPoint)point {
+	point.y -= self.font.lineHeight/2;
+	NSUInteger index = [self characterIndexForPoint:point];
+	UITextPosition *pos = [self positionFromPosition:self.beginningOfDocument offset:index];
+	return pos;
 }
 
-
-#pragma mark -
+- (void)scrollRangeToVisible:(NSRange)range {
+	[super scrollRangeToVisible:range];
+	
+	if (self.layoutManager.extraLineFragmentTextContainer != nil && self.selectedRange.location == range.location) {
+		CGRect caretRect = [self caretRectForPosition:self.selectedTextRange.start];
+		[self scrollRectToVisible:caretRect animated:YES];
+	}
+}
 
 - (void)setTextColor:(UIColor *)textColor {
-	[self setDefaultTextColor:textColor];
 	[super setTextColor:textColor];
-}
-
-
-#pragma mark - 
-
-- (NSArray *)allPatterns {
-	return [self.regularExpressions allKeys];
-}
-
-- (void)setHighlightingColor:(UIColor *)color forPattern:(NSString *)pattern {
 	
-	if (![self.allPatterns containsObject:pattern]) {
-		NSRegularExpression *regex = [self regularExpressionForPattern:pattern];
-		[self.regularExpressions setObject:regex forKey:pattern];
+	if ([self.textStorage isKindOfClass:[XUITextStorage class]]) {
+		[(XUITextStorage *)self.textStorage setTextColor:textColor];
 	}
-	[self.highlightingColors setObject:color forKey:pattern];
-}
-
-- (void)removeHighlightingColorForPattern:(NSString *)pattern {
-	[self.regularExpressions removeObjectForKey:pattern];
-	[self.highlightingColors removeObjectForKey:pattern];
-}
-
-- (UIColor *)highlightingColorForPattern:(NSString *)pattern {
-	return [self.highlightingColors objectForKey:pattern];
-}
-
-
-#pragma mark - private methods
-
-- (void)processEditing:(NSNotification *)notification {
-	NSString *string = [self.textStorage string];
-	NSRange range = NSMakeRange(0, [string length]);
-	
-	[self.textStorage addAttribute:NSForegroundColorAttributeName value:self.defaultTextColor range:range];
-	
-	for (NSString *pattern in self.allPatterns) {
-		NSRegularExpression *regex = [self.regularExpressions objectForKey:pattern];
-		UIColor *color = [self.highlightingColors objectForKey:pattern];
-		
-		//TODO: performance decreases with increasing string size
-		[regex enumerateMatchesInString:string options:0 range:range usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-			[self.textStorage addAttribute:NSForegroundColorAttributeName value:color range:result.range];
-		}];
-	}
-}
-
-- (NSRegularExpression *)regularExpressionForPattern:(NSString *)pattern {
-	NSError *error = nil;
-	NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:pattern options:0 error:&error];
-	NSAssert(!error, [error localizedDescription]);
-	return regex;
 }
 
 @end

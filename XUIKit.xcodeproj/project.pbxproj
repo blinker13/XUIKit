@@ -24,6 +24,8 @@
 		BD75EB4718492DC500B42FF5 /* UIViewController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB4518492DC500B42FF5 /* UIViewController+XUIKit.m */; };
 		BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB52184ACE2E00B42FF5 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB53184ACE2E00B42FF5 /* XUITextView.m */; };
+		BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */; };
 		BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA1B7631840DCD600DA642E /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B7641840DCD600DA642E /* XUITextViewController.m */; };
 		BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +61,8 @@
 		BD75EB4518492DC500B42FF5 /* UIViewController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XUIKit.m"; sourceTree = "<group>"; };
 		BD75EB52184ACE2E00B42FF5 /* XUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextView.h; sourceTree = "<group>"; };
 		BD75EB53184ACE2E00B42FF5 /* XUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextView.m; sourceTree = "<group>"; };
+		BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextStorage.h; sourceTree = "<group>"; };
+		BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextStorage.m; sourceTree = "<group>"; };
 		BDA1B7631840DCD600DA642E /* XUITextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextViewController.h; sourceTree = "<group>"; };
 		BDA1B7641840DCD600DA642E /* XUITextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextViewController.m; sourceTree = "<group>"; };
 		BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XUIKit.h"; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 				BD733503183E9EB00064C74D /* XUIKit.h */,
 				BD733513183EA60F0064C74D /* XUITableViewController.h */,
 				BD733514183EA60F0064C74D /* XUITableViewController.m */,
-				BD75EB51184ACDE200B42FF5 /* Text Kit */,
+				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD733518183EA79A0064C74D /* Categories */,
 			);
 			path = Source;
@@ -153,15 +157,17 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		BD75EB51184ACDE200B42FF5 /* Text Kit */ = {
+		BD75EB51184ACDE200B42FF5 /* Text View */ = {
 			isa = PBXGroup;
 			children = (
 				BDA1B7631840DCD600DA642E /* XUITextViewController.h */,
 				BDA1B7641840DCD600DA642E /* XUITextViewController.m */,
 				BD75EB52184ACE2E00B42FF5 /* XUITextView.h */,
 				BD75EB53184ACE2E00B42FF5 /* XUITextView.m */,
+				BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */,
+				BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */,
 			);
-			name = "Text Kit";
+			name = "Text View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +182,7 @@
 				BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */,
 				BD75EB4618492DC500B42FF5 /* UIViewController+XUIKit.h in Headers */,
 				BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */,
+				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
@@ -265,6 +272,7 @@
 				BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */,
 				BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */,
 				BD75EB4718492DC500B42FF5 /* UIViewController+XUIKit.m in Sources */,
+				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
 				BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */,

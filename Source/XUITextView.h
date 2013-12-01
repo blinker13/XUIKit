@@ -11,10 +11,4 @@
 
 @interface XUITextView : UITextView
 
-@property (nonatomic, readonly) NSArray	*allPatterns;
-
-- (void)setHighlightingColor:(UIColor *)color forPattern:(NSString *)pattern;
-- (void)removeHighlightingColorForPattern:(NSString *)pattern;
-- (UIColor *)highlightingColorForPattern:(NSString *)pattern;
-
 @end

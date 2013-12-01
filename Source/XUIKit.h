@@ -10,6 +10,7 @@
 
 #import <XUIKit/XUITextViewController.h>
 #import <XUIKit/XUITextView.h>
+#import <XUIKit/XUITextStorage.h>
 
 #import <XUIKit/UIViewController+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>

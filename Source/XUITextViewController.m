@@ -8,6 +8,7 @@
 
 #import "XUITextViewController.h"
 #import "UITextView+XUIKit.h"
+#import "XUITextStorage.h"
 
 
 @interface XUITextViewController ()
@@ -20,10 +21,8 @@
 @end
 
 
+#pragma mark -
 @implementation XUITextViewController
-
-@synthesize textContainer	=	_textContainer;
-
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
@@ -37,16 +36,17 @@
 #pragma mark -
 
 - (void)loadView {
-	[self setView:self.textView];
+	[self loadTextStack];
+	[self loadTextView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
 	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-	[center addObserver:self selector:@selector(beginEditingText:) name:UITextViewTextDidBeginEditingNotification object:self.textView];
-	[center addObserver:self selector:@selector(endEditingText:) name:UITextViewTextDidEndEditingNotification object:self.textView];
-	[center addObserver:self selector:@selector(updateCursorVisibility:) name:UITextViewTextDidChangeNotification object:self.textView];
+	[center addObserver:self selector:@selector(beginEditing:) name:UITextViewTextDidBeginEditingNotification object:self.textView];
+	[center addObserver:self selector:@selector(endEditing:) name:UITextViewTextDidEndEditingNotification object:self.textView];
+	[center addObserver:self selector:@selector(updateCursor:) name:UITextViewTextDidChangeNotification object:self.textView];
 	[center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	[center addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
 	[center addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -83,36 +83,36 @@
 
 #pragma mark -
 
-- (NSTextContainer *)textContainer {
-	return nil;
+- (void)loadTextStack {
+	//overwrite
 }
 
-- (UITextView *)textView {
-	if (!_textView) {
-		CGRect bounds = [[UIScreen mainScreen] bounds];
-		
-		_textView = [[XUITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
-		[_textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-		[_textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
-		[_textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
-		[_textView setIndicatorStyle:UIScrollViewIndicatorStyleBlack];
-		[_textView setTextContentInsets:self.textViewContentInsets];
-		[_textView setBackgroundColor:[UIColor whiteColor]];
-		[_textView setAlwaysBounceVertical:YES];
-		[_textView setScrollEnabled:YES];
-		[_textView setDelegate:self];
-	}
-	return _textView;
+- (void)loadTextView {
+	CGRect bounds = [[UIScreen mainScreen] bounds];
+	
+	XUITextView *textView = [[XUITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
+	[textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+	[textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
+	[textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
+	[textView setIndicatorStyle:UIScrollViewIndicatorStyleBlack];
+	[textView setTextContentInsets:self.textViewContentInsets];
+	[textView setBackgroundColor:[UIColor whiteColor]];
+	[textView setAlwaysBounceVertical:YES];
+	[textView setScrollEnabled:YES];
+	[textView setDelegate:self];
+	
+	[self setTextView:textView];
+	[self setView:textView];
 }
 
 
 #pragma mark - private methods
 
-- (void)beginEditingText:(NSNotification *)notification {
+- (void)beginEditing:(NSNotification *)notification {
 	[super setEditing:YES animated:YES];
 }
 
-- (void)endEditingText:(NSNotification *)notification {
+- (void)endEditing:(NSNotification *)notification {
 	id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
 	
 	BOOL shouldReselect = [coordinator isAnimated];
@@ -123,7 +123,7 @@
 	}
 }
 
-- (void)updateCursorVisibility:(NSNotification *)notification {
+- (void)updateCursor:(NSNotification *)notification {
 	CGRect caretRect = [self.textView currentCurserRect];
 	[self.textView scrollRectToVisible:caretRect animated:NO];
 }
