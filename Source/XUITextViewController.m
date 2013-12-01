@@ -15,8 +15,8 @@
 
 @property (nonatomic, readwrite) IBOutlet XUITextView	*textView;
 
-@property (nonatomic) BOOL	shouldReselectTextView;
-@property (nonatomic) BOOL	keyboardIsDisappearing;
+@property (nonatomic) BOOL	shouldReselectTextView;	//reselect the textView after a canceled transactional transition
+@property (nonatomic) BOOL	keyboardIsDisappearing;	//prevents unnecessary textView layouting when orientation is changed
 
 @end
 
@@ -67,6 +67,7 @@
 	[center removeObserver:self name:UIKeyboardDidShowNotification object:nil];
 	[center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 	
+	//triggers a smother hide-keyboard animation
 	[self.textView resignFirstResponder];
 }
 
