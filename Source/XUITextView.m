@@ -43,7 +43,7 @@
 }
 
 - (UITextPosition *)closestPositionToPoint:(CGPoint)point {
-	point.y -= self.font.lineHeight/2;
+	point.y -= (self.font.lineHeight / 2);
 	NSUInteger index = [self characterIndexForPoint:point];
 	UITextPosition *pos = [self positionFromPosition:self.beginningOfDocument offset:index];
 	return pos;

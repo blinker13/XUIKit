@@ -9,7 +9,7 @@
 #import "UIBarButtonItem+XUIKit.h"
 
 
-@implementation UIBarButtonItem (XUI)
+@implementation UIBarButtonItem (XUIKit)
 
 + (instancetype)fixedSpaceItemWithWidth:(CGFloat)width {
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
