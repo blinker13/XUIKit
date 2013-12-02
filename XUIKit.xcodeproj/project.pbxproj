@@ -100,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD62A336184D09A600A21125 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				BD733513183EA60F0064C74D /* XUITableViewController.h */,
+				BD733514183EA60F0064C74D /* XUITableViewController.m */,
+			);
+			name = "Table View";
+			sourceTree = "<group>";
+		};
 		BD7334D0183E9E4A0064C74D = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BD733503183E9EB00064C74D /* XUIKit.h */,
-				BD733513183EA60F0064C74D /* XUITableViewController.h */,
-				BD733514183EA60F0064C74D /* XUITableViewController.m */,
+				BD62A336184D09A600A21125 /* Table View */,
 				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD733518183EA79A0064C74D /* Categories */,
 			);
