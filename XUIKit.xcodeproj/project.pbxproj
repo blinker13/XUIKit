@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
+		BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 			children = (
 				BD733513183EA60F0064C74D /* XUITableViewController.h */,
 				BD733514183EA60F0064C74D /* XUITableViewController.m */,
+				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
+				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
+				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
 			);
@@ -298,6 +305,7 @@
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
+				BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */,
 				BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */,
 				BD75EB81184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m in Sources */,
 				BDBCE45E184408100095F2E2 /* UITextView+XUIKit.m in Sources */,
