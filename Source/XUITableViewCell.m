@@ -7,23 +7,69 @@
 //
 
 #import "XUITableViewCell.h"
+#import "XUITableViewCellScrollView.h"
 
+
+@interface XUITableViewCell ()
+
+@property (nonatomic, strong) IBOutlet XUIScrollView	*contentScrollView;
+//@property (nonatomic, strong) UIImageView	*accessoryImageView;
+
+@end
+
+
+#pragma mark -
 @implementation XUITableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+
+- (UILabel *)textLabel {
+	UILabel *textLabel = [super textLabel];
+	if (textLabel.superview != self.contentScrollView) {
+		[self.contentScrollView addSubview:textLabel];
+	}
+	return textLabel;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
+- (UILabel *)detailTextLabel {
+	UILabel *detailTextLabel = [super detailTextLabel];
+	if (detailTextLabel.superview != self.contentScrollView) {
+		[self.contentScrollView addSubview:detailTextLabel];
+	}
+	return detailTextLabel;
+}
 
-    // Configure the view for the selected state
+- (void)setAccessoryView:(UIView *)accessoryView {
+	[super setAccessoryView:accessoryView];
+	[self.contentScrollView addSubview:accessoryView];
+}
+
+- (UIScrollView *)contentScrollView {
+	if (!_contentScrollView) {
+		CGRect rect = [self.contentView bounds];
+		
+		_contentScrollView = [[XUITableViewCellScrollView alloc] initWithFrame:rect];
+		[_contentScrollView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+		[_contentScrollView setShowsHorizontalScrollIndicator:NO];
+		[_contentScrollView setShowsVerticalScrollIndicator:NO];
+		[_contentScrollView setPagingEnabled:YES];
+		
+		[_contentScrollView setContentSize:CGSizeMake(rect.size.width + 50.0, rect.size.height)];
+		[self.contentView addSubview:_contentScrollView];
+	}
+	return _contentScrollView;
+}
+
+
+#pragma mark - 
+
+- (UIColor *)selectedBackgroundColor {
+	return [self.selectedBackgroundView backgroundColor];
+}
+
+- (void)setSelectedBackgroundColor:(UIColor *)selectedBackgroundColor {
+	UIView *selectionView = [[UIView alloc] initWithFrame:CGRectZero];
+	[selectionView setBackgroundColor:selectedBackgroundColor];
+	[self setSelectedBackgroundView:selectionView];
 }
 
 @end

@@ -21,17 +21,4 @@
 	return [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
 }
 
-
-#pragma mark -
-
-- (UIColor *)selectedBackgroundColor {
-	return [self.selectedBackgroundView backgroundColor];
-}
-
-- (void)setSelectedBackgroundColor:(UIColor *)selectedBackgroundColor {
-	UIView *selectionView = [[UIView alloc] initWithFrame:CGRectZero];
-	[selectionView setBackgroundColor:selectedBackgroundColor];
-	[self setSelectedBackgroundView:selectionView];
-}
-
 @end

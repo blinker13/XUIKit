@@ -6,8 +6,15 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
+@class XUITableViewCellScrollView;
+
 
 @interface XUITableViewCell : UITableViewCell
+
+@property (nonatomic, readonly) XUITableViewCellScrollView	*contentScrollView;
+
+@property (nonatomic, strong) UIColor	*selectedBackgroundColor;
 
 @end
