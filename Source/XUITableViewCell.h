@@ -8,12 +8,8 @@
 
 @import UIKit;
 
-@class XUITableViewCellScrollView;
-
 
 @interface XUITableViewCell : UITableViewCell
-
-@property (nonatomic, readonly) XUITableViewCellScrollView	*contentScrollView;
 
 @property (nonatomic, strong) UIColor	*selectedBackgroundColor;
 

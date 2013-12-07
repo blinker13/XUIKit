@@ -7,13 +7,12 @@
 //
 
 #import "XUITableViewCell.h"
-#import "XUITableViewCellScrollView.h"
 
 
 @interface XUITableViewCell ()
 
-@property (nonatomic, strong) IBOutlet XUIScrollView	*contentScrollView;
-//@property (nonatomic, strong) UIImageView	*accessoryImageView;
+@property (nonatomic, strong) NSAttributedString	*attributedDetailedTextBackup;
+@property (nonatomic, strong) NSAttributedString	*attributedTextBackup;
 
 @end
 
@@ -21,46 +20,34 @@
 #pragma mark -
 @implementation XUITableViewCell
 
-
-- (UILabel *)textLabel {
-	UILabel *textLabel = [super textLabel];
-	if (textLabel.superview != self.contentScrollView) {
-		[self.contentScrollView addSubview:textLabel];
-	}
-	return textLabel;
-}
-
-- (UILabel *)detailTextLabel {
-	UILabel *detailTextLabel = [super detailTextLabel];
-	if (detailTextLabel.superview != self.contentScrollView) {
-		[self.contentScrollView addSubview:detailTextLabel];
-	}
-	return detailTextLabel;
-}
-
-- (void)setAccessoryView:(UIView *)accessoryView {
-	[super setAccessoryView:accessoryView];
-	[self.contentScrollView addSubview:accessoryView];
-}
-
-- (UIScrollView *)contentScrollView {
-	if (!_contentScrollView) {
-		CGRect rect = [self.contentView bounds];
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+	[super setHighlighted:highlighted animated:animated];
+	
+	if (highlighted) {
+		if (self.textLabel.attributedText) {
+			[self setAttributedTextBackup:self.textLabel.attributedText];
+			NSAttributedString *string = [self highlightedStringFromLabel:self.textLabel];
+			[self.textLabel setAttributedText:string];
+		}
 		
-		_contentScrollView = [[XUITableViewCellScrollView alloc] initWithFrame:rect];
-		[_contentScrollView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-		[_contentScrollView setShowsHorizontalScrollIndicator:NO];
-		[_contentScrollView setShowsVerticalScrollIndicator:NO];
-		[_contentScrollView setPagingEnabled:YES];
+		if (self.detailTextLabel.attributedText) {
+			[self setAttributedTextBackup:self.detailTextLabel.attributedText];
+			NSAttributedString *string = [self highlightedStringFromLabel:self.detailTextLabel];
+			[self.detailTextLabel setAttributedText:string];
+		}
 		
-		[_contentScrollView setContentSize:CGSizeMake(rect.size.width + 50.0, rect.size.height)];
-		[self.contentView addSubview:_contentScrollView];
+	} else {
+		if (self.attributedTextBackup) {
+			[self.textLabel setAttributedText:self.attributedTextBackup];
+			[self setAttributedTextBackup:nil];
+		}
+		
+		if (self.attributedDetailedTextBackup) {
+			[self.textLabel setAttributedText:self.attributedDetailedTextBackup];
+			[self setAttributedDetailedTextBackup:nil];
+		}
 	}
-	return _contentScrollView;
 }
-
-
-#pragma mark - 
 
 - (UIColor *)selectedBackgroundColor {
 	return [self.selectedBackgroundView backgroundColor];
@@ -70,6 +57,16 @@
 	UIView *selectionView = [[UIView alloc] initWithFrame:CGRectZero];
 	[selectionView setBackgroundColor:selectedBackgroundColor];
 	[self setSelectedBackgroundView:selectionView];
+}
+
+
+#pragma mark - private methods
+
+- (NSAttributedString *)highlightedStringFromLabel:(UILabel *)label {
+	NSRange range = NSMakeRange(0, label.text.length);
+	NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithAttributedString:label.attributedText];
+	[string addAttribute:NSForegroundColorAttributeName value:label.highlightedTextColor range:range];
+	return string;
 }
 
 @end
