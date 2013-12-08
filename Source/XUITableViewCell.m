@@ -11,6 +11,9 @@
 
 @interface XUITableViewCell ()
 
+@property (nonatomic, strong) IBOutlet XUILabel	*titleLabel;
+@property (nonatomic, strong) IBOutlet XUILabel	*subtitleLabel;
+
 @property (nonatomic, strong) NSAttributedString	*attributedDetailedTextBackup;
 @property (nonatomic, strong) NSAttributedString	*attributedTextBackup;
 
@@ -20,33 +23,59 @@
 #pragma mark -
 @implementation XUITableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+	if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
+		[self.contentView setBackgroundColor:[UIColor whiteColor]];
+		[self setBackgroundColor:[UIColor whiteColor]];
+		_style = style;
+	}
+	return self;
+}
+
+- (UILabel *)textLabel {
+	return self.titleLabel;
+}
+
+- (UILabel *)detailTextLabel {
+	return self.subtitleLabel;
+}
+
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
 	[super setHighlighted:highlighted animated:animated];
-	
-	if (highlighted) {
-		if (self.textLabel.attributedText) {
-			[self setAttributedTextBackup:self.textLabel.attributedText];
-			NSAttributedString *string = [self highlightedStringFromLabel:self.textLabel];
-			[self.textLabel setAttributedText:string];
-		}
+	[_subtitleLabel setHighlighted:highlighted];
+	[_titleLabel setHighlighted:highlighted];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+	[super setSelected:selected animated:animated];
+	[_subtitleLabel setHighlighted:selected];
+	[_titleLabel setHighlighted:selected];
+}
+
+
+#pragma mark -
+
+- (XUILabel *)titleLabel {
+	if (!_titleLabel) {
+		UIEdgeInsets insets = UIEdgeInsetsMake(0.0, 15.0, 0.0, 0.0);
+		CGRect rect = UIEdgeInsetsInsetRect(self.contentView.bounds, insets);
 		
-		if (self.detailTextLabel.attributedText) {
-			[self setAttributedTextBackup:self.detailTextLabel.attributedText];
-			NSAttributedString *string = [self highlightedStringFromLabel:self.detailTextLabel];
-			[self.detailTextLabel setAttributedText:string];
-		}
-		
-	} else {
-		if (self.attributedTextBackup) {
-			[self.textLabel setAttributedText:self.attributedTextBackup];
-			[self setAttributedTextBackup:nil];
-		}
-		
-		if (self.attributedDetailedTextBackup) {
-			[self.textLabel setAttributedText:self.attributedDetailedTextBackup];
-			[self setAttributedDetailedTextBackup:nil];
-		}
+		_titleLabel = [[XUILabel alloc] initWithFrame:rect];
+		[_titleLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+		[_titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
+		[_titleLabel setBackgroundColor:[UIColor whiteColor]];
+		[self.contentView addSubview:_titleLabel];
 	}
+	return _titleLabel;
+}
+
+- (XUILabel *)subtitleLabel {
+	if (!_subtitleLabel) {
+		_subtitleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
+		[_subtitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
+		[self.contentView addSubview:_subtitleLabel];
+	}
+	return _subtitleLabel;
 }
 
 - (UIColor *)selectedBackgroundColor {

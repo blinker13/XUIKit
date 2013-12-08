@@ -7,10 +7,16 @@
 //
 
 @import UIKit;
+#import "XUILabel.h"
 
 
 @interface XUITableViewCell : UITableViewCell
 
+@property (nonatomic, readonly) XUILabel	*titleLabel;
+@property (nonatomic, readonly) XUILabel	*subtitleLabel;
+
 @property (nonatomic, strong) UIColor	*selectedBackgroundColor;
+
+@property (nonatomic, readonly) UITableViewCellStyle	style;
 
 @end

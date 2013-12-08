@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
-		BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */; };
+		BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */; };
-		BD4FF1C8184F9FB700A8C736 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */; };
+		BD4FF1C8184F9FB700A8C736 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1C9184F9FB700A8C736 /* UIViewController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1C7184F9FB700A8C736 /* UIViewController+XUIKit.m */; };
+		BD4FF27A1853E42C00A8C736 /* XUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF2781853E42C00A8C736 /* XUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF2791853E42C00A8C736 /* XUILabel.m */; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
@@ -57,6 +59,8 @@
 		BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCellScrollView.m; sourceTree = "<group>"; };
 		BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XUIKit.h"; sourceTree = "<group>"; };
 		BD4FF1C7184F9FB700A8C736 /* UIViewController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XUIKit.m"; sourceTree = "<group>"; };
+		BD4FF2781853E42C00A8C736 /* XUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUILabel.h; sourceTree = "<group>"; };
+		BD4FF2791853E42C00A8C736 /* XUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUILabel.m; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD4FF2771853E40F00A8C736 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
+				BD4FF2791853E42C00A8C736 /* XUILabel.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		BD62A336184D09A600A21125 /* Table View */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BD733503183E9EB00064C74D /* XUIKit.h */,
+				BD4FF2771853E40F00A8C736 /* Views */,
 				BD62A336184D09A600A21125 /* Table View */,
 				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD733518183EA79A0064C74D /* Categories */,
@@ -214,11 +228,12 @@
 				BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */,
 				BD75EB85184BE41E00B42FF5 /* NSTextStorage+XUIKit.h in Headers */,
 				BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */,
-				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
 				BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */,
+				BD4FF27A1853E42C00A8C736 /* XUILabel.h in Headers */,
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
+				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
@@ -309,6 +324,7 @@
 				BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */,
 				BD75EB86184BE41E00B42FF5 /* NSTextStorage+XUIKit.m in Sources */,
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
+				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
