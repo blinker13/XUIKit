@@ -16,6 +16,7 @@
 @end
 
 
+#pragma mark -
 @implementation XUITableViewController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
@@ -64,8 +65,13 @@
 			}];
 			
 		} else {
-			//default behaviour for pressing the back-button
-			[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+			[UIView animateWithDuration:0.5 animations:^{
+				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+				[cell.selectedBackgroundView setAlpha:0.0];
+				
+			} completion:^(BOOL finished) {
+				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+			}];
 		}
 	}
 }
