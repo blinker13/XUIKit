@@ -25,6 +25,10 @@
 	return self;
 }
 
+//- (void)loadView {
+//	//TODO: XUITableView
+//}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	

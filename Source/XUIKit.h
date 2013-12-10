@@ -6,7 +6,10 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
+#import <XUIKit/XUILabel.h>
+
 #import <XUIKit/XUITableViewController.h>
+#import <XUIKit/XUITableViewCell.h>
 
 #import <XUIKit/XUITextViewController.h>
 #import <XUIKit/XUITextView.h>

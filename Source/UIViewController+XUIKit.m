@@ -24,6 +24,7 @@
 		UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
 		
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+		if (!navigation.isTranslucent) [titleLabel setBackgroundColor:navigation.barTintColor];
 		[titleLabel setTextAlignment:NSTextAlignmentCenter];
 		[titleLabel setTextColor:textColor];
 		[titleLabel setText:contentTitle];
