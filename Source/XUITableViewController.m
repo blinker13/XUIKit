@@ -87,4 +87,11 @@
 	[self setShouldClearSelection:clearsSelectionOnViewWillAppear];
 }
 
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return UITableViewAutomaticDimension;
+}
+
 @end
