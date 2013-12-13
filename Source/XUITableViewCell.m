@@ -52,6 +52,15 @@
 	[_titleLabel setHighlighted:selected];
 }
 
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	
+	if (self.style == UITableViewCellStyleValue1) {
+		CGRect rect = CGRectOffset(self.detailTextLabel.frame, 0.0, -1.0);
+		[self.detailTextLabel setFrame:rect];
+	}
+}
+
 
 #pragma mark -
 
@@ -64,6 +73,7 @@
 		[_titleLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
 		[_titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
 		[_titleLabel setBackgroundColor:[UIColor whiteColor]];
+		[self setValue:_titleLabel forKey:@"textLabel"];
 		[self.contentView addSubview:_titleLabel];
 	}
 	return _titleLabel;
@@ -73,6 +83,8 @@
 	if (!_subtitleLabel) {
 		_subtitleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
 		[_subtitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
+		[_subtitleLabel setBackgroundColor:[UIColor whiteColor]];
+		[self setValue:_subtitleLabel forKey:@"detailTextLabel"];
 		[self.contentView addSubview:_subtitleLabel];
 	}
 	return _subtitleLabel;
