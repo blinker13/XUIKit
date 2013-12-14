@@ -37,6 +37,7 @@
 
 - (void)loadView {
 	[self loadTextStack];
+	[self textStackDidLoad];
 	[self loadTextView];
 }
 
@@ -85,6 +86,16 @@
 #pragma mark -
 
 - (void)loadTextStack {
+	XUITextStorage *textStorage = [[XUITextStorage alloc] init];
+	NSLayoutManager	*layoutManager = [[NSLayoutManager alloc] init];
+	NSTextContainer	*textContainer = [[NSTextContainer alloc] init];
+	[layoutManager addTextContainer:textContainer];
+	[textStorage addLayoutManager:layoutManager];
+	[self setTextContainer:textContainer];
+	[self setTextStorage:textStorage];
+}
+
+- (void)textStackDidLoad {
 	//overwrite
 }
 

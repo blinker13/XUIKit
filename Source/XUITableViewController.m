@@ -65,7 +65,7 @@
 			}];
 			
 		} else {
-			[UIView animateWithDuration:0.5 animations:^{
+			[UIView animateWithDuration:0.35 animations:^{
 				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 				[cell.selectedBackgroundView setAlpha:0.0];
 				
@@ -85,6 +85,13 @@
 
 - (void)setClearsSelectionOnViewWillAppear:(BOOL)clearsSelectionOnViewWillAppear {
 	[self setShouldClearSelection:clearsSelectionOnViewWillAppear];
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return UITableViewAutomaticDimension;
 }
 
 @end

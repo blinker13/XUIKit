@@ -18,17 +18,26 @@
 
 @implementation XUILabel
 
+- (void)setAttributedText:(NSAttributedString *)attributedText {
+	[super setAttributedText:attributedText];
+	
+	if (self.isHighlighted) {
+		[self setAttributtedTextBackup:attributedText];
+		[super setAttributedText:self.highlightedAttributedText];
+	}
+}
+
 - (void)setHighlighted:(BOOL)highlighted {
 	if (highlighted != self.highlighted) {
 		[super setHighlighted:highlighted];
 		
 		if (highlighted && self.attributedText) {
 			[self setAttributtedTextBackup:self.attributedText];
-			[self setAttributedText:self.highlightedAttributedText];
+			[super setAttributedText:self.highlightedAttributedText];
 		}
 		
 		if (!highlighted && self.attributtedTextBackup) {
-			[self setAttributedText:self.attributtedTextBackup];
+			[super setAttributedText:self.attributtedTextBackup];
 			[self setAttributtedTextBackup:nil];
 		}
 	}
@@ -38,8 +47,9 @@
 	if (!_highlightedAttributedText) {
 		NSAttributedString *text = [self attributedText];
 		NSRange highlightingRange = NSMakeRange(0, text.length);
+		UIColor *color = self.highlightedTextColor ?: self.textColor;
 		NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithAttributedString:text];
-		[string addAttribute:NSForegroundColorAttributeName value:self.highlightedTextColor range:highlightingRange];
+		if (color) [string addAttribute:NSForegroundColorAttributeName value:color range:highlightingRange];
 		return string;
 	}
 	return _highlightedAttributedText;

@@ -7,12 +7,13 @@
 //
 
 #import "XUITextView.h"
+#import "XUITextStorage.h"
 
 
 @interface XUITextViewController : UIViewController <UITextViewDelegate>
 
 @property (nonatomic, strong) NSTextContainer	*textContainer;
-@property (nonatomic, strong) NSTextStorage		*textStorage;
+@property (nonatomic, strong) XUITextStorage	*textStorage;
 
 @property (nonatomic, readonly) XUITextView		*textView;
 
@@ -22,6 +23,8 @@
 
 
 - (void)loadTextStack;	//this is where subclasses should create their textStorage, layoutManager and textContainer
+- (void)textStackDidLoad;
+
 - (void)loadTextView;	//this is where subclasses should create their textView
 
 @end

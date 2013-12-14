@@ -7,15 +7,20 @@
 //
 
 #import "XUITableViewCell.h"
+#import "XUILabel.h"
 
 
+NSString * const XUITableViewCellTitleLabelKey		=	@"textLabel";
+NSString * const XUITableViewCellSubtitleLabelKey	=	@"detailTextLabel";
+
+const CGFloat XUITableViewCellOffsetX	=	2.0;
+
+
+#pragma mark -
 @interface XUITableViewCell ()
 
-@property (nonatomic, strong) IBOutlet XUILabel	*titleLabel;
-@property (nonatomic, strong) IBOutlet XUILabel	*subtitleLabel;
-
-@property (nonatomic, strong) NSAttributedString	*attributedDetailedTextBackup;
-@property (nonatomic, strong) NSAttributedString	*attributedTextBackup;
+@property (nonatomic, weak) UILabel	*titleLabel;
+@property (nonatomic, weak) UILabel	*subtitleLabel;
 
 @end
 
@@ -33,11 +38,25 @@
 }
 
 - (UILabel *)textLabel {
-	return self.titleLabel;
+	if (!self.titleLabel) {
+		XUILabel *titleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
+		[titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
+		[titleLabel setBackgroundColor:[UIColor whiteColor]];
+		[self setValue:titleLabel forKey:XUITableViewCellTitleLabelKey];
+		[self.contentView addSubview:titleLabel];
+	}
+	return [super textLabel];
 }
 
 - (UILabel *)detailTextLabel {
-	return self.subtitleLabel;
+	if (!self.subtitleLabel) {
+		XUILabel *subtitleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
+		[subtitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
+		[subtitleLabel setBackgroundColor:[UIColor whiteColor]];
+		[self setValue:subtitleLabel forKey:XUITableViewCellSubtitleLabelKey];
+		[self.contentView addSubview:subtitleLabel];
+	}
+	return [super detailTextLabel];
 }
 
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
@@ -52,31 +71,32 @@
 	[_titleLabel setHighlighted:selected];
 }
 
+- (void)setValue:(id)value forKey:(NSString *)key {
+	if ([key isEqualToString:XUITableViewCellSubtitleLabelKey]) [self setSubtitleLabel:value];
+	if ([key isEqualToString:XUITableViewCellTitleLabelKey]) [self setTitleLabel:value];
+	[super setValue:value forKey:key];
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	
+	if (self.style == UITableViewCellStyleValue1 && self.subtitleLabel) {
+		[self.detailTextLabel sizeToFit];
+		
+		CGRect bounds = [self.contentView bounds];
+		
+		CGRect subRect = [self.detailTextLabel frame];
+		bounds.size.width -= CGRectGetWidth(subRect);
+		subRect.origin.x = CGRectGetWidth(bounds);
+		[self.detailTextLabel setFrame:subRect];
+		
+		CGRect rect = CGRectIntersection(self.textLabel.frame, bounds);
+		[self.textLabel setFrame:rect];
+	}
+}
+
 
 #pragma mark -
-
-- (XUILabel *)titleLabel {
-	if (!_titleLabel) {
-		UIEdgeInsets insets = UIEdgeInsetsMake(0.0, 15.0, 0.0, 0.0);
-		CGRect rect = UIEdgeInsetsInsetRect(self.contentView.bounds, insets);
-		
-		_titleLabel = [[XUILabel alloc] initWithFrame:rect];
-		[_titleLabel setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-		[_titleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleHeadline]];
-		[_titleLabel setBackgroundColor:[UIColor whiteColor]];
-		[self.contentView addSubview:_titleLabel];
-	}
-	return _titleLabel;
-}
-
-- (XUILabel *)subtitleLabel {
-	if (!_subtitleLabel) {
-		_subtitleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
-		[_subtitleLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]];
-		[self.contentView addSubview:_subtitleLabel];
-	}
-	return _subtitleLabel;
-}
 
 - (UIColor *)selectedBackgroundColor {
 	return [self.selectedBackgroundView backgroundColor];
@@ -86,16 +106,6 @@
 	UIView *selectionView = [[UIView alloc] initWithFrame:CGRectZero];
 	[selectionView setBackgroundColor:selectedBackgroundColor];
 	[self setSelectedBackgroundView:selectionView];
-}
-
-
-#pragma mark - private methods
-
-- (NSAttributedString *)highlightedStringFromLabel:(UILabel *)label {
-	NSRange range = NSMakeRange(0, label.text.length);
-	NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithAttributedString:label.attributedText];
-	[string addAttribute:NSForegroundColorAttributeName value:label.highlightedTextColor range:range];
-	return string;
 }
 
 @end
