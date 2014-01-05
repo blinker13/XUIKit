@@ -112,6 +112,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2926A1187900AB00CD136D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BD75EB7E184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h */,
+				BD75EB7F184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m */,
+				BD75EB83184BE41E00B42FF5 /* NSTextStorage+XUIKit.h */,
+				BD75EB84184BE41E00B42FF5 /* NSTextStorage+XUIKit.m */,
+				BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */,
+				BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BD2926A2187900FB00CD136D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */,
+				BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BD2926A31879014400CD136D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */,
+				BD4FF1C7184F9FB700A8C736 /* UIViewController+XUIKit.m */,
+				BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */,
+				BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		BD4FF2771853E40F00A8C736 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +163,7 @@
 				BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */,
 				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
 				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
+				BD2926A2187900FB00CD136D /* Categories */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -170,7 +204,7 @@
 				BD4FF2771853E40F00A8C736 /* Views */,
 				BD62A336184D09A600A21125 /* Table View */,
 				BD75EB51184ACDE200B42FF5 /* Text View */,
-				BD733518183EA79A0064C74D /* Categories */,
+				BD2926A31879014400CD136D /* Categories */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -184,25 +218,6 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		BD733518183EA79A0064C74D /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				BD75EB83184BE41E00B42FF5 /* NSTextStorage+XUIKit.h */,
-				BD75EB84184BE41E00B42FF5 /* NSTextStorage+XUIKit.m */,
-				BD75EB7E184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h */,
-				BD75EB7F184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m */,
-				BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */,
-				BD4FF1C7184F9FB700A8C736 /* UIViewController+XUIKit.m */,
-				BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */,
-				BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */,
-				BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */,
-				BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */,
-				BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */,
-				BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
 		BD75EB51184ACDE200B42FF5 /* Text View */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +227,7 @@
 				BD75EB53184ACE2E00B42FF5 /* XUITextView.m */,
 				BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */,
 				BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */,
+				BD2926A1187900AB00CD136D /* Categories */,
 			);
 			name = "Text View";
 			sourceTree = "<group>";

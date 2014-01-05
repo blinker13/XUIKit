@@ -7,7 +7,6 @@
 //
 
 @import UIKit;
-//TODO: add AppKit support
 
 
 @interface NSTextStorage (XUIKit)
