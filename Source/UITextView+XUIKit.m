@@ -9,6 +9,9 @@
 #import "UITextView+XUIKit.h"
 
 
+const CGFloat XUITextViewScrollDuration	=	0.13;
+
+
 @implementation UITextView (XUIKit)
 
 - (UIEdgeInsets)textContentInsets {
@@ -37,9 +40,9 @@
 	CGRect cursorRect = [self currentCurserRect];
 	
 	if (!CGRectContainsRect(visibleRect, cursorRect)) {
-		CGFloat duration = animated? 0.2 : 0.0;
+		CGFloat duration = animated ? XUITextViewScrollDuration : 0.0;
 		
-		[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
+		[UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
 			[self scrollRectToVisible:cursorRect animated:NO];
 		} completion:nil];
 	}
