@@ -136,8 +136,9 @@
 }
 
 - (void)updateCursor:(NSNotification *)notification {
-	CGRect caretRect = [self.textView currentCurserRect];
-	[self.textView scrollRectToVisible:caretRect animated:NO];
+//	CGRect caretRect = [self.textView currentCurserRect];
+//	[self.textView scrollRectToVisible:caretRect animated:NO];
+	[self.textView makeCursorVisibleAnimated:YES];
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
