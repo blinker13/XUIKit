@@ -37,7 +37,7 @@
 	CGRect cursorRect = [self currentCurserRect];
 	
 	if (!CGRectContainsRect(visibleRect, cursorRect)) {
-		CGFloat duration = animated? 2.0 : 0.0;
+		CGFloat duration = animated? 0.2 : 0.0;
 		
 		[UIView animateKeyframesWithDuration:duration delay:0.0 options:UIViewKeyframeAnimationOptionBeginFromCurrentState animations:^{
 			[self scrollRectToVisible:cursorRect animated:NO];
