@@ -163,7 +163,7 @@
 
 - (void)keyboardDidShow:(NSNotification *)notification {
 	if ([self.textView isFirstResponder]) {
-		[self.textView makeCursorVisibleAnimated:NO];
+		[self.textView makeCursorVisibleAnimated:YES];
 	}
 }
 
