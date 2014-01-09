@@ -202,8 +202,8 @@
 			children = (
 				BD733503183E9EB00064C74D /* XUIKit.h */,
 				BD4FF2771853E40F00A8C736 /* Views */,
-				BD62A336184D09A600A21125 /* Table View */,
 				BD75EB51184ACDE200B42FF5 /* Text View */,
+				BD62A336184D09A600A21125 /* Table View */,
 				BD2926A31879014400CD136D /* Categories */,
 			);
 			path = Source;
