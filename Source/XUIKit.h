@@ -7,6 +7,7 @@
 //
 
 #import <XUIKit/XUILabel.h>
+#import <XUIKit/XUIButton.h>
 
 #import <XUIKit/XUITableViewController.h>
 #import <XUIKit/XUITableViewCell.h>
