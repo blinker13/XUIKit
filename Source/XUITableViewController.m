@@ -9,6 +9,10 @@
 #import "XUITableViewController.h"
 
 
+const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
+const CGFloat XUITableViewCellDeSelectionDelay		=	0.30;
+
+
 @interface XUITableViewController ()
 
 @property (nonatomic) BOOL	shouldClearSelection;
@@ -65,19 +69,21 @@
 			}];
 			
 		} else {
-			[UIView animateWithDuration:0.35 animations:^{
+			[UIView animateWithDuration:XUITableViewCellDeSelectionDuration animations:^{
 				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 				[cell.selectedBackgroundView setAlpha:0.0];
-				
-			} completion:^(BOOL finished) {
-				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 			}];
+			
+			dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(XUITableViewCellDeSelectionDelay * NSEC_PER_SEC));
+			dispatch_after(time, dispatch_get_main_queue(), ^(void){
+				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+			});
 		}
 	}
 }
 
 
-#pragma mark - 
+#pragma mark -
 
 - (BOOL)clearsSelectionOnViewWillAppear {
 	return self.shouldClearSelection;
