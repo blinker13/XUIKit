@@ -7,7 +7,6 @@
 //
 
 @import UIKit;
-@import QuartzCore;
 
 
 extern const CGFloat XUIButtonDefaultCornerRadius;
@@ -15,8 +14,5 @@ extern const CGFloat XUIButtonDefaultBorderWidth;
 
 
 @interface XUIButton : UIButton
-
-@property (nonatomic) CGFloat	cornerRadius;
-@property (nonatomic) CGFloat	borderWidth;
 
 @end

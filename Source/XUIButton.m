@@ -66,23 +66,4 @@ const CGFloat XUIButtonDefaultBorderWidth	=	1.0;
 	}
 }
 
-
-#pragma mark -
-
-- (CGFloat)cornerRadius {
-	return [self.layer cornerRadius];
-}
-
-- (void)setCornerRadius:(CGFloat)cornerRadius {
-	[self.layer setCornerRadius:cornerRadius];
-}
-
-- (CGFloat)borderWidth {
-	return [self.layer borderWidth];
-}
-
-- (void)setBorderWidth:(CGFloat)borderWidth {
-	[self.layer setBorderWidth:borderWidth];
-}
-
 @end
