@@ -7,6 +7,7 @@
 //
 
 #import "XUIButton.h"
+#import "UIView+XUIKit.h"
 
 
 const CGFloat XUIButtonDefaultCornerRadius	=	3.0;
