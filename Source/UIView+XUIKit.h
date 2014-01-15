@@ -15,4 +15,7 @@
 @property (nonatomic) CGFloat	cornerRadius;
 @property (nonatomic) CGFloat	borderWidth;
 
+
+- (CGPoint)innerCenter;
+
 @end

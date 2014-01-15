@@ -27,4 +27,10 @@
 	[self.layer setBorderWidth:borderWidth];
 }
 
+- (CGPoint)innerCenter {
+	CGFloat x = CGRectGetMidX(self.bounds);
+	CGFloat y = CGRectGetMidY(self.bounds);
+	return CGPointMake(x, y);
+}
+
 @end
