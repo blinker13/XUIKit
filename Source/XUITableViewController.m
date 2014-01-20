@@ -10,7 +10,6 @@
 
 
 const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
-const CGFloat XUITableViewCellDeSelectionDelay		=	0.30;
 
 
 @interface XUITableViewController ()
@@ -49,7 +48,7 @@ const CGFloat XUITableViewCellDeSelectionDelay		=	0.30;
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	if (![self isMovingToParentViewController] && [self clearsSelectionOnViewWillAppear]) {
+	if (!self.isMovingToParentViewController && self.clearsSelectionOnViewWillAppear) {
 		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
 		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		
@@ -70,14 +69,15 @@ const CGFloat XUITableViewCellDeSelectionDelay		=	0.30;
 			
 		} else {
 			[UIView animateWithDuration:XUITableViewCellDeSelectionDuration animations:^{
+				
+				SEL action = @selector(setHighlighted:);
 				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+				[cell.contentView.subviews makeObjectsPerformSelector:action withObject:@NO];
 				[cell.selectedBackgroundView setAlpha:0.0];
-			}];
-			
-			dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(XUITableViewCellDeSelectionDelay * NSEC_PER_SEC));
-			dispatch_after(time, dispatch_get_main_queue(), ^(void){
+								
+			} completion:^(BOOL finished) {
 				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-			});
+			}];
 		}
 	}
 }

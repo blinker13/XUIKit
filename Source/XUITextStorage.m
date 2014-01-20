@@ -48,7 +48,7 @@
 - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)str {
 	[self.storage replaceCharactersInRange:range withString:str];
 	
-	NSInteger delta = [str length] - range.length;
+	NSInteger delta = (str.length - range.length);
 	[self edited:NSTextStorageEditedCharacters range:range changeInLength:delta];
 }
 
