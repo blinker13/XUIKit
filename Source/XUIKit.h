@@ -6,6 +6,10 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
+
+//App
+#import <XUIKit/XUIApplication.h>
+
 // Views
 #import <XUIKit/XUILabel.h>
 #import <XUIKit/XUIButton.h>

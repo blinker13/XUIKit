@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD0E96181881FA9B00D63463 /* XUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BD0E96161881FA9B00D63463 /* XUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E96171881FA9B00D63463 /* XUIButton.m */; };
+		BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F191891821F00B87F87 /* XUIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F1A1891821F00B87F87 /* XUIApplication.m */; };
 		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
 		BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		BD0E96161881FA9B00D63463 /* XUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIButton.h; sourceTree = "<group>"; };
 		BD0E96171881FA9B00D63463 /* XUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
+		BD1A3F191891821F00B87F87 /* XUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
+		BD1A3F1A1891821F00B87F87 /* XUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
 		BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
 		BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
 		BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCellScrollView.h; sourceTree = "<group>"; };
@@ -120,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1A3F18189181F600B87F87 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BD1A3F191891821F00B87F87 /* XUIApplication.h */,
+				BD1A3F1A1891821F00B87F87 /* XUIApplication.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		BD2926A1187900AB00CD136D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				BD733503183E9EB00064C74D /* XUIKit.h */,
+				BD1A3F18189181F600B87F87 /* App */,
 				BD4FF2771853E40F00A8C736 /* Views */,
 				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD62A336184D09A600A21125 /* Table View */,
@@ -264,6 +278,7 @@
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
 				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
+				BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD0E96181881FA9B00D63463 /* XUIButton.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
@@ -355,6 +370,7 @@
 				BD75EB86184BE41E00B42FF5 /* NSTextStorage+XUIKit.m in Sources */,
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,
+				BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
