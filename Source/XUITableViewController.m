@@ -9,6 +9,8 @@
 #import "XUITableViewController.h"
 
 
+NSString * const XUITableViewShouldClearSelectionKey	=	@"shouldClearSelection";
+
 const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 
 
@@ -48,9 +50,10 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	if (!self.isMovingToParentViewController && self.clearsSelectionOnViewWillAppear) {
+	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+	
+	if (indexPath && self.clearsSelectionOnViewWillAppear) {
 		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
-		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		
 		if ([coordinator initiallyInteractive]) {
 			
@@ -98,6 +101,22 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	return UITableViewAutomaticDimension;
+}
+
+
+#pragma mark - UIStateRestoring
+
+- (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+	[super encodeRestorableStateWithCoder:coder];
+	
+	[coder encodeBool:self.shouldClearSelection forKey:XUITableViewShouldClearSelectionKey];
+}
+
+- (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
+	[super decodeRestorableStateWithCoder:coder];
+	
+	BOOL shouldClearSelection = [coder decodeBoolForKey:XUITableViewShouldClearSelectionKey];
+	[self setClearsSelectionOnViewWillAppear:shouldClearSelection];
 }
 
 @end

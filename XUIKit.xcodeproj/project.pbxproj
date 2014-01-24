@@ -11,6 +11,10 @@
 		BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E96171881FA9B00D63463 /* XUIButton.m */; };
 		BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F191891821F00B87F87 /* XUIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F1A1891821F00B87F87 /* XUIApplication.m */; };
+		BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD1A3F241891B8AE00B87F87 /* XUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */; };
+		BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */; };
+		BD1A3F281891C02F00B87F87 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */; };
 		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
 		BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +67,10 @@
 		BD0E96171881FA9B00D63463 /* XUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
 		BD1A3F191891821F00B87F87 /* XUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
 		BD1A3F1A1891821F00B87F87 /* XUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
+		BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
+		BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIAppDelegate.m; sourceTree = "<group>"; };
+		BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XUIKit.h"; sourceTree = "<group>"; };
+		BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XUIKit.m"; sourceTree = "<group>"; };
 		BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
 		BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
 		BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCellScrollView.h; sourceTree = "<group>"; };
@@ -129,6 +137,8 @@
 			children = (
 				BD1A3F191891821F00B87F87 /* XUIApplication.h */,
 				BD1A3F1A1891821F00B87F87 /* XUIApplication.m */,
+				BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */,
+				BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -158,6 +168,8 @@
 		BD2926A31879014400CD136D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */,
+				BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */,
 				BD4FF1C6184F9FB700A8C736 /* UIViewController+XUIKit.h */,
 				BD4FF1C7184F9FB700A8C736 /* UIViewController+XUIKit.m */,
 				BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */,
@@ -273,7 +285,9 @@
 				BDBCE45D184408100095F2E2 /* UITextView+XUIKit.h in Headers */,
 				BD4FF27A1853E42C00A8C736 /* XUILabel.h in Headers */,
 				BDA9BA0C1887198100AFE5DA /* UIView+XUIKit.h in Headers */,
+				BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */,
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
+				BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
 				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
@@ -377,9 +391,11 @@
 				BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */,
 				BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */,
 				BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */,
+				BD1A3F241891B8AE00B87F87 /* XUIAppDelegate.m in Sources */,
 				BDA9BA0D1887198100AFE5DA /* UIView+XUIKit.m in Sources */,
 				BD75EB81184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m in Sources */,
 				BD4FF1C9184F9FB700A8C736 /* UIViewController+XUIKit.m in Sources */,
+				BD1A3F281891C02F00B87F87 /* NSBundle+XUIKit.m in Sources */,
 				BDBCE45E184408100095F2E2 /* UITextView+XUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

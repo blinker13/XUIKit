@@ -9,6 +9,7 @@
 
 //App
 #import <XUIKit/XUIApplication.h>
+#import <XUIKit/XUIAppDelegate.h>
 
 // Views
 #import <XUIKit/XUILabel.h>
