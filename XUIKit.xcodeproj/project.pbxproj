@@ -13,7 +13,7 @@
 		BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F1A1891821F00B87F87 /* XUIApplication.m */; };
 		BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD1A3F241891B8AE00B87F87 /* XUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */; };
-		BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */; };
+		BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD1A3F281891C02F00B87F87 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */; };
 		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
@@ -23,7 +23,7 @@
 		BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF2791853E42C00A8C736 /* XUILabel.m */; };
 		BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353F918931AAE00168DEE /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD6353FC18931AAE00168DEE /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6353FA18931AAE00168DEE /* XUIViewController.m */; };
-		BD63540018931DB800168DEE /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353FF18931DB800168DEE /* XUIKitDefines.h */; };
+		BD63540018931DB800168DEE /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353FF18931DB800168DEE /* XUIKitDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };

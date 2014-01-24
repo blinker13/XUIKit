@@ -10,8 +10,8 @@
 #import "UIView+XUIKit.h"
 
 
-const CGFloat XUIButtonDefaultCornerRadius	=	3.0;
-const CGFloat XUIButtonDefaultBorderWidth	=	1.0;
+const CGFloat XUIButtonCornerRadius	=	3.0;
+const CGFloat XUIButtonBorderWidth	=	1.0;
 
 
 @interface XUIButton ()
@@ -26,8 +26,8 @@ const CGFloat XUIButtonDefaultBorderWidth	=	1.0;
 
 - (instancetype)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
-		[self setCornerRadius:XUIButtonDefaultCornerRadius];
-		[self setBorderWidth:XUIButtonDefaultBorderWidth];
+		[self setCornerRadius:XUIButtonCornerRadius];
+		[self setBorderWidth:XUIButtonBorderWidth];
 	}
 	return self;
 }
@@ -38,8 +38,8 @@ const CGFloat XUIButtonDefaultBorderWidth	=	1.0;
 - (void)tintColorDidChange {
 	[super tintColorDidChange];
 	
-	CGColorRef tintColorRef = [self.tintColor CGColor];
-	[self.layer setBorderColor:tintColorRef];
+	UIColor *tintColor = [self tintColor];
+	[self setBorderColor:tintColor];
 }
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {

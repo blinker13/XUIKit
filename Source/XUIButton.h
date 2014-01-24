@@ -9,8 +9,8 @@
 @import UIKit;
 
 
-extern const CGFloat XUIButtonDefaultCornerRadius;
-extern const CGFloat XUIButtonDefaultBorderWidth;
+extern const CGFloat XUIButtonCornerRadius;
+extern const CGFloat XUIButtonBorderWidth;
 
 
 @interface XUIButton : UIButton

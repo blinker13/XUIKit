@@ -12,6 +12,7 @@
 
 @interface UIView (XUIKit)
 
+@property (nonatomic) UIColor	*borderColor;
 @property (nonatomic) CGFloat	cornerRadius;
 @property (nonatomic) CGFloat	borderWidth;
 

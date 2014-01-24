@@ -11,6 +11,16 @@
 
 @implementation UIView (XUIKit)
 
+- (UIColor *)borderColor {
+	CGColorRef cgColor = [self.layer borderColor];
+	return [UIColor colorWithCGColor:cgColor];
+}
+
+- (void)setBorderColor:(UIColor *)borderColor {
+	CGColorRef cgColor = [borderColor CGColor];
+	[self.layer setBorderColor:cgColor];
+}
+
 - (CGFloat)cornerRadius {
 	return [self.layer cornerRadius];
 }

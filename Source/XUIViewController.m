@@ -63,7 +63,7 @@
 		UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
 		UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
 		
-		_titleItemLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+		_titleItemLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
 		if (!navigation.isTranslucent) [_titleItemLabel setBackgroundColor:navigation.barTintColor];
 		[_titleItemLabel setTextAlignment:NSTextAlignmentCenter];
 		[_titleItemLabel setTextColor:textColor];
