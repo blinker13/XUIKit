@@ -6,9 +6,18 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-@import UIKit;
+#import "XUIViewController.h"
+#import "XUITableView.h"
 
 
-@interface XUITableViewController : UITableViewController
+@interface XUITableViewController : XUIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, readonly) XUITableView	*tableView;
+@property (nonatomic, copy) NSString			*placeholder;
+
+@property (nonatomic) BOOL	clearsSelectionOnViewWillAppear;
+
+
+- (instancetype)initWithStyle:(UITableViewStyle)style;
 
 @end

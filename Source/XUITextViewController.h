@@ -6,16 +6,17 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import "XUITextView.h"
+#import "XUIViewController.h"
 #import "XUITextStorage.h"
+#import "XUITextView.h"
 
 
-@interface XUITextViewController : UIViewController <UITextViewDelegate>
+@interface XUITextViewController : XUIViewController <UITextViewDelegate>
 
 @property (nonatomic, strong) NSTextContainer	*textContainer;
 @property (nonatomic, strong) XUITextStorage	*textStorage;
 
-@property (nonatomic, readonly) XUITextView		*textView;
+@property (nonatomic, strong, readonly) XUITextView	*textView;
 
 //following insets should be set before -loadTextView is called. Manipulating the textView directly might interfer with keyboard insets
 @property (nonatomic) UIEdgeInsets	textViewScrollIndicatorInsets;

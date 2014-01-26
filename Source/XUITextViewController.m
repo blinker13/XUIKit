@@ -13,7 +13,7 @@
 
 @interface XUITextViewController ()
 
-@property (nonatomic, readwrite) IBOutlet XUITextView	*textView;
+@property (nonatomic, strong) IBOutlet XUITextView	*textView;
 
 @property (nonatomic) BOOL	shouldReselectTextView;	//reselect the textView after a canceled transactional transition
 @property (nonatomic) BOOL	keyboardIsDisappearing;	//prevents unnecessary textView layouting when orientation is changed
@@ -34,6 +34,14 @@
 
 
 #pragma mark -
+
+- (XUITextView *)textView {
+	return (XUITextView *)[self view];
+}
+
+- (void)setTextView:(XUITextView *)textView {
+	[self setView:textView];
+}
 
 - (void)loadView {
 	[self loadTextStack];

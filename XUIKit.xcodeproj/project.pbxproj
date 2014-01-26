@@ -24,6 +24,8 @@
 		BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353F918931AAE00168DEE /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD6353FC18931AAE00168DEE /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6353FA18931AAE00168DEE /* XUIViewController.m */; };
 		BD63540018931DB800168DEE /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353FF18931DB800168DEE /* XUIKitDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD6354031893330E00168DEE /* XUITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6354011893330E00168DEE /* XUITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD6354041893330E00168DEE /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6354021893330E00168DEE /* XUITableView.m */; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
@@ -81,6 +83,8 @@
 		BD6353F918931AAE00168DEE /* XUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIViewController.h; sourceTree = "<group>"; };
 		BD6353FA18931AAE00168DEE /* XUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIViewController.m; sourceTree = "<group>"; };
 		BD6353FF18931DB800168DEE /* XUIKitDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIKitDefines.h; sourceTree = "<group>"; };
+		BD6354011893330E00168DEE /* XUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableView.h; sourceTree = "<group>"; };
+		BD6354021893330E00168DEE /* XUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableView.m; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,10 +187,9 @@
 			children = (
 				BD733513183EA60F0064C74D /* XUITableViewController.h */,
 				BD733514183EA60F0064C74D /* XUITableViewController.m */,
-				BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */,
-				BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */,
-				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
-				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
+				BD6354011893330E00168DEE /* XUITableView.h */,
+				BD6354021893330E00168DEE /* XUITableView.m */,
+				BD6354051893331E00168DEE /* Table View Cells */,
 				BD2926A2187900FB00CD136D /* Categories */,
 			);
 			name = "Table View";
@@ -197,10 +200,6 @@
 			children = (
 				BD6353F918931AAE00168DEE /* XUIViewController.h */,
 				BD6353FA18931AAE00168DEE /* XUIViewController.m */,
-				BD0E96161881FA9B00D63463 /* XUIButton.h */,
-				BD0E96171881FA9B00D63463 /* XUIButton.m */,
-				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
-				BD4FF2791853E42C00A8C736 /* XUILabel.m */,
 				BD6353FD18931AB300168DEE /* Categories */,
 			);
 			name = View;
@@ -213,6 +212,28 @@
 				BDA9BA0B1887198100AFE5DA /* UIView+XUIKit.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		BD6354051893331E00168DEE /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */,
+				BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */,
+				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
+				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		BD6354061895632200168DEE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BD0E96161881FA9B00D63463 /* XUIButton.h */,
+				BD0E96171881FA9B00D63463 /* XUIButton.m */,
+				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
+				BD4FF2791853E42C00A8C736 /* XUILabel.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 		BD7334D0183E9E4A0064C74D = {
@@ -251,8 +272,9 @@
 				BD6353FF18931DB800168DEE /* XUIKitDefines.h */,
 				BD1A3F18189181F600B87F87 /* Application */,
 				BD6353F818931A8F00168DEE /* View */,
-				BD75EB51184ACDE200B42FF5 /* Text View */,
 				BD62A336184D09A600A21125 /* Table View */,
+				BD75EB51184ACDE200B42FF5 /* Text View */,
+				BD6354061895632200168DEE /* Other */,
 				BD2926A31879014400CD136D /* Categories */,
 			);
 			path = Source;
@@ -305,6 +327,7 @@
 				BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */,
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */,
+				BD6354031893330E00168DEE /* XUITableView.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD0E96181881FA9B00D63463 /* XUIButton.h in Headers */,
 				BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */,
@@ -399,6 +422,7 @@
 				BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
+				BD6354041893330E00168DEE /* XUITableView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
 				BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */,
 				BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */,

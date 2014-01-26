@@ -7,16 +7,20 @@
 //
 
 #import "XUITableViewController.h"
+#import "XUIKitDefines.h"
+#import "XUILabel.h"
 
 
-NSString * const XUITableViewShouldClearSelectionKey	=	@"shouldClearSelection";
+NSString * const XUITableViewRestorationKey		=	@"XUITableViewRestorationKey";
+NSString * const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKey";
 
-const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
+const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 
 
 @interface XUITableViewController ()
 
-@property (nonatomic) BOOL	shouldClearSelection;
+@property (nonatomic, strong) IBOutlet XUITableView	*tableView;
+@property (nonatomic) UITableViewStyle	style;
 
 @end
 
@@ -25,30 +29,59 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 @implementation XUITableViewController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
-	if ((self = [super initWithStyle:style])) {
-		_shouldClearSelection = YES;
+	if ((self = [super initWithNibName:nil bundle:nil])) {
+		
+		if (!self.restorationIdentifier) {
+			NSString *identifier = NSStringFromClass(self.class);
+			[self setRestorationIdentifier:identifier];
+		}
+		
+		if ([self conformsToProtocol:@protocol(UIViewControllerRestoration)]) {
+			[self setRestorationClass:self.class];
+		}
+		_clearsSelectionOnViewWillAppear = YES;
+		_style = style;
 	}
 	return self;
 }
 
-//- (void)loadView {
-//	//TODO: XUITableView
-//}
-
-- (void)viewDidLoad {
-	[super viewDidLoad];
-	
-	//we need to disable automatic deselection for our custom deselection behavior
-	[super setClearsSelectionOnViewWillAppear:NO];
-	
-	//my prefered seperator style
-	[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-	[self.tableView setBackgroundColor:[UIColor whiteColor]];
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	return [self initWithStyle:UITableViewStylePlain];
 }
+
+
+#pragma mark -
+
+- (XUITableView *)tableView {
+	return (XUITableView *)[self view];
+}
+
+- (void)setTableView:(XUITableView *)tableView {
+	[self setView:tableView];
+}
+
+- (void)loadView {
+	CGRect bounds = [[UIScreen mainScreen] bounds];
+	UIColor *backgroundColor = [UIColor whiteColor];
 	
+	XUITableView *tableView = [[XUITableView alloc] initWithFrame:bounds style:self.style];
+	[tableView setRestorationIdentifier:XUITableViewRestorationKey];
+	[tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+	[tableView setAutoresizingMask:XUIViewFlexibleSize];
+	[tableView setBackgroundColor:backgroundColor];
+	[tableView setDataSource:self];
+	[tableView setDelegate:self];
+	
+	[self setTableView:tableView];
+	[self setView:tableView];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
+	
+	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+	[center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+	[center addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 	
 	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 	
@@ -71,12 +104,11 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 			}];
 			
 		} else {
+			
 			[UIView animateWithDuration:XUITableViewCellDeSelectionDuration animations:^{
-				
-				SEL action = @selector(setHighlighted:);
 				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-				[cell.contentView.subviews makeObjectsPerformSelector:action withObject:@NO];
 				[cell.selectedBackgroundView setAlpha:0.0];
+				[cell setHighlighted:NO animated:NO];
 								
 			} completion:^(BOOL finished) {
 				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -85,22 +117,35 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 	}
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	
+	NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+	[center removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+	[center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
 
 #pragma mark -
 
-- (BOOL)clearsSelectionOnViewWillAppear {
-	return self.shouldClearSelection;
+- (NSString *)placeholder {
+	return [self.tableView.placeholderLabel text];
 }
 
-- (void)setClearsSelectionOnViewWillAppear:(BOOL)clearsSelectionOnViewWillAppear {
-	[self setShouldClearSelection:clearsSelectionOnViewWillAppear];
+- (void)setPlaceholder:(NSString *)placeholder {
+	XUILabel *label = [self.tableView placeholderLabel];
+	[label setText:placeholder];
 }
 
 
-#pragma mark - UITableViewDelegate
+#pragma mark - UITableViewDataSource
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return UITableViewAutomaticDimension;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return nil;
 }
 
 
@@ -109,14 +154,66 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.35;
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
 	[super encodeRestorableStateWithCoder:coder];
 	
-	[coder encodeBool:self.shouldClearSelection forKey:XUITableViewShouldClearSelectionKey];
+	BOOL value = [self clearsSelectionOnViewWillAppear];
+	[coder encodeBool:value forKey:XUITableViewClearsSelectionKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
 	[super decodeRestorableStateWithCoder:coder];
 	
-	BOOL shouldClearSelection = [coder decodeBoolForKey:XUITableViewShouldClearSelectionKey];
-	[self setClearsSelectionOnViewWillAppear:shouldClearSelection];
+	BOOL value = [coder decodeBoolForKey:XUITableViewClearsSelectionKey];
+	[self setClearsSelectionOnViewWillAppear:value];
+}
+
+
+#pragma mark - private methods
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+	NSDictionary *userInfo = [notification userInfo];
+	CGRect rect = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+	rect = [self.tableView.window convertRect:rect toView:self.tableView];
+	rect = CGRectIntersection(rect, self.tableView.bounds);
+	
+	if (!CGRectIsEmpty(rect)) {
+		CGFloat duration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+		NSUInteger curve = [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
+		UIViewAnimationOptions options = (curve << 16);
+		
+		CGFloat height = CGRectGetHeight(rect);
+		UIEdgeInsets scrollIndicatorInsets = [self.tableView scrollIndicatorInsets];
+		scrollIndicatorInsets.bottom = (scrollIndicatorInsets.bottom + height);
+		UIEdgeInsets insets = [self.tableView contentInset];
+		insets.bottom = (insets.bottom + height);
+		
+		[UIView animateWithDuration:duration delay:0.0 options:options animations:^{
+			[self.tableView setScrollIndicatorInsets:scrollIndicatorInsets];
+			[self.tableView setContentInset:insets];
+		} completion:nil];
+	}
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+	NSDictionary *userInfo = [notification userInfo];
+	CGRect rect = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+	rect = [self.tableView.window convertRect:rect toView:self.tableView];
+	rect = CGRectIntersection(rect, self.tableView.bounds);
+	
+	if (!CGRectIsEmpty(rect)) {
+		CGFloat duration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+		NSUInteger curve = [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] unsignedIntegerValue];
+		UIViewAnimationOptions options = (curve << 16);
+		
+		CGFloat height = CGRectGetHeight(rect);
+		UIEdgeInsets scrollIndicatorInsets = [self.tableView scrollIndicatorInsets];
+		scrollIndicatorInsets.bottom = (scrollIndicatorInsets.bottom - height);
+		UIEdgeInsets insets = [self.tableView contentInset];
+		insets.bottom = (insets.bottom - height);
+		
+		[UIView animateWithDuration:duration delay:0.0 options:options animations:^{
+			[self.tableView setScrollIndicatorInsets:scrollIndicatorInsets];
+			[self.tableView setContentInset:insets];
+		} completion:nil];
+	}
 }
 
 @end

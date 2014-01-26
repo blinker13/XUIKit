@@ -30,7 +30,6 @@
 		if ([self conformsToProtocol:@protocol(UIViewControllerRestoration)]) {
 			[self setRestorationClass:self.class];
 		}
-		[self setBackButtonTitle:@""];
     }
     return self;
 }
@@ -43,6 +42,9 @@
 	
 	UIColor *white = [UIColor whiteColor];
 	[self.view setBackgroundColor:white];
+	
+	[self setBackButtonTitle:@""];
+	[self loadTitleItemLabel];
 }
 
 - (NSString *)title {
@@ -51,6 +53,7 @@
 
 - (void)setTitle:(NSString *)title {
 	[self.titleItemLabel setText:title];
+	[self.titleItemLabel sizeToFit];
 }
 
 
@@ -58,19 +61,9 @@
 
 - (XUILabel *)titleItemLabel {
 	if (!_titleItemLabel) {
-		UINavigationBar *navigation = [self.navigationController navigationBar];
-		NSDictionary *titleAttributes = [navigation titleTextAttributes];
-		UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
-		UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
-		
 		_titleItemLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
-		if (!navigation.isTranslucent) [_titleItemLabel setBackgroundColor:navigation.barTintColor];
 		[_titleItemLabel setTextAlignment:NSTextAlignmentCenter];
-		[_titleItemLabel setTextColor:textColor];
-		[_titleItemLabel setFont:font];
-		
 		[self.navigationItem setTitleView:_titleItemLabel];
-		[_titleItemLabel sizeToFit];
 	}
 	return _titleItemLabel;
 }
@@ -85,6 +78,20 @@
 
 - (UINavigationController *)contentNavigationController {
 	return XUIIdiomIsPad() ? [self.splitViewController.viewControllers lastObject] : [self navigationController];
+}
+
+
+#pragma mark - private methods
+
+- (void)loadTitleItemLabel {
+	UINavigationBar *navigation = [self.navigationController navigationBar];
+	NSDictionary *titleAttributes = [navigation titleTextAttributes];
+	UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
+	UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
+	
+	if (!navigation.isTranslucent) [self.titleItemLabel setBackgroundColor:navigation.barTintColor];
+	[self.titleItemLabel setTextColor:textColor];
+	[self.titleItemLabel setFont:font];
 }
 
 @end

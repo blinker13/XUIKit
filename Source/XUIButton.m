@@ -16,7 +16,7 @@ const CGFloat XUIButtonBorderWidth	=	1.0;
 
 @interface XUIButton ()
 
-@property (nonatomic, strong) UIColor *originalBackgroundColor;
+@property (nonatomic, strong) UIColor	*originalBackgroundColor;
 
 @end
 
