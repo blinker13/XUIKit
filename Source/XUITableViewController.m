@@ -11,8 +11,8 @@
 #import "XUILabel.h"
 
 
-NSString * const XUITableViewRestorationKey		=	@"XUITableViewRestorationKey";
-NSString * const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKey";
+NSString *const XUITableViewRestorationKey		=	@"XUITableViewRestorationKey";
+NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKey";
 
 const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 

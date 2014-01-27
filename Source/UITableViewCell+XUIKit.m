@@ -11,17 +11,15 @@
 
 @implementation UITableViewCell (XUIKit)
 
-+ (void)registerInTableView:(UITableView *)tableView {
-	
++ (void)registerNibInTableView:(UITableView *)tableView {
 	NSString *identifier = NSStringFromClass(self);
 	UINib *nib = [UINib nibWithNibName:identifier bundle:nil];
-	
-	if (nib) {
-		[tableView registerNib:nib forCellReuseIdentifier:identifier];
-		
-	} else {
-		[tableView registerClass:self forCellReuseIdentifier:identifier];
-	}
+	[tableView registerNib:nib forCellReuseIdentifier:identifier];
+}
+
++ (void)registerClassInTableView:(UITableView *)tableView {
+	NSString *identifier = NSStringFromClass(self);
+	[tableView registerClass:self forCellReuseIdentifier:identifier];
 }
 
 + (instancetype)dequeueInTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath {

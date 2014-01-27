@@ -9,8 +9,8 @@
 #import "XUIApplication.h"
 
 
-NSString * const XUIApplicationClass	=	@"XUIApplicationClass";
-NSString * const XUIAppDelegateClass	=	@"XUIAppDelegateClass";
+NSString *const XUIApplicationClass	=	@"XUIApplicationClass";
+NSString *const XUIAppDelegateClass	=	@"XUIAppDelegateClass";
 
 
 int XUIApplicationMain(int argc, char *argv[]) {

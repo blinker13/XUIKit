@@ -11,7 +11,8 @@
 
 @interface UITableViewCell (XUIKit)
 
-+ (void)registerInTableView:(UITableView *)tableView;
++ (void)registerNibInTableView:(UITableView *)tableView;
++ (void)registerClassInTableView:(UITableView *)tableView;
 
 + (instancetype)dequeueInTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath;
 

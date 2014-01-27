@@ -40,10 +40,12 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	[self.navigationItem setTitleView:self.titleItemLabel];
+	
 	UIColor *white = [UIColor whiteColor];
 	[self.view setBackgroundColor:white];
 	
-	[self setBackButtonTitle:@""];
+	[self setBackButtonTitle:nil];
 	[self loadTitleItemLabel];
 }
 
@@ -63,17 +65,18 @@
 	if (!_titleItemLabel) {
 		_titleItemLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
 		[_titleItemLabel setTextAlignment:NSTextAlignmentCenter];
-		[self.navigationItem setTitleView:_titleItemLabel];
 	}
 	return _titleItemLabel;
 }
 
 - (NSString *)backButtonTitle {
-	return [self title];
+	return [super title];
 }
 
 - (void)setBackButtonTitle:(NSString *)backButtonTitle {
-	[self setTitle:backButtonTitle];
+	backButtonTitle = (backButtonTitle.length > 0) ? backButtonTitle : @"";
+	[self.navigationItem setTitle:backButtonTitle];
+	[super setTitle:backButtonTitle];
 }
 
 - (UINavigationController *)contentNavigationController {

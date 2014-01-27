@@ -11,7 +11,6 @@
 
 @interface XUIAppDelegate : UIResponder <UIApplicationDelegate>
 
-//@property (nonatomic, strong) UIViewController	*rootViewController;
 @property (nonatomic, strong) UIWindow	*window;
 
 

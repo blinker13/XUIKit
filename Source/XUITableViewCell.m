@@ -10,8 +10,8 @@
 #import "XUILabel.h"
 
 
-NSString * const XUITableViewCellTitleLabelKey		=	@"textLabel";
-NSString * const XUITableViewCellSubtitleLabelKey	=	@"detailTextLabel";
+NSString *const XUITableViewCellTitleLabelKey		=	@"textLabel";
+NSString *const XUITableViewCellSubtitleLabelKey	=	@"detailTextLabel";
 
 const CGFloat XUITableViewCellOffsetX	=	2.0;
 
