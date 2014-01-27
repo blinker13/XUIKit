@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD0E96181881FA9B00D63463 /* XUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BD0E96161881FA9B00D63463 /* XUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E96171881FA9B00D63463 /* XUIButton.m */; };
+		BD12315B1896600D00F617A7 /* XUIDataSourceController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1231591896600D00F617A7 /* XUIDataSourceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD12315C1896600D00F617A7 /* XUIDataSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12315A1896600D00F617A7 /* XUIDataSourceController.m */; };
 		BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F191891821F00B87F87 /* XUIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F1A1891821F00B87F87 /* XUIApplication.m */; };
 		BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,8 @@
 /* Begin PBXFileReference section */
 		BD0E96161881FA9B00D63463 /* XUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIButton.h; sourceTree = "<group>"; };
 		BD0E96171881FA9B00D63463 /* XUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
+		BD1231591896600D00F617A7 /* XUIDataSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDataSourceController.h; sourceTree = "<group>"; };
+		BD12315A1896600D00F617A7 /* XUIDataSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSourceController.m; sourceTree = "<group>"; };
 		BD1A3F191891821F00B87F87 /* XUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
 		BD1A3F1A1891821F00B87F87 /* XUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
 		BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 		BD6354061895632200168DEE /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BD1231591896600D00F617A7 /* XUIDataSourceController.h */,
+				BD12315A1896600D00F617A7 /* XUIDataSourceController.m */,
 				BD0E96161881FA9B00D63463 /* XUIButton.h */,
 				BD0E96171881FA9B00D63463 /* XUIButton.m */,
 				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
@@ -310,6 +316,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD12315B1896600D00F617A7 /* XUIDataSourceController.h in Headers */,
 				BD73350D183EA4120064C74D /* XUIKit.h in Headers */,
 				BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */,
 				BD75EB85184BE41E00B42FF5 /* NSTextStorage+XUIKit.h in Headers */,
@@ -421,6 +428,7 @@
 				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,
 				BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */,
 				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
+				BD12315C1896600D00F617A7 /* XUIDataSourceController.m in Sources */,
 				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
 				BD6354041893330E00168DEE /* XUITableView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
