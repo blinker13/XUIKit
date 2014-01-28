@@ -10,14 +10,13 @@
 @import UIKit;
 
 
-@protocol XUIFetchedDataSourceCell <NSObject>
+@protocol XUICollectionViewDelegate <UICollectionViewDelegate>
 
-- (void)loadCellWithObject:(id)object;
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
-#pragma mark -
 @interface XUIDataSourceController : NSFetchedResultsController
 
 @property (nonatomic, copy) NSString	*cellIdentifier;

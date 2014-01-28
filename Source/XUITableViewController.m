@@ -125,6 +125,11 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 	[center removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+	[self.tableView setEditing:editing animated:animated];
+	[super setEditing:editing animated:animated];
+}
+
 
 #pragma mark -
 

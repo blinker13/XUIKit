@@ -10,7 +10,6 @@
 
 
 @implementation XUIDataSourceController
-
 @end
 
 
@@ -18,6 +17,12 @@
 @implementation XUIDataSourceController (UITableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	
+	if (!self.fetchedObjects) {
+		NSError *error = nil;
+		[self performFetch:&error];
+		NSAssert(!error, [error localizedDescription]);
+	}
 	return [self.sections count];
 }
 
@@ -27,10 +32,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell<XUIFetchedDataSourceCell> *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
-	id object = [self objectAtIndexPath:indexPath];
-	[cell loadCellWithObject:object];
-	return cell;
+	return [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
 }
 
 @end
@@ -49,9 +51,9 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-	UICollectionViewCell<XUIFetchedDataSourceCell> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentifier forIndexPath:indexPath];
-	id object = [self objectAtIndexPath:indexPath];
-	[cell loadCellWithObject:object];
+	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentifier forIndexPath:indexPath];
+	id<XUICollectionViewDelegate> delegate = (id<XUICollectionViewDelegate>)[collectionView delegate];
+	[delegate collectionView:collectionView willDisplayCell:cell forItemAtIndexPath:indexPath];
 	return cell;
 }
 

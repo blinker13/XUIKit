@@ -11,6 +11,8 @@
 		BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E96171881FA9B00D63463 /* XUIButton.m */; };
 		BD12315B1896600D00F617A7 /* XUIDataSourceController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1231591896600D00F617A7 /* XUIDataSourceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD12315C1896600D00F617A7 /* XUIDataSourceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD12315A1896600D00F617A7 /* XUIDataSourceController.m */; };
+		BD123161189719C400F617A7 /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD12315F189719C400F617A7 /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD123162189719C400F617A7 /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD123160189719C400F617A7 /* UITableView+XUIKit.m */; };
 		BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F191891821F00B87F87 /* XUIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F1A1891821F00B87F87 /* XUIApplication.m */; };
 		BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,8 +41,6 @@
 		BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD733514183EA60F0064C74D /* XUITableViewController.m */; };
 		BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD73351C183EA7C30064C74D /* UIBarButtonItem+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */; };
-		BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */; };
 		BD75EB54184ACE2E00B42FF5 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB52184ACE2E00B42FF5 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB53184ACE2E00B42FF5 /* XUITextView.m */; };
 		BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +72,8 @@
 		BD0E96171881FA9B00D63463 /* XUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
 		BD1231591896600D00F617A7 /* XUIDataSourceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDataSourceController.h; sourceTree = "<group>"; };
 		BD12315A1896600D00F617A7 /* XUIDataSourceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSourceController.m; sourceTree = "<group>"; };
+		BD12315F189719C400F617A7 /* UITableView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XUIKit.h"; sourceTree = "<group>"; };
+		BD123160189719C400F617A7 /* UITableView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XUIKit.m"; sourceTree = "<group>"; };
 		BD1A3F191891821F00B87F87 /* XUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
 		BD1A3F1A1891821F00B87F87 /* XUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
 		BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		BD733514183EA60F0064C74D /* XUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewController.m; sourceTree = "<group>"; };
 		BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XUIKit.h"; sourceTree = "<group>"; };
 		BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XUIKit.m"; sourceTree = "<group>"; };
-		BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+XUIKit.h"; sourceTree = "<group>"; };
-		BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+XUIKit.m"; sourceTree = "<group>"; };
 		BD75EB52184ACE2E00B42FF5 /* XUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextView.h; sourceTree = "<group>"; };
 		BD75EB53184ACE2E00B42FF5 /* XUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextView.m; sourceTree = "<group>"; };
 		BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextStorage.h; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		BD2926A2187900FB00CD136D /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BD73351D183EAC6E0064C74D /* UITableViewCell+XUIKit.h */,
-				BD73351E183EAC6E0064C74D /* UITableViewCell+XUIKit.m */,
+				BD12315F189719C400F617A7 /* UITableView+XUIKit.h */,
+				BD123160189719C400F617A7 /* UITableView+XUIKit.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -329,11 +329,11 @@
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
 				BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
-				BD73351F183EAC6E0064C74D /* UITableViewCell+XUIKit.h in Headers */,
 				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
 				BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */,
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */,
+				BD123161189719C400F617A7 /* UITableView+XUIKit.h in Headers */,
 				BD6354031893330E00168DEE /* XUITableView.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
 				BD0E96181881FA9B00D63463 /* XUIButton.h in Headers */,
@@ -427,9 +427,9 @@
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,
 				BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */,
-				BD733520183EAC6E0064C74D /* UITableViewCell+XUIKit.m in Sources */,
 				BD12315C1896600D00F617A7 /* XUIDataSourceController.m in Sources */,
 				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
+				BD123162189719C400F617A7 /* UITableView+XUIKit.m in Sources */,
 				BD6354041893330E00168DEE /* XUITableView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
 				BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */,

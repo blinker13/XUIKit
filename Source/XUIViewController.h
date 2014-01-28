@@ -8,10 +8,13 @@
 
 @import UIKit;
 
+@class XUILabel;
+
 
 @interface XUIViewController : UIViewController
 
-@property (nonatomic, copy) NSString	*backButtonTitle;
+@property (nonatomic, readonly) XUILabel	*titleItemLabel;
+@property (nonatomic, copy) NSString		*backButtonTitle;
 
 
 - (UINavigationController *)contentNavigationController;
