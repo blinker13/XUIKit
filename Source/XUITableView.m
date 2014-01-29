@@ -11,7 +11,8 @@
 #import "XUILabel.h"
 
 
-const CGFloat XUITableViewPlaceholderInset	=	10.0;
+const CGFloat XUITableViewPlaceholderInset		=	10.0;
+const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 
 
 @interface XUITableView ()
@@ -26,8 +27,11 @@ const CGFloat XUITableViewPlaceholderInset	=	10.0;
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
 	if ((self = [super initWithFrame:frame style:style])) {
+		UIColor *backgroundColor = [UIColor whiteColor];
+		
 		[self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[self setBackgroundColor:[UIColor whiteColor]];
+		[self setAutoresizingMask:XUIViewFlexibleSize];
+		[self setBackgroundColor:backgroundColor];
 		
 		_hidesTableHeaderWhenEmpty = YES;
 		_hidesTableFooterWhenEmpty = YES;
@@ -35,6 +39,36 @@ const CGFloat XUITableViewPlaceholderInset	=	10.0;
 	return self;
 }
 
+
+#pragma mark - 
+
+- (void)deselectRowAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
+	
+	if (animated) {
+		UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
+		
+		[UIView animateWithDuration:XUITableViewDeSelectionDuration animations:^{
+			[cell.selectedBackgroundView setAlpha:0.0];
+			[cell setHighlighted:NO animated:NO];
+			
+		} completion:^(BOOL finished) {
+			[super deselectRowAtIndexPath:indexPath animated:NO];
+		}];
+		
+	} else {
+		[super deselectRowAtIndexPath:indexPath animated:animated];
+	}
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+	
+	//TODO: animate visibility
+	BOOL isEmpty = (self.indexPathsForVisibleRows.count == 0);
+	[self.tableHeaderView setHidden:(isEmpty && self.hidesTableHeaderWhenEmpty)];
+	[self.tableFooterView setHidden:(isEmpty && self.hidesTableFooterWhenEmpty)];
+	[self.placeholderLabel setHidden:!isEmpty];
+}
 
 #pragma mark -
 
@@ -58,16 +92,6 @@ const CGFloat XUITableViewPlaceholderInset	=	10.0;
 		[self setBackgroundView:_placeholderLabel];
 	}
 	return _placeholderLabel;
-}
-
-- (void)layoutSubviews {
-	[super layoutSubviews];
-	
-	//TODO: animate visibility
-	BOOL isEmpty = (self.indexPathsForVisibleRows == nil);
-	[self.tableHeaderView setHidden:(isEmpty && self.hidesTableHeaderWhenEmpty)];
-	[self.tableFooterView setHidden:(isEmpty && self.hidesTableFooterWhenEmpty)];
-	[self.placeholderLabel setHidden:!isEmpty];
 }
 
 @end

@@ -14,8 +14,6 @@
 NSString *const XUITableViewRestorationKey		=	@"XUITableViewRestorationKey";
 NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKey";
 
-const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
-
 
 @interface XUITableViewController ()
 
@@ -62,13 +60,9 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 
 - (void)loadView {
 	CGRect bounds = [[UIScreen mainScreen] bounds];
-	UIColor *backgroundColor = [UIColor whiteColor];
 	
 	XUITableView *tableView = [[XUITableView alloc] initWithFrame:bounds style:self.style];
 	[tableView setRestorationIdentifier:XUITableViewRestorationKey];
-	[tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-	[tableView setAutoresizingMask:XUIViewFlexibleSize];
-	[tableView setBackgroundColor:backgroundColor];
 	[tableView setDataSource:self];
 	[tableView setDelegate:self];
 	
@@ -83,20 +77,18 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 	[center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	[center addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 	
+	
 	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 	
 	if (indexPath && self.clearsSelectionOnViewWillAppear) {
 		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
 		
 		if ([coordinator initiallyInteractive]) {
-			
-			//fading the out the selected cells background color because a custom selectedBackgroundView will fade out after -viewDidAppear or will never trigger when the transition is interactive
 			[coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 				[cell.selectedBackgroundView setAlpha:0.0];
 			} completion:nil];
 			
-			//-deselectRowAtIndexPath:animated: triggers unhighlighting of a cells labels with a timer when animated. To prevent unhighlighting in the middle of an interactive transaction we need to deselect the cell manually after the transaction is completed
 			[coordinator notifyWhenInteractionEndsUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 				if (![context isCancelled]) {
 					[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -104,15 +96,7 @@ const CGFloat XUITableViewCellDeSelectionDuration	=	0.4;
 			}];
 			
 		} else {
-			
-			[UIView animateWithDuration:XUITableViewCellDeSelectionDuration animations:^{
-				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-				[cell.selectedBackgroundView setAlpha:0.0];
-				[cell setHighlighted:NO animated:NO];
-								
-			} completion:^(BOOL finished) {
-				[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-			}];
+			[self.tableView deselectRowAtIndexPath:indexPath animated:animated];
 		}
 	}
 }
