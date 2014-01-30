@@ -11,10 +11,6 @@
 
 @implementation UIBarButtonItem (XUIKit)
 
-+ (instancetype)addItemWithTarget:(id)target action:(SEL)action {
-	return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:target action:action];
-}
-
 + (instancetype)composeItemWithTarget:(id)target action:(SEL)action {
 	return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:target action:action];
 }

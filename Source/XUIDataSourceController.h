@@ -10,10 +10,9 @@
 @import UIKit;
 
 
+//Remove as soon as Apple introduces this method
 @protocol XUICollectionViewDelegate <UICollectionViewDelegate>
-
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath;
-
 @end
 
 

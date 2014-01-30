@@ -11,7 +11,6 @@
 
 @interface UIBarButtonItem (XUIKit)
 
-+ (instancetype)addItemWithTarget:(id)target action:(SEL)action;
 + (instancetype)composeItemWithTarget:(id)target action:(SEL)action;
 
 + (instancetype)fixedSpaceItemWithWidth:(CGFloat)width;

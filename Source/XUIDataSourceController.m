@@ -17,12 +17,6 @@
 @implementation XUIDataSourceController (UITableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	
-	if (!self.fetchedObjects) {
-		NSError *error = nil;
-		[self performFetch:&error];
-		NSAssert(!error, [error localizedDescription]);
-	}
 	return [self.sections count];
 }
 

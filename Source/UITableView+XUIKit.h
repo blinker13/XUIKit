@@ -12,7 +12,6 @@
 @interface UITableView (XUIKit)
 
 - (void)registerCellClass:(Class)cellClass;
-
 - (id)dequeueReusableCell:(Class)cellClass forIndexPath:(NSIndexPath *)indexPath;
 
 @end
