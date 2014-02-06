@@ -11,6 +11,6 @@
 
 @interface NSMutableAttributedString (XUIKit)
 
-- (void)addHighlighting:(UIColor *)color usingRegex:(NSRegularExpression *)regex;
+- (void)addHighlighting:(UIColor *)color regex:(NSRegularExpression *)regex range:(NSRange)range;
 
 @end

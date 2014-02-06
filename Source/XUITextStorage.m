@@ -62,7 +62,7 @@
 	
 	NSRange range = [self editedParagraphsRange];
 	[self addAttribute:NSForegroundColorAttributeName value:self.textColor range:range];
-	[self processHighlighting:self.string range:range];
+	[self processHighlightingInRange:range];
 }
 
 
@@ -92,11 +92,11 @@
 
 #pragma mark - private methods
 
-- (void)processHighlighting:(NSString *)string range:(NSRange)range {
+- (void)processHighlightingInRange:(NSRange)range {
 	for (NSString *pattern in self.allPatterns) {
 		NSRegularExpression *regex = [self.regularExpressions objectForKey:pattern];
 		UIColor *color = [self.highlightingColors objectForKey:pattern];
-		[self addHighlighting:color usingRegex:regex];
+		[self addHighlighting:color regex:regex range:range];
 	}
 }
 

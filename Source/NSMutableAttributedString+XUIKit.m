@@ -11,9 +11,7 @@
 
 @implementation NSMutableAttributedString (XUIKit)
 
-- (void)addHighlighting:(UIColor *)color usingRegex:(NSRegularExpression *)regex {
-	NSRange range = NSMakeRange(0, self.string.length);
-	
+- (void)addHighlighting:(UIColor *)color regex:(NSRegularExpression *)regex range:(NSRange)range {
 	[regex enumerateMatchesInString:self.string options:0 range:range usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
 		[self addAttribute:NSForegroundColorAttributeName value:color range:result.range];
 	}];
