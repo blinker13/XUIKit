@@ -1,5 +1,5 @@
 //
-//  XUIDataSourceController.h
+//  XUIFetchedDataSource.h
 //  XUIKit
 //
 //  Created by Felix Gabel on 27/01/14.
@@ -16,7 +16,7 @@
 @end
 
 
-@interface XUIDataSourceController : NSFetchedResultsController
+@interface XUIFetchedDataSource : NSFetchedResultsController
 
 @property (nonatomic, copy) NSString	*cellIdentifier;
 
@@ -24,7 +24,7 @@
 
 
 #pragma mark -
-@interface XUIDataSourceController (UITableViewDataSource) <UITableViewDataSource>
+@interface XUIFetchedDataSource (UITableViewDataSource) <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -34,7 +34,7 @@
 
 
 #pragma mark -
-@interface XUIDataSourceController (UICollectionViewDataSource) <UICollectionViewDataSource>
+@interface XUIFetchedDataSource (UICollectionViewDataSource) <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;

@@ -1,20 +1,20 @@
 //
-//  XUIDataSourceController.m
+//  XUIFetchedDataSource.m
 //  XUIKit
 //
 //  Created by Felix Gabel on 27/01/14.
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
-#import "XUIDataSourceController.h"
+#import "XUIFetchedDataSource.h"
 
 
-@implementation XUIDataSourceController
+@implementation XUIFetchedDataSource
 @end
 
 
 #pragma mark -
-@implementation XUIDataSourceController (UITableViewDataSource)
+@implementation XUIFetchedDataSource (UITableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return [self.sections count];
@@ -33,7 +33,7 @@
 
 
 #pragma mark -
-@implementation XUIDataSourceController (UICollectionViewDataSource)
+@implementation XUIFetchedDataSource (UICollectionViewDataSource)
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 	return [self.sections count];
