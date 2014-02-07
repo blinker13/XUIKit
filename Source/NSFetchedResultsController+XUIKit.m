@@ -1,20 +1,15 @@
 //
-//  XUIFetchedDataSource.m
+//  NSFetchedResultsController+XUIKit.m
 //  XUIKit
 //
-//  Created by Felix Gabel on 27/01/14.
+//  Created by Felix Gabel on 06/02/14.
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
-#import "XUIFetchedDataSource.h"
+#import "NSFetchedResultsController+XUIKit.h"
 
 
-@implementation XUIFetchedDataSource
-@end
-
-
-#pragma mark -
-@implementation XUIFetchedDataSource (UITableViewDataSource)
+@implementation NSFetchedResultsController (UITableViewDataSource)
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return [self.sections count];
@@ -26,14 +21,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	return [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
+	id<NSFetchedResultsDataSource> delegate = (id<NSFetchedResultsDataSource>)[self delegate];
+	return [delegate controller:self cellForIndexPath:indexPath];
 }
 
 @end
 
 
 #pragma mark -
-@implementation XUIFetchedDataSource (UICollectionViewDataSource)
+@implementation NSFetchedResultsController (UICollectionViewDataSource)
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 	return [self.sections count];
@@ -45,10 +41,8 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:self.cellIdentifier forIndexPath:indexPath];
-	id<XUICollectionViewDelegate> delegate = (id<XUICollectionViewDelegate>)[collectionView delegate];
-	[delegate collectionView:collectionView willDisplayCell:cell forItemAtIndexPath:indexPath];
-	return cell;
+	id<NSFetchedResultsDataSource> delegate = (id<NSFetchedResultsDataSource>)[self delegate];
+	return [delegate controller:self cellForIndexPath:indexPath];
 }
 
 @end

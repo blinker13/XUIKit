@@ -12,7 +12,6 @@
 #import <XUIKit/XUIAppDelegate.h>
 #import <XUIKit/XUIApplication.h>
 #import <XUIKit/XUIButton.h>
-#import <XUIKit/XUIFetchedDataSource.h>
 #import <XUIKit/XUILabel.h>
 #import <XUIKit/XUITableViewController.h>
 #import <XUIKit/XUITableViewCell.h>
@@ -27,5 +26,6 @@
 #import <XUIKit/UIView+XUIKit.h>
 
 #import <XUIKit/NSBundle+XUIKit.h>
+#import <XUIKit/NSFetchedResultsController+XUIKit.h>
 #import <XUIKit/NSMutableAttributedString+XUIKit.h>
 #import <XUIKit/NSTextStorage+XUIKit.h>

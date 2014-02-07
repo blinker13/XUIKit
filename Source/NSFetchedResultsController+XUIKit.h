@@ -1,8 +1,8 @@
 //
-//  XUIFetchedDataSource.h
+//  NSFetchedResultsController+XUIKit.h
 //  XUIKit
 //
-//  Created by Felix Gabel on 27/01/14.
+//  Created by Felix Gabel on 06/02/14.
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
@@ -10,21 +10,23 @@
 @import UIKit;
 
 
-//Remove as soon as Apple introduces this method
-@protocol XUICollectionViewDelegate <UICollectionViewDelegate>
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath;
-@end
+@protocol NSFetchedResultsDataSource <NSFetchedResultsControllerDelegate, NSObject>
 
-
-@interface XUIFetchedDataSource : NSFetchedResultsController
-
-@property (nonatomic, copy) NSString	*cellIdentifier;
+- (id)controller:(NSFetchedResultsController *)controller cellForIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
 #pragma mark -
-@interface XUIFetchedDataSource (UITableViewDataSource) <UITableViewDataSource>
+@protocol XUIFetchedDataSource <NSObject>
+
+@property (nonatomic, weak) id<NSFetchedResultsDataSource>	delegate;
+
+@end
+
+
+#pragma mark -
+@interface NSFetchedResultsController (UITableViewDataSource) <UITableViewDataSource, XUIFetchedDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
@@ -34,7 +36,7 @@
 
 
 #pragma mark -
-@interface XUIFetchedDataSource (UICollectionViewDataSource) <UICollectionViewDataSource>
+@interface NSFetchedResultsController (UICollectionViewDataSource) <UICollectionViewDataSource, XUIFetchedDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
