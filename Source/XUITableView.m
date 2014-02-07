@@ -64,10 +64,10 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 	[super layoutSubviews];
 	
 	//TODO: animate visibility
-	BOOL isEmpty = (self.indexPathsForVisibleRows.count == 0);
-	[self.tableHeaderView setHidden:(isEmpty && self.hidesTableHeaderWhenEmpty)];
-	[self.tableFooterView setHidden:(isEmpty && self.hidesTableFooterWhenEmpty)];
-	[self.placeholderLabel setHidden:!isEmpty];
+	BOOL shouldHidePlaceholder = [self shouldHidePlaceholder];
+	[self.tableHeaderView setHidden:(!shouldHidePlaceholder && self.hidesTableHeaderWhenEmpty)];
+	[self.tableFooterView setHidden:(!shouldHidePlaceholder && self.hidesTableFooterWhenEmpty)];
+	[self.placeholderLabel setHidden:shouldHidePlaceholder];
 }
 
 #pragma mark -
@@ -92,6 +92,17 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 		[self setBackgroundView:_placeholderLabel];
 	}
 	return _placeholderLabel;
+}
+
+
+#pragma mark - private methods
+
+- (BOOL)shouldHidePlaceholder {
+	NSUInteger numberOfSections = [self numberOfSections];
+	for (NSUInteger section = 0; section < numberOfSections; section++) {
+		if ([self numberOfRowsInSection:section] > 0) return YES;
+	}
+	return NO;
 }
 
 @end
