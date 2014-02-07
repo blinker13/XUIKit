@@ -19,8 +19,6 @@
 		BD1A3F281891C02F00B87F87 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */; };
 		BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF1BC184E1A7500A8C736 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */; };
-		BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */; };
 		BD4FF27A1853E42C00A8C736 /* XUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4FF2781853E42C00A8C736 /* XUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4FF2791853E42C00A8C736 /* XUILabel.m */; };
 		BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353F918931AAE00168DEE /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,8 +80,6 @@
 		BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XUIKit.m"; sourceTree = "<group>"; };
 		BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
 		BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
-		BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCellScrollView.h; sourceTree = "<group>"; };
-		BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCellScrollView.m; sourceTree = "<group>"; };
 		BD4FF2781853E42C00A8C736 /* XUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUILabel.h; sourceTree = "<group>"; };
 		BD4FF2791853E42C00A8C736 /* XUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUILabel.m; sourceTree = "<group>"; };
 		BD6353F918931AAE00168DEE /* XUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIViewController.h; sourceTree = "<group>"; };
@@ -189,8 +185,6 @@
 				BD6354021893330E00168DEE /* XUITableView.m */,
 				BD733513183EA60F0064C74D /* XUITableViewController.h */,
 				BD733514183EA60F0064C74D /* XUITableViewController.m */,
-				BD4FF1BE184E66C100A8C736 /* XUITableViewCellScrollView.h */,
-				BD4FF1BF184E66C100A8C736 /* XUITableViewCellScrollView.m */,
 				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
 				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
 			);
@@ -303,7 +297,6 @@
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
 				BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
-				BD4FF1C0184E66C100A8C736 /* XUITableViewCellScrollView.h in Headers */,
 				BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */,
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */,
@@ -403,7 +396,6 @@
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,
 				BD1A3F1C1891821F00B87F87 /* XUIApplication.m in Sources */,
-				BD4FF1C1184E66C100A8C736 /* XUITableViewCellScrollView.m in Sources */,
 				BD123162189719C400F617A7 /* UITableView+XUIKit.m in Sources */,
 				BD6354041893330E00168DEE /* XUITableView.m in Sources */,
 				BD733516183EA60F0064C74D /* XUITableViewController.m in Sources */,
