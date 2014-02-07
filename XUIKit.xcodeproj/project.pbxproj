@@ -49,7 +49,7 @@
 		BD75EB86184BE41E00B42FF5 /* NSTextStorage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD75EB84184BE41E00B42FF5 /* NSTextStorage+XUIKit.m */; };
 		BDA1B7651840DCD600DA642E /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA1B7631840DCD600DA642E /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1B7641840DCD600DA642E /* XUITextViewController.m */; };
-		BDA399B418A3E0CA00588473 /* UIImage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA399B218A3E0CA00588473 /* UIImage+XUIKit.h */; };
+		BDA399B418A3E0CA00588473 /* UIImage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA399B218A3E0CA00588473 /* UIImage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA399B518A3E0CA00588473 /* UIImage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA399B318A3E0CA00588473 /* UIImage+XUIKit.m */; };
 		BDA399BC18A4009700588473 /* NSFetchedResultsController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA399BA18A4009700588473 /* NSFetchedResultsController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDA399BD18A4009700588473 /* NSFetchedResultsController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA399BB18A4009700588473 /* NSFetchedResultsController+XUIKit.m */; };
