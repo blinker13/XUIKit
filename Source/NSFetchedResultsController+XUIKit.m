@@ -21,7 +21,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	id<NSFetchedResultsDataSource> delegate = (id<NSFetchedResultsDataSource>)[self delegate];
+	id<NSFetchedDataSourceDelegate> delegate = (id<NSFetchedDataSourceDelegate>)[self delegate];
 	return [delegate controller:self cellForIndexPath:indexPath];
 }
 
@@ -41,7 +41,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-	id<NSFetchedResultsDataSource> delegate = (id<NSFetchedResultsDataSource>)[self delegate];
+	id<NSFetchedDataSourceDelegate> delegate = (id<NSFetchedDataSourceDelegate>)[self delegate];
 	return [delegate controller:self cellForIndexPath:indexPath];
 }
 

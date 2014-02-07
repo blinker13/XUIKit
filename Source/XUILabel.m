@@ -16,6 +16,7 @@
 @end
 
 
+#pragma mark -
 @implementation XUILabel
 
 - (void)setAttributedText:(NSAttributedString *)attributedText {

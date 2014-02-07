@@ -24,12 +24,11 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
 		
-		NSString *identifier = NSStringFromClass(self.class);
-		[self setRestorationIdentifier:identifier];
-		
 		if ([self conformsToProtocol:@protocol(UIViewControllerRestoration)]) {
 			[self setRestorationClass:self.class];
 		}
+		NSString *identifier = NSStringFromClass(self.class);
+		[self setRestorationIdentifier:identifier];
     }
     return self;
 }

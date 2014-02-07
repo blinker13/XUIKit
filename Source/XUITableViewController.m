@@ -28,15 +28,6 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
 	if ((self = [super initWithNibName:nil bundle:nil])) {
-		
-		if (!self.restorationIdentifier) {
-			NSString *identifier = NSStringFromClass(self.class);
-			[self setRestorationIdentifier:identifier];
-		}
-		
-		if ([self conformsToProtocol:@protocol(UIViewControllerRestoration)]) {
-			[self setRestorationClass:self.class];
-		}
 		_clearsSelectionOnViewWillAppear = YES;
 		_style = style;
 	}
