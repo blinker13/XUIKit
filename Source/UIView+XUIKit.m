@@ -11,6 +11,21 @@
 
 @implementation UIView (XUIKit)
 
++ (instancetype)viewWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+	
+	NSString *nibName = nibNameOrNil ?: NSStringFromClass(self);
+	UINib *nib = [UINib nibWithNibName:nibName bundle:nibBundleOrNil];
+	NSArray *contents = [nib instantiateWithOwner:nil options:nil];
+	UIView *view = [contents firstObject];
+	
+	NSAssert([view isKindOfClass:self], @"Incompatible nib '%@'\n\n%@", nibName, view);
+	
+	return view;
+}
+
+
+#pragma mark - Convenience
+
 - (UIColor *)borderColor {
 	CGColorRef cgColor = [self.layer borderColor];
 	return [UIColor colorWithCGColor:cgColor];
@@ -36,6 +51,9 @@
 - (void)setBorderWidth:(CGFloat)borderWidth {
 	[self.layer setBorderWidth:borderWidth];
 }
+
+
+#pragma mark - Geometry
 
 - (CGPoint)innerCenter {
 	CGFloat x = CGRectGetMidX(self.bounds);
