@@ -12,6 +12,7 @@
 #import <XUIKit/XUIAppDelegate.h>
 #import <XUIKit/XUIApplication.h>
 #import <XUIKit/XUIButton.h>
+#import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
 #import <XUIKit/XUITableViewController.h>
 #import <XUIKit/XUITableViewCell.h>

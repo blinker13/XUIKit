@@ -26,6 +26,8 @@
 		BD63540018931DB800168DEE /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353FF18931DB800168DEE /* XUIKitDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD6354031893330E00168DEE /* XUITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6354011893330E00168DEE /* XUITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD6354041893330E00168DEE /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6354021893330E00168DEE /* XUITableView.m */; };
+		BD698CEE18A684B600EE9885 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD698CEC18A684B600EE9885 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD698CEF18A684B600EE9885 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD698CED18A684B600EE9885 /* XUIInputView.m */; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
@@ -87,6 +89,8 @@
 		BD6353FF18931DB800168DEE /* XUIKitDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIKitDefines.h; sourceTree = "<group>"; };
 		BD6354011893330E00168DEE /* XUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableView.h; sourceTree = "<group>"; };
 		BD6354021893330E00168DEE /* XUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableView.m; sourceTree = "<group>"; };
+		BD698CEC18A684B600EE9885 /* XUIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIInputView.h; sourceTree = "<group>"; };
+		BD698CED18A684B600EE9885 /* XUIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIInputView.m; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +209,8 @@
 			children = (
 				BD0E96161881FA9B00D63463 /* XUIButton.h */,
 				BD0E96171881FA9B00D63463 /* XUIButton.m */,
+				BD698CEC18A684B600EE9885 /* XUIInputView.h */,
+				BD698CED18A684B600EE9885 /* XUIInputView.m */,
 				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
 				BD4FF2791853E42C00A8C736 /* XUILabel.m */,
 			);
@@ -295,6 +301,7 @@
 				BDA9BA0C1887198100AFE5DA /* UIView+XUIKit.h in Headers */,
 				BD1A3F231891B8AE00B87F87 /* XUIAppDelegate.h in Headers */,
 				BD75EB80184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h in Headers */,
+				BD698CEE18A684B600EE9885 /* XUIInputView.h in Headers */,
 				BD1A3F271891C02F00B87F87 /* NSBundle+XUIKit.h in Headers */,
 				BD75EB5C184AF70500B42FF5 /* XUITextStorage.h in Headers */,
 				BD6353FB18931AAE00168DEE /* XUIViewController.h in Headers */,
@@ -405,6 +412,7 @@
 				BD0E96191881FA9B00D63463 /* XUIButton.m in Sources */,
 				BD6353FC18931AAE00168DEE /* XUIViewController.m in Sources */,
 				BD1A3F241891B8AE00B87F87 /* XUIAppDelegate.m in Sources */,
+				BD698CEF18A684B600EE9885 /* XUIInputView.m in Sources */,
 				BDA9BA0D1887198100AFE5DA /* UIView+XUIKit.m in Sources */,
 				BD75EB81184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m in Sources */,
 				BD1A3F281891C02F00B87F87 /* NSBundle+XUIKit.m in Sources */,
