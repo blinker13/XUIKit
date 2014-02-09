@@ -17,7 +17,7 @@
 @property (nonatomic) CGFloat	borderWidth;
 
 
-+ (instancetype)viewWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
++ (instancetype)viewWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle owner:(id)owner;
 
 - (CGPoint)innerCenter;
 

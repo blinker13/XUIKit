@@ -11,11 +11,11 @@
 
 @implementation UIView (XUIKit)
 
-+ (instancetype)viewWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
++ (instancetype)viewWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle owner:(id)owner {
 	
-	NSString *nibName = nibNameOrNil ?: NSStringFromClass(self);
-	UINib *nib = [UINib nibWithNibName:nibName bundle:nibBundleOrNil];
-	NSArray *contents = [nib instantiateWithOwner:nil options:nil];
+	nibName = nibName ?: NSStringFromClass(self);
+	UINib *nib = [UINib nibWithNibName:nibName bundle:bundle];
+	NSArray *contents = [nib instantiateWithOwner:owner options:nil];
 	UIView *view = [contents firstObject];
 	
 	NSAssert([view isKindOfClass:self], @"Incompatible nib '%@'\n\n%@", nibName, view);
