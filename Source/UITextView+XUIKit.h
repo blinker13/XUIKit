@@ -11,7 +11,8 @@
 
 @interface UITextView (XUIKit)
 
-@property (nonatomic) UIEdgeInsets	textContentInsets;
+@property (nonatomic, strong) UIColor	*keyboardBlendColor;
+@property (nonatomic) UIEdgeInsets		textContentInsets;
 
 
 - (void)makeCursorVisibleAnimated:(BOOL)animated;
