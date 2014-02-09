@@ -42,23 +42,20 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 #pragma mark -
 
 - (XUITableView *)tableView {
-	return (XUITableView *)[self view];
-}
-
-- (void)setTableView:(XUITableView *)tableView {
-	[self setView:tableView];
+	return (XUITableView *)[super view];
 }
 
 - (void)loadView {
-	CGRect bounds = [[UIScreen mainScreen] bounds];
+	[super loadView];
 	
-	XUITableView *tableView = [[XUITableView alloc] initWithFrame:bounds style:self.style];
-	[tableView setRestorationIdentifier:XUITableViewRestorationKey];
-	[tableView setDataSource:self];
-	[tableView setDelegate:self];
-	
-	[self setTableView:tableView];
-	[self setView:tableView];
+	if (!_tableView) {
+		CGRect bounds = [[UIScreen mainScreen] bounds];
+		_tableView = [[XUITableView alloc] initWithFrame:bounds style:self.style];
+		[_tableView setRestorationIdentifier:XUITableViewRestorationKey];
+		[_tableView setDataSource:self];
+		[_tableView setDelegate:self];
+		[self setView:_tableView];
+	}
 }
 
 - (void)viewWillAppear:(BOOL)animated {

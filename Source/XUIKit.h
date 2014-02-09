@@ -24,6 +24,7 @@
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
 #import <XUIKit/UIImage+XUIKit.h>
 #import <XUIKit/UITableView+XUIKit.h>
+#import <XUIKit/UITextField+XUIKit.h>
 #import <XUIKit/UITextView+XUIKit.h>
 #import <XUIKit/UIView+XUIKit.h>
 

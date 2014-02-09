@@ -28,6 +28,8 @@
 		BD6354041893330E00168DEE /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6354021893330E00168DEE /* XUITableView.m */; };
 		BD698CEE18A684B600EE9885 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD698CEC18A684B600EE9885 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD698CEF18A684B600EE9885 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD698CED18A684B600EE9885 /* XUIInputView.m */; };
+		BD698CF418A6FC6900EE9885 /* UITextField+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD698CF518A6FC6900EE9885 /* UITextField+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */; };
 		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
 		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
@@ -91,6 +93,8 @@
 		BD6354021893330E00168DEE /* XUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableView.m; sourceTree = "<group>"; };
 		BD698CEC18A684B600EE9885 /* XUIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIInputView.h; sourceTree = "<group>"; };
 		BD698CED18A684B600EE9885 /* XUIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIInputView.m; sourceTree = "<group>"; };
+		BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XUIKit.h"; sourceTree = "<group>"; };
+		BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XUIKit.m"; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,8 @@
 				BDA399B318A3E0CA00588473 /* UIImage+XUIKit.m */,
 				BD12315F189719C400F617A7 /* UITableView+XUIKit.h */,
 				BD123160189719C400F617A7 /* UITableView+XUIKit.m */,
+				BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */,
+				BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */,
 				BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */,
 				BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */,
 				BDA9BA0A1887198100AFE5DA /* UIView+XUIKit.h */,
@@ -308,6 +314,7 @@
 				BD4FF1BB184E1A7500A8C736 /* XUITableViewCell.h in Headers */,
 				BD1A3F1B1891821F00B87F87 /* XUIApplication.h in Headers */,
 				BD123161189719C400F617A7 /* UITableView+XUIKit.h in Headers */,
+				BD698CF418A6FC6900EE9885 /* UITextField+XUIKit.h in Headers */,
 				BDA399B418A3E0CA00588473 /* UIImage+XUIKit.h in Headers */,
 				BD6354031893330E00168DEE /* XUITableView.h in Headers */,
 				BD73351B183EA7C30064C74D /* UIBarButtonItem+XUIKit.h in Headers */,
@@ -399,6 +406,7 @@
 				BDA1B7661840DCD600DA642E /* XUITextViewController.m in Sources */,
 				BDA399BD18A4009700588473 /* NSFetchedResultsController+XUIKit.m in Sources */,
 				BD75EB55184ACE2E00B42FF5 /* XUITextView.m in Sources */,
+				BD698CF518A6FC6900EE9885 /* UITextField+XUIKit.m in Sources */,
 				BD75EB86184BE41E00B42FF5 /* NSTextStorage+XUIKit.m in Sources */,
 				BD75EB5D184AF70500B42FF5 /* XUITextStorage.m in Sources */,
 				BD4FF27B1853E42C00A8C736 /* XUILabel.m in Sources */,

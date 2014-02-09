@@ -36,6 +36,12 @@
 
 #pragma mark -
 
+- (void)loadView {
+	NSString *nibName = self.nibName ?: NSStringFromClass([self class]);
+	UINib *nib = [UINib nibWithNibName:nibName bundle:self.nibBundle];
+	[nib instantiateWithOwner:self options:nil];
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
