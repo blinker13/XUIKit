@@ -18,4 +18,8 @@
 	[self.superview setBackgroundColor:blendColor];
 }
 
+- (UIResponder *)nextResponder {
+	return nil;
+}
+
 @end
