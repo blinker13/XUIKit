@@ -32,6 +32,7 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 		[self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 		[self setAutoresizingMask:XUIViewFlexibleSize];
 		[self setBackgroundColor:backgroundColor];
+		[self setRowHeight:40.0];
 		
 		_hidesTableHeaderWhenEmpty = YES;
 		_hidesTableFooterWhenEmpty = YES;

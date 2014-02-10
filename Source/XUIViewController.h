@@ -13,8 +13,7 @@
 
 @interface XUIViewController : UIViewController
 
-@property (nonatomic, readonly) XUILabel	*titleItemLabel;
-@property (nonatomic, copy) NSString		*backButtonTitle;
+@property (nonatomic, copy) NSString	*backButtonTitle;
 
 
 - (UINavigationController *)contentNavigationController;

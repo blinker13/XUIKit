@@ -13,7 +13,9 @@
 
 @interface XUIViewController ()
 
-@property (nonatomic, strong) XUILabel	*titleItemLabel;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem	*leftBarButtonItem;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem	*rightBarButtonItem;
+@property (nonatomic, strong) IBOutlet UIView			*titleItemView;
 
 @end
 
@@ -27,8 +29,11 @@
 		if ([self conformsToProtocol:@protocol(UIViewControllerRestoration)]) {
 			[self setRestorationClass:self.class];
 		}
-		NSString *identifier = NSStringFromClass(self.class);
-		[self setRestorationIdentifier:identifier];
+		
+		if (!self.restorationIdentifier) {
+			NSString *identifier = NSStringFromClass(self.class);
+			[self setRestorationIdentifier:identifier];
+		}
     }
     return self;
 }
@@ -37,42 +42,53 @@
 #pragma mark -
 
 - (void)loadView {
-	NSString *nibName = self.nibName ?: NSStringFromClass([self class]);
-	UINib *nib = [UINib nibWithNibName:nibName bundle:self.nibBundle];
-	[nib instantiateWithOwner:self options:nil];
+	NSString *name = self.nibName ?: NSStringFromClass([self class]);
+	NSBundle *bundle = self.nibBundle ?: [NSBundle mainBundle];
+	
+	if ([bundle pathForResource:name ofType:@"nib"]) {
+		UINib *nib = [UINib nibWithNibName:name bundle:bundle];
+		[nib instantiateWithOwner:self options:nil];
+	}
+	
+	if (!self.titleItemView) {
+		UINavigationBar *navigation = [self.navigationController navigationBar];
+		NSDictionary *titleAttributes = [navigation titleTextAttributes];
+		UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
+		UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
+		
+		XUILabel *titleLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
+		if (!navigation.isTranslucent) [titleLabel setBackgroundColor:navigation.barTintColor];
+		[titleLabel setTextAlignment:NSTextAlignmentCenter];
+		[titleLabel setTextColor:textColor];
+		[titleLabel setFont:font];
+		
+		[self setTitleItemView:titleLabel];
+	}
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self.navigationItem setTitleView:self.titleItemLabel];
+	[self.navigationItem setLeftBarButtonItem:self.leftBarButtonItem];
+	[self.navigationItem setRightBarButtonItem:self.rightBarButtonItem];
+	[self.navigationItem setTitleView:self.titleItemView];
 	
 	UIColor *white = [UIColor whiteColor];
 	[self.view setBackgroundColor:white];
-	
 	[self setBackButtonTitle:nil];
-	[self loadTitleItemLabel];
 }
 
 - (NSString *)title {
-	return [self.titleItemLabel text];
+	return [self.titleItemView performSelector:@selector(text)];
 }
 
 - (void)setTitle:(NSString *)title {
-	[self.titleItemLabel setText:title];
-	[self.titleItemLabel sizeToFit];
+	[(UILabel *)self.titleItemView setText:title];
+	[self.titleItemView sizeToFit];
 }
 
 
 #pragma mark -
-
-- (XUILabel *)titleItemLabel {
-	if (!_titleItemLabel) {
-		_titleItemLabel = [[XUILabel alloc] initWithFrame:CGRectZero];
-		[_titleItemLabel setTextAlignment:NSTextAlignmentCenter];
-	}
-	return _titleItemLabel;
-}
 
 - (NSString *)backButtonTitle {
 	return [super title];
@@ -86,20 +102,6 @@
 
 - (UINavigationController *)contentNavigationController {
 	return XUIIdiomIsPad() ? [self.splitViewController.viewControllers lastObject] : [self navigationController];
-}
-
-
-#pragma mark - private methods
-
-- (void)loadTitleItemLabel {
-	UINavigationBar *navigation = [self.navigationController navigationBar];
-	NSDictionary *titleAttributes = [navigation titleTextAttributes];
-	UIColor *textColor = [titleAttributes objectForKey:NSForegroundColorAttributeName];
-	UIFont *font = [titleAttributes objectForKey:NSFontAttributeName];
-	
-	if (!navigation.isTranslucent) [self.titleItemLabel setBackgroundColor:navigation.barTintColor];
-	[self.titleItemLabel setTextColor:textColor];
-	[self.titleItemLabel setFont:font];
 }
 
 @end
