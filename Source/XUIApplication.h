@@ -8,7 +8,5 @@
 
 @import UIKit;
 
-extern NSString *const XUIApplicationClass;	// XUIApplicationClass
-extern NSString *const XUIAppDelegateClass;	// XUIAppDelegateClass
-
-extern int XUIApplicationMain(int argc, char *argv[]);
+extern NSString *const XUIApplicationClass;	// "ApplicationClass"
+extern NSString *const XUIAppDelegateClass;	// "AppDelegateClass"

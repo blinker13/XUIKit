@@ -9,11 +9,11 @@
 #import "XUIApplication.h"
 
 
-NSString *const XUIApplicationClass	=	@"XUIApplicationClass";
-NSString *const XUIAppDelegateClass	=	@"XUIAppDelegateClass";
+NSString *const XUIApplicationClass	=	@"ApplicationClass";
+NSString *const XUIAppDelegateClass	=	@"AppDelegateClass";
 
 
-int XUIApplicationMain(int argc, char *argv[]) {
+int main(int argc, char * argv[]) {
 	
 	@autoreleasepool {
 		NSBundle *mainBundle = [NSBundle mainBundle];
