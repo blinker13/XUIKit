@@ -6,11 +6,13 @@
 //  Copyright (c) 2014 Felix Gabel. All rights reserved.
 //
 
-@import Foundation;
+@import UIKit;
 
 
 @interface NSBundle (XUIKit)
 
 + (NSString *)mainBundleVersion;
+
+- (UINib *)nibWithName:(NSString *)name;
 
 @end

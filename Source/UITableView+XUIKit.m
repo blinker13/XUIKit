@@ -7,24 +7,16 @@
 //
 
 #import "UITableView+XUIKit.h"
-
-
-NSString *const XUITableViewCellNibType	=	@"nib";
+#import "NSBundle+XUIKit.h"
 
 
 @implementation UITableView (XUIKit)
 
 - (void)registerCellClass:(Class)cellClass {
 	NSString *identifier = NSStringFromClass(cellClass);
-	NSBundle *mainBundle = [NSBundle mainBundle];
-	
-	if ([mainBundle pathForResource:identifier ofType:XUITableViewCellNibType]) {
-		UINib *nib = [UINib nibWithNibName:identifier bundle:mainBundle];
-		[self registerNib:nib forCellReuseIdentifier:identifier];
-		
-	} else {
-		[self registerClass:cellClass forCellReuseIdentifier:identifier];
-	}
+	UINib *nib = [[NSBundle mainBundle] nibWithName:identifier];
+	if (nib) [self registerNib:nib forCellReuseIdentifier:identifier];
+	else [self registerClass:cellClass forCellReuseIdentifier:identifier];
 }
 
 - (id)dequeueReusableCell:(Class)cellClass forIndexPath:(NSIndexPath *)indexPath {
