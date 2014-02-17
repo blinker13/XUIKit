@@ -32,7 +32,6 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 		[self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 		[self setAutoresizingMask:XUIViewFlexibleSize];
 		[self setBackgroundColor:backgroundColor];
-		[self setRowHeight:40.0];
 		
 		_hidesTableHeaderWhenEmpty = YES;
 		_hidesTableFooterWhenEmpty = YES;
@@ -40,8 +39,16 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 	return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+	if ((self = [super initWithCoder:aDecoder])) {
+		_hidesTableHeaderWhenEmpty = YES;
+		_hidesTableFooterWhenEmpty = YES;
+	}
+	return self;
+}
 
-#pragma mark - 
+
+#pragma mark -
 
 - (void)deselectRowAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
 	
