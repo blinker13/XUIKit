@@ -43,7 +43,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	[super setTitle:@""];
+	[self setTitle:@""];
 	
 	if (!self.navigationTitleView) {
 		UINavigationBar *navigation = [self.navigationController navigationBar];
@@ -64,16 +64,16 @@
 	[self.navigationItem setTitleView:self.navigationTitleView];
 }
 
-- (NSString *)title {
+- (NSString *)navigationTitle {
 	if ([self.navigationTitleView respondsToSelector:@selector(text)]) {
 		return [self.navigationTitleView performSelector:@selector(text)];
 	}
 	return nil;
 }
 
-- (void)setTitle:(NSString *)title {
+- (void)setNavigationTitle:(NSString *)navigationTitle {
 	if ([self.navigationTitleView respondsToSelector:@selector(setText:)]) {
-		[self.navigationTitleView performSelector:@selector(setText:) withObject:title];
+		[self.navigationTitleView performSelector:@selector(setText:) withObject:navigationTitle];
 		[self.navigationTitleView sizeToFit];
 	}
 }

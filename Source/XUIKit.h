@@ -14,8 +14,9 @@
 #import <XUIKit/XUIButton.h>
 #import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
-#import <XUIKit/XUITableViewController.h>
 #import <XUIKit/XUITableViewCell.h>
+#import <XUIKit/XUITableViewController.h>
+#import <XUIKit/XUITableView.h>
 #import <XUIKit/XUITextStorage.h>
 #import <XUIKit/XUITextViewController.h>
 #import <XUIKit/XUITextView.h>

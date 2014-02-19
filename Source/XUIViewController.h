@@ -11,6 +11,9 @@
 
 @interface XUIViewController : UIViewController
 
+@property (nonatomic, copy) NSString	*navigationTitle;
+
+
 - (UINavigationController *)contentNavigationController;
 
 @end
