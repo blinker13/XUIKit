@@ -13,10 +13,10 @@
 
 @interface XUITextViewController ()
 
-@property (nonatomic, strong) IBOutlet XUITextView	*textView;
+@property (nonatomic, strong) XUITextView	*textView;
 
-@property (nonatomic) BOOL	shouldReselectTextView;	//reselect the textView after a canceled transactional transition
-@property (nonatomic) BOOL	keyboardIsDisappearing;	//prevents unnecessary textView layouting when orientation is changed
+@property (nonatomic) BOOL	shouldReselectTextView;
+@property (nonatomic) BOOL	keyboardIsDisappearing;
 
 @end
 
@@ -35,18 +35,11 @@
 
 #pragma mark -
 
-- (XUITextView *)textView {
-	return (XUITextView *)[self view];
-}
-
-- (void)setTextView:(XUITextView *)textView {
-	[self setView:textView];
-}
-
-- (void)loadView {
+- (void)viewDidLoad {
+	[super viewDidLoad];
 	[self loadTextStack];
-	[self textStackDidLoad];
-	[self loadTextView];
+	
+	[self.view addSubview:self.textView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -103,26 +96,20 @@
 	[self setTextStorage:textStorage];
 }
 
-- (void)textStackDidLoad {
-	//overwrite
-}
-
-- (void)loadTextView {
-	CGRect bounds = [[UIScreen mainScreen] bounds];
-	
-	XUITextView *textView = [[XUITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
-	[textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-	[textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
-	[textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
-	[textView setIndicatorStyle:UIScrollViewIndicatorStyleBlack];
-	[textView setTextContentInsets:self.textViewContentInsets];
-	[textView setBackgroundColor:[UIColor whiteColor]];
-	[textView setAlwaysBounceVertical:YES];
-	[textView setScrollEnabled:YES];
-	[textView setDelegate:self];
-	
-	[self setTextView:textView];
-	[self setView:textView];
+- (XUITextView *)textView {
+	if (!_textView) {
+		CGRect bounds = [self.view bounds];
+		
+		_textView = [[XUITextView alloc] initWithFrame:bounds textContainer:self.textContainer];
+		[_textView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+		[_textView setKeyboardDismissMode:UIScrollViewKeyboardDismissModeInteractive];
+		[_textView setScrollIndicatorInsets:self.textViewScrollIndicatorInsets];
+		[_textView setTextContentInsets:self.textViewContentInsets];
+		[_textView setBackgroundColor:[UIColor whiteColor]];
+		[_textView setAlwaysBounceVertical:YES];
+		[_textView setDelegate:self];
+	}
+	return _textView;
 }
 
 

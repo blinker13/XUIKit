@@ -7,25 +7,24 @@
 //
 
 #import "XUIViewController.h"
-#import "XUITextStorage.h"
 #import "XUITextView.h"
+
+@class XUITextStorage;
 
 
 @interface XUITextViewController : XUIViewController <UITextViewDelegate>
 
 @property (nonatomic, strong) NSTextContainer	*textContainer;
 @property (nonatomic, strong) XUITextStorage	*textStorage;
+@property (nonatomic, readonly) XUITextView		*textView;
 
-@property (nonatomic, strong, readonly) XUITextView	*textView;
-
-//following insets should be set before -loadTextView is called. Manipulating the textView directly might interfer with keyboard insets
+//!!!: Manipulating the textView directly might interfer with keyboard insets
 @property (nonatomic) UIEdgeInsets	textViewScrollIndicatorInsets;
 @property (nonatomic) UIEdgeInsets	textViewContentInsets;
 
 
-- (void)loadTextStack;	//this is where subclasses should create their textStorage, layoutManager and textContainer
-- (void)textStackDidLoad;
-
-- (void)loadTextView;	//this is where subclasses should create their textView
+//this is where subclasses should create their textStorage, layoutManager and textContainer instances
+//!!!: Should never be called directly.
+- (void)loadTextStack;
 
 @end
