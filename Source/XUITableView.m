@@ -78,21 +78,20 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 	[self.placeholderLabel setHidden:shouldHidePlaceholder];
 }
 
+
 #pragma mark -
 
 - (XUILabel *)placeholderLabel {
 	if (!_placeholderLabel) {
 		CGRect bounds = [self bounds];
 		CGRect rect = CGRectInset(bounds, XUITableViewPlaceholderInset, XUITableViewPlaceholderInset);
-		
 		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-		UIColor *backgroundColor = [UIColor whiteColor];
 		UIColor *textColor = [UIColor grayColor];
 		
 		_placeholderLabel = [[XUILabel alloc] initWithFrame:rect];
+		[_placeholderLabel setBackgroundColor:self.backgroundColor];
 		[_placeholderLabel setAutoresizingMask:XUIViewFlexibleSize];
 		[_placeholderLabel setTextAlignment:NSTextAlignmentCenter];
-		[_placeholderLabel setBackgroundColor:backgroundColor];
 		[_placeholderLabel setTextColor:textColor];
 		[_placeholderLabel setNumberOfLines:0];
 		[_placeholderLabel setFont:font];
