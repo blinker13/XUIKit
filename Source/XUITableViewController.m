@@ -18,7 +18,6 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 @interface XUITableViewController ()
 
 @property (nonatomic, strong) IBOutlet XUITableView	*tableView;
-@property (nonatomic) UITableViewStyle	style;
 
 @end
 
@@ -99,18 +98,6 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
 	[self.tableView setEditing:editing animated:animated];
 	[super setEditing:editing animated:animated];
-}
-
-
-#pragma mark -
-
-- (NSString *)placeholder {
-	return [self.tableView.placeholderLabel text];
-}
-
-- (void)setPlaceholder:(NSString *)placeholder {
-	XUILabel *label = [self.tableView placeholderLabel];
-	[label setText:placeholder];
 }
 
 

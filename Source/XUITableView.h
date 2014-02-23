@@ -13,9 +13,4 @@
 
 @interface XUITableView : UITableView
 
-@property (nonatomic, readonly) XUILabel	*placeholderLabel;
-
-@property (nonatomic) BOOL	hidesTableHeaderWhenEmpty;
-@property (nonatomic) BOOL	hidesTableFooterWhenEmpty;
-
 @end

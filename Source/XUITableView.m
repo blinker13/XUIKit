@@ -11,15 +11,7 @@
 #import "XUILabel.h"
 
 
-const CGFloat XUITableViewPlaceholderInset		=	10.0;
 const CGFloat XUITableViewDeSelectionDuration	=	0.4;
-
-
-@interface XUITableView ()
-
-@property (nonatomic, strong) IBOutlet XUILabel	*placeholderLabel;
-
-@end
 
 
 #pragma mark -
@@ -32,17 +24,6 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 		[self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 		[self setAutoresizingMask:XUIViewFlexibleSize];
 		[self setBackgroundColor:backgroundColor];
-		
-		_hidesTableHeaderWhenEmpty = YES;
-		_hidesTableFooterWhenEmpty = YES;
-	}
-	return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-	if ((self = [super initWithCoder:aDecoder])) {
-		_hidesTableHeaderWhenEmpty = YES;
-		_hidesTableFooterWhenEmpty = YES;
 	}
 	return self;
 }
@@ -66,50 +47,6 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 	} else {
 		[super deselectRowAtIndexPath:indexPath animated:animated];
 	}
-}
-
-- (void)layoutSubviews {
-	[super layoutSubviews];
-	
-	//TODO: animate visibility
-	BOOL shouldHidePlaceholder = [self shouldHidePlaceholder];
-	[self.tableHeaderView setHidden:(!shouldHidePlaceholder && self.hidesTableHeaderWhenEmpty)];
-	[self.tableFooterView setHidden:(!shouldHidePlaceholder && self.hidesTableFooterWhenEmpty)];
-	[self.placeholderLabel setHidden:shouldHidePlaceholder];
-}
-
-
-#pragma mark -
-
-- (XUILabel *)placeholderLabel {
-	if (!_placeholderLabel) {
-		CGRect bounds = [self bounds];
-		CGRect rect = CGRectInset(bounds, XUITableViewPlaceholderInset, XUITableViewPlaceholderInset);
-		UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-		UIColor *textColor = [UIColor grayColor];
-		
-		_placeholderLabel = [[XUILabel alloc] initWithFrame:rect];
-		[_placeholderLabel setBackgroundColor:self.backgroundColor];
-		[_placeholderLabel setAutoresizingMask:XUIViewFlexibleSize];
-		[_placeholderLabel setTextAlignment:NSTextAlignmentCenter];
-		[_placeholderLabel setTextColor:textColor];
-		[_placeholderLabel setNumberOfLines:0];
-		[_placeholderLabel setFont:font];
-		
-		[self setBackgroundView:_placeholderLabel];
-	}
-	return _placeholderLabel;
-}
-
-
-#pragma mark - private methods
-
-- (BOOL)shouldHidePlaceholder {
-	NSUInteger numberOfSections = [self numberOfSections];
-	for (NSUInteger section = 0; section < numberOfSections; section++) {
-		if ([self numberOfRowsInSection:section] > 0) return YES;
-	}
-	return NO;
 }
 
 @end

@@ -13,7 +13,8 @@
 @interface XUITableViewController : XUIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, readonly) XUITableView	*tableView;
-@property (nonatomic, copy) NSString			*placeholder;
+
+@property (nonatomic) UITableViewStyle	style;
 
 @property (nonatomic) BOOL	clearsSelectionOnViewWillAppear;
 
