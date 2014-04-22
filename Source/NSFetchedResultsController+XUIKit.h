@@ -12,7 +12,7 @@
 
 @protocol NSFetchedDataSourceDelegate <NSFetchedResultsControllerDelegate, NSObject>
 
-- (id)controller:(NSFetchedResultsController *)controller cellForIndexPath:(NSIndexPath *)indexPath;
+- (id)controller:(NSFetchedResultsController *)controller cellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

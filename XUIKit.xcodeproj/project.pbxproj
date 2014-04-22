@@ -30,11 +30,7 @@
 		BD698CEF18A684B600EE9885 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD698CED18A684B600EE9885 /* XUIInputView.m */; };
 		BD698CF418A6FC6900EE9885 /* UITextField+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD698CF518A6FC6900EE9885 /* UITextField+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */; };
-		BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
-		BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334EA183E9E4A0064C74D /* XCTest.framework */; };
-		BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334DC183E9E4A0064C74D /* Foundation.framework */; };
 		BD733508183E9EB80064C74D /* XUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD733506183E9EB00064C74D /* XUIKitTests.m */; };
-		BD73350A183EA2F90064C74D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD733509183EA2F90064C74D /* UIKit.framework */; };
 		BD73350B183EA3F40064C74D /* libXUIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7334D9183E9E4A0064C74D /* libXUIKit.a */; };
 		BD73350D183EA4120064C74D /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD733503183E9EB00064C74D /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD733515183EA60F0064C74D /* XUITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD733513183EA60F0064C74D /* XUITableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,13 +94,10 @@
 		BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XUIKit.h"; sourceTree = "<group>"; };
 		BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XUIKit.m"; sourceTree = "<group>"; };
 		BD7334D9183E9E4A0064C74D /* libXUIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXUIKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD7334DC183E9E4A0064C74D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD7334EA183E9E4A0064C74D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BD733503183E9EB00064C74D /* XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIKit.h; sourceTree = "<group>"; };
 		BD733505183E9EB00064C74D /* XUIKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "XUIKitTests-Info.plist"; sourceTree = "<group>"; };
 		BD733506183E9EB00064C74D /* XUIKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIKitTests.m; sourceTree = "<group>"; };
-		BD733509183EA2F90064C74D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BD733513183EA60F0064C74D /* XUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewController.h; sourceTree = "<group>"; };
 		BD733514183EA60F0064C74D /* XUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewController.m; sourceTree = "<group>"; };
 		BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XUIKit.h"; sourceTree = "<group>"; };
@@ -136,8 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7334DD183E9E4A0064C74D /* Foundation.framework in Frameworks */,
-				BD73350A183EA2F90064C74D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +136,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7334EB183E9E4A0064C74D /* XCTest.framework in Frameworks */,
-				BD7334EC183E9E4A0064C74D /* Foundation.framework in Frameworks */,
 				BD73350B183EA3F40064C74D /* libXUIKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +223,6 @@
 			children = (
 				BD733502183E9EB00064C74D /* Source */,
 				BD733504183E9EB00064C74D /* Tests */,
-				BD7334DB183E9E4A0064C74D /* Frameworks */,
 				BD7334DA183E9E4A0064C74D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,16 +234,6 @@
 				BD7334E9183E9E4A0064C74D /* XUIKitTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		BD7334DB183E9E4A0064C74D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BD7334EA183E9E4A0064C74D /* XCTest.framework */,
-				BD7334DC183E9E4A0064C74D /* Foundation.framework */,
-				BD733509183EA2F90064C74D /* UIKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BD733502183E9EB00064C74D /* Source */ = {
