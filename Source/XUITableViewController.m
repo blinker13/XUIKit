@@ -63,28 +63,7 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 	[center addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
 	[center addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 	
-	
-	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-	
-	if (indexPath && self.clearsSelectionOnViewWillAppear) {
-		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
-		
-		if ([coordinator initiallyInteractive]) {
-			[coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-				UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-				[cell.selectedBackgroundView setAlpha:0.0];
-			} completion:nil];
-			
-			[coordinator notifyWhenInteractionEndsUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-				if (![context isCancelled]) {
-					[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
-				}
-			}];
-			
-		} else {
-			[self.tableView deselectRowAtIndexPath:indexPath animated:animated];
-		}
-	}
+	[self deselectTableViewRowsAnimated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -176,6 +155,36 @@ NSString *const XUITableViewClearsSelectionKey	=	@"XUITableViewClearsSelectionKe
 			[self.tableView setScrollIndicatorInsets:scrollIndicatorInsets];
 			[self.tableView setContentInset:insets];
 		} completion:nil];
+	}
+}
+
+- (void)deselectTableViewRowsAnimated:(BOOL)animated {
+	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+	
+	if (indexPath && self.clearsSelectionOnViewWillAppear) {
+		id<UIViewControllerTransitionCoordinator> coordinator = [self transitionCoordinator];
+		
+		if ([coordinator initiallyInteractive]) {
+			UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+			
+			[coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+				[cell.selectedBackgroundView setAlpha:0.0];
+				
+			} completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+				if (![context isCancelled]) {
+					[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+				}
+			}];
+			
+			[coordinator notifyWhenInteractionEndsUsingBlock:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+				if (![context isCancelled]) {
+					[cell setHighlighted:NO animated:NO];
+				}
+			}];
+			
+		} else {
+			[self.tableView deselectRowAtIndexPath:indexPath animated:animated];
+		}
 	}
 }
 
