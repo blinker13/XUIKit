@@ -22,6 +22,10 @@
 #import <XUIKit/XUITextView.h>
 #import <XUIKit/XUIViewController.h>
 
+#import <XUIKit/NSBundle+XUIKit.h>
+#import <XUIKit/NSFetchedResultsController+XUIKit.h>
+#import <XUIKit/NSMutableAttributedString+XUIKit.h>
+#import <XUIKit/NSTextStorage+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
 #import <XUIKit/UICollectionView+XUIKit.h>
 #import <XUIKit/UIImage+XUIKit.h>
@@ -29,8 +33,3 @@
 #import <XUIKit/UITextField+XUIKit.h>
 #import <XUIKit/UITextView+XUIKit.h>
 #import <XUIKit/UIView+XUIKit.h>
-
-#import <XUIKit/NSBundle+XUIKit.h>
-#import <XUIKit/NSFetchedResultsController+XUIKit.h>
-#import <XUIKit/NSMutableAttributedString+XUIKit.h>
-#import <XUIKit/NSTextStorage+XUIKit.h>

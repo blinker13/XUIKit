@@ -7,262 +7,308 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDFD6982194E36FC00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD6977194E36FC00799C33 /* XUIKit.framework */; };
-		BDFD6995194E37CA00799C33 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD733503183E9EB00064C74D /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6996194E37D100799C33 /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD6353FF18931DB800168DEE /* XUIKitDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD69A1194E383E00799C33 /* XUIKit.framework */; };
+		BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F4194E388C00799C33 /* XUIKitTests.m */; };
+		BDFD69F7194E390200799C33 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E0194E388C00799C33 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD69FA194E39EB00799C33 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD69FB194E39EB00799C33 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */; };
+		BDFD69FC194E39EB00799C33 /* NSFetchedResultsController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD69FD194E39EB00799C33 /* NSFetchedResultsController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */; };
+		BDFD69FE194E39EB00799C33 /* NSMutableAttributedString+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD69FF194E39EB00799C33 /* NSMutableAttributedString+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */; };
+		BDFD6A00194E39EB00799C33 /* NSTextStorage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A01194E39EB00799C33 /* NSTextStorage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */; };
+		BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */; };
+		BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A05194E39EB00799C33 /* UICollectionView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CD194E388C00799C33 /* UICollectionView+XUIKit.m */; };
+		BDFD6A06194E39EB00799C33 /* UIImage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CE194E388C00799C33 /* UIImage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CF194E388C00799C33 /* UIImage+XUIKit.m */; };
+		BDFD6A08194E39EB00799C33 /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D0194E388C00799C33 /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A09194E39EB00799C33 /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D1194E388C00799C33 /* UITableView+XUIKit.m */; };
+		BDFD6A0A194E39EB00799C33 /* UITextField+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D2194E388C00799C33 /* UITextField+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D3194E388C00799C33 /* UITextField+XUIKit.m */; };
+		BDFD6A0C194E39EB00799C33 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */; };
+		BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A0F194E39EB00799C33 /* UIView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */; };
+		BDFD6A10194E3A2700799C33 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A11194E3A2700799C33 /* XUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */; };
+		BDFD6A12194E3A2700799C33 /* XUIApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DA194E388C00799C33 /* XUIApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A13194E3A2700799C33 /* XUIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DB194E388C00799C33 /* XUIApplication.m */; };
+		BDFD6A14194E3BE400799C33 /* XUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DC194E388C00799C33 /* XUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A15194E3BE400799C33 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DD194E388C00799C33 /* XUIButton.m */; };
+		BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DE194E388C00799C33 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A17194E3BE400799C33 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DF194E388C00799C33 /* XUIInputView.m */; };
+		BDFD6A18194E3BE400799C33 /* XUIKitDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E1194E388C00799C33 /* XUIKitDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A19194E3BE400799C33 /* XUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E2194E388C00799C33 /* XUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E3194E388C00799C33 /* XUILabel.m */; };
+		BDFD6A1B194E3BE400799C33 /* XUITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E4194E388C00799C33 /* XUITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E5194E388C00799C33 /* XUITableView.m */; };
+		BDFD6A1D194E3BE400799C33 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E6194E388C00799C33 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A1E194E3BE400799C33 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E7194E388C00799C33 /* XUITableViewCell.m */; };
+		BDFD6A1F194E3BE400799C33 /* XUITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E8194E388C00799C33 /* XUITableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A20194E3BE400799C33 /* XUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E9194E388C00799C33 /* XUITableViewController.m */; };
+		BDFD6A21194E3BE400799C33 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EA194E388C00799C33 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A22194E3BE400799C33 /* XUITextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EB194E388C00799C33 /* XUITextStorage.m */; };
+		BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EC194E388C00799C33 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A24194E3BE400799C33 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69ED194E388C00799C33 /* XUITextView.m */; };
+		BDFD6A25194E3BE400799C33 /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EE194E388C00799C33 /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A26194E3BE400799C33 /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EF194E388C00799C33 /* XUITextViewController.m */; };
+		BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69F0194E388C00799C33 /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD6A28194E3BE400799C33 /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F1194E388C00799C33 /* XUIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BDFD6983194E36FC00799C33 /* PBXContainerItemProxy */ = {
+		BDFD69AE194E383E00799C33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BD7334D1183E9E4A0064C74D /* Project object */;
+			containerPortal = BDFD6998194E383E00799C33 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BDFD6976194E36FC00799C33;
+			remoteGlobalIDString = BDFD69A0194E383E00799C33;
 			remoteInfo = XUIKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD0E96161881FA9B00D63463 /* XUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIButton.h; sourceTree = "<group>"; };
-		BD0E96171881FA9B00D63463 /* XUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
-		BD12315F189719C400F617A7 /* UITableView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XUIKit.h"; sourceTree = "<group>"; };
-		BD123160189719C400F617A7 /* UITableView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XUIKit.m"; sourceTree = "<group>"; };
-		BD1A3F191891821F00B87F87 /* XUIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
-		BD1A3F1A1891821F00B87F87 /* XUIApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
-		BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
-		BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIAppDelegate.m; sourceTree = "<group>"; };
-		BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XUIKit.h"; sourceTree = "<group>"; };
-		BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XUIKit.m"; sourceTree = "<group>"; };
-		BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
-		BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
-		BD4FF2781853E42C00A8C736 /* XUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUILabel.h; sourceTree = "<group>"; };
-		BD4FF2791853E42C00A8C736 /* XUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUILabel.m; sourceTree = "<group>"; };
-		BD6353F918931AAE00168DEE /* XUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIViewController.h; sourceTree = "<group>"; };
-		BD6353FA18931AAE00168DEE /* XUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIViewController.m; sourceTree = "<group>"; };
-		BD6353FF18931DB800168DEE /* XUIKitDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIKitDefines.h; sourceTree = "<group>"; };
-		BD6354011893330E00168DEE /* XUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableView.h; sourceTree = "<group>"; };
-		BD6354021893330E00168DEE /* XUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableView.m; sourceTree = "<group>"; };
-		BD698CEC18A684B600EE9885 /* XUIInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIInputView.h; sourceTree = "<group>"; };
-		BD698CED18A684B600EE9885 /* XUIInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIInputView.m; sourceTree = "<group>"; };
-		BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XUIKit.h"; sourceTree = "<group>"; };
-		BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XUIKit.m"; sourceTree = "<group>"; };
-		BD733503183E9EB00064C74D /* XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIKit.h; sourceTree = "<group>"; };
-		BD733506183E9EB00064C74D /* XUIKitTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIKitTests.m; sourceTree = "<group>"; };
-		BD733513183EA60F0064C74D /* XUITableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITableViewController.h; sourceTree = "<group>"; };
-		BD733514183EA60F0064C74D /* XUITableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITableViewController.m; sourceTree = "<group>"; };
-		BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XUIKit.h"; sourceTree = "<group>"; };
-		BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XUIKit.m"; sourceTree = "<group>"; };
-		BD75EB52184ACE2E00B42FF5 /* XUITextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextView.h; sourceTree = "<group>"; };
-		BD75EB53184ACE2E00B42FF5 /* XUITextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextView.m; sourceTree = "<group>"; };
-		BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextStorage.h; sourceTree = "<group>"; };
-		BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextStorage.m; sourceTree = "<group>"; };
-		BD75EB7E184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+XUIKit.h"; sourceTree = "<group>"; };
-		BD75EB7F184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+XUIKit.m"; sourceTree = "<group>"; };
-		BD75EB83184BE41E00B42FF5 /* NSTextStorage+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextStorage+XUIKit.h"; sourceTree = "<group>"; };
-		BD75EB84184BE41E00B42FF5 /* NSTextStorage+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextStorage+XUIKit.m"; sourceTree = "<group>"; };
-		BD81206D18AD78680039C19C /* UICollectionView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+XUIKit.h"; sourceTree = "<group>"; };
-		BD81206E18AD78680039C19C /* UICollectionView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+XUIKit.m"; sourceTree = "<group>"; };
-		BDA1B7631840DCD600DA642E /* XUITextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUITextViewController.h; sourceTree = "<group>"; };
-		BDA1B7641840DCD600DA642E /* XUITextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUITextViewController.m; sourceTree = "<group>"; };
-		BDA399B218A3E0CA00588473 /* UIImage+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XUIKit.h"; sourceTree = "<group>"; };
-		BDA399B318A3E0CA00588473 /* UIImage+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XUIKit.m"; sourceTree = "<group>"; };
-		BDA399BA18A4009700588473 /* NSFetchedResultsController+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+XUIKit.h"; sourceTree = "<group>"; };
-		BDA399BB18A4009700588473 /* NSFetchedResultsController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+XUIKit.m"; sourceTree = "<group>"; };
-		BDA9BA0A1887198100AFE5DA /* UIView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XUIKit.h"; sourceTree = "<group>"; };
-		BDA9BA0B1887198100AFE5DA /* UIView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XUIKit.m"; sourceTree = "<group>"; };
-		BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+XUIKit.h"; sourceTree = "<group>"; };
-		BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XUIKit.m"; sourceTree = "<group>"; };
-		BDFD6977194E36FC00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDFD6981194E36FC00799C33 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDFD6990194E377300799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDFD6992194E37A000799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		BDFD6993194E37A000799C33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		BDFD6994194E37A000799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD69A1194E383E00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDFD69BD194E386C00799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BDFD69BE194E386C00799C33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BDFD69BF194E386C00799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextStorage+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTextStorage+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69CD194E388C00799C33 /* UICollectionView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69CE194E388C00799C33 /* UIImage+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69CF194E388C00799C33 /* UIImage+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69D0194E388C00799C33 /* UITableView+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69D1194E388C00799C33 /* UITableView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69D2194E388C00799C33 /* UITextField+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69D3194E388C00799C33 /* UITextField+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XUIKit.h"; sourceTree = "<group>"; };
+		BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XUIKit.m"; sourceTree = "<group>"; };
+		BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
+		BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIAppDelegate.m; sourceTree = "<group>"; };
+		BDFD69DA194E388C00799C33 /* XUIApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIApplication.h; sourceTree = "<group>"; };
+		BDFD69DB194E388C00799C33 /* XUIApplication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIApplication.m; sourceTree = "<group>"; };
+		BDFD69DC194E388C00799C33 /* XUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIButton.h; sourceTree = "<group>"; };
+		BDFD69DD194E388C00799C33 /* XUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
+		BDFD69DE194E388C00799C33 /* XUIInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIInputView.h; sourceTree = "<group>"; };
+		BDFD69DF194E388C00799C33 /* XUIInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIInputView.m; sourceTree = "<group>"; };
+		BDFD69E0194E388C00799C33 /* XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIKit.h; sourceTree = "<group>"; };
+		BDFD69E1194E388C00799C33 /* XUIKitDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIKitDefines.h; sourceTree = "<group>"; };
+		BDFD69E2194E388C00799C33 /* XUILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUILabel.h; sourceTree = "<group>"; };
+		BDFD69E3194E388C00799C33 /* XUILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUILabel.m; sourceTree = "<group>"; };
+		BDFD69E4194E388C00799C33 /* XUITableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITableView.h; sourceTree = "<group>"; };
+		BDFD69E5194E388C00799C33 /* XUITableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITableView.m; sourceTree = "<group>"; };
+		BDFD69E6194E388C00799C33 /* XUITableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITableViewCell.h; sourceTree = "<group>"; };
+		BDFD69E7194E388C00799C33 /* XUITableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITableViewCell.m; sourceTree = "<group>"; };
+		BDFD69E8194E388C00799C33 /* XUITableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITableViewController.h; sourceTree = "<group>"; };
+		BDFD69E9194E388C00799C33 /* XUITableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITableViewController.m; sourceTree = "<group>"; };
+		BDFD69EA194E388C00799C33 /* XUITextStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITextStorage.h; sourceTree = "<group>"; };
+		BDFD69EB194E388C00799C33 /* XUITextStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITextStorage.m; sourceTree = "<group>"; };
+		BDFD69EC194E388C00799C33 /* XUITextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITextView.h; sourceTree = "<group>"; };
+		BDFD69ED194E388C00799C33 /* XUITextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITextView.m; sourceTree = "<group>"; };
+		BDFD69EE194E388C00799C33 /* XUITextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUITextViewController.h; sourceTree = "<group>"; };
+		BDFD69EF194E388C00799C33 /* XUITextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUITextViewController.m; sourceTree = "<group>"; };
+		BDFD69F0194E388C00799C33 /* XUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIViewController.h; sourceTree = "<group>"; };
+		BDFD69F1194E388C00799C33 /* XUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIViewController.m; sourceTree = "<group>"; };
+		BDFD69F3194E388C00799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFD69F4194E388C00799C33 /* XUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIKitTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BDFD6973194E36FC00799C33 /* Frameworks */ = {
+		BDFD699D194E383E00799C33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD697E194E36FC00799C33 /* Frameworks */ = {
+		BDFD69A9194E383E00799C33 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD6982194E36FC00799C33 /* XUIKit.framework in Frameworks */,
+				BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD1A3F18189181F600B87F87 /* Application */ = {
+		BDFD6997194E383E00799C33 = {
 			isa = PBXGroup;
 			children = (
-				BD1A3F191891821F00B87F87 /* XUIApplication.h */,
-				BD1A3F1A1891821F00B87F87 /* XUIApplication.m */,
-				BD1A3F211891B8AE00B87F87 /* XUIAppDelegate.h */,
-				BD1A3F221891B8AE00B87F87 /* XUIAppDelegate.m */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
-		BD2926A31879014400CD136D /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				BD1A3F251891C02F00B87F87 /* NSBundle+XUIKit.h */,
-				BD1A3F261891C02F00B87F87 /* NSBundle+XUIKit.m */,
-				BDA399BA18A4009700588473 /* NSFetchedResultsController+XUIKit.h */,
-				BDA399BB18A4009700588473 /* NSFetchedResultsController+XUIKit.m */,
-				BD75EB7E184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.h */,
-				BD75EB7F184BE1AA00B42FF5 /* NSMutableAttributedString+XUIKit.m */,
-				BD75EB83184BE41E00B42FF5 /* NSTextStorage+XUIKit.h */,
-				BD75EB84184BE41E00B42FF5 /* NSTextStorage+XUIKit.m */,
-				BD733519183EA7C30064C74D /* UIBarButtonItem+XUIKit.h */,
-				BD73351A183EA7C30064C74D /* UIBarButtonItem+XUIKit.m */,
-				BD81206D18AD78680039C19C /* UICollectionView+XUIKit.h */,
-				BD81206E18AD78680039C19C /* UICollectionView+XUIKit.m */,
-				BDA399B218A3E0CA00588473 /* UIImage+XUIKit.h */,
-				BDA399B318A3E0CA00588473 /* UIImage+XUIKit.m */,
-				BD12315F189719C400F617A7 /* UITableView+XUIKit.h */,
-				BD123160189719C400F617A7 /* UITableView+XUIKit.m */,
-				BD698CF218A6FC6900EE9885 /* UITextField+XUIKit.h */,
-				BD698CF318A6FC6900EE9885 /* UITextField+XUIKit.m */,
-				BDBCE45B184408100095F2E2 /* UITextView+XUIKit.h */,
-				BDBCE45C184408100095F2E2 /* UITextView+XUIKit.m */,
-				BDA9BA0A1887198100AFE5DA /* UIView+XUIKit.h */,
-				BDA9BA0B1887198100AFE5DA /* UIView+XUIKit.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-		BD62A336184D09A600A21125 /* Table View */ = {
-			isa = PBXGroup;
-			children = (
-				BD6354011893330E00168DEE /* XUITableView.h */,
-				BD6354021893330E00168DEE /* XUITableView.m */,
-				BD733513183EA60F0064C74D /* XUITableViewController.h */,
-				BD733514183EA60F0064C74D /* XUITableViewController.m */,
-				BD4FF1B9184E1A7500A8C736 /* XUITableViewCell.h */,
-				BD4FF1BA184E1A7500A8C736 /* XUITableViewCell.m */,
-			);
-			name = "Table View";
-			sourceTree = "<group>";
-		};
-		BD6353F818931A8F00168DEE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BD6353F918931AAE00168DEE /* XUIViewController.h */,
-				BD6353FA18931AAE00168DEE /* XUIViewController.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		BD6354061895632200168DEE /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				BD0E96161881FA9B00D63463 /* XUIButton.h */,
-				BD0E96171881FA9B00D63463 /* XUIButton.m */,
-				BD698CEC18A684B600EE9885 /* XUIInputView.h */,
-				BD698CED18A684B600EE9885 /* XUIInputView.m */,
-				BD4FF2781853E42C00A8C736 /* XUILabel.h */,
-				BD4FF2791853E42C00A8C736 /* XUILabel.m */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
-		BD7334D0183E9E4A0064C74D = {
-			isa = PBXGroup;
-			children = (
-				BDFD6991194E377F00799C33 /* Resources */,
-				BD733502183E9EB00064C74D /* Source */,
-				BD733504183E9EB00064C74D /* Tests */,
-				BD7334DA183E9E4A0064C74D /* Products */,
+				BDFD69C0194E387A00799C33 /* Resources */,
+				BDFD69C1194E388C00799C33 /* Source */,
+				BDFD69F2194E388C00799C33 /* Tests */,
+				BDFD69A2194E383E00799C33 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BD7334DA183E9E4A0064C74D /* Products */ = {
+		BDFD69A2194E383E00799C33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD6977194E36FC00799C33 /* XUIKit.framework */,
-				BDFD6981194E36FC00799C33 /* XUIKitTests.xctest */,
+				BDFD69A1194E383E00799C33 /* XUIKit.framework */,
+				BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BD733502183E9EB00064C74D /* Source */ = {
+		BDFD69C0194E387A00799C33 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BD733503183E9EB00064C74D /* XUIKit.h */,
-				BD6353FF18931DB800168DEE /* XUIKitDefines.h */,
-				BD1A3F18189181F600B87F87 /* Application */,
-				BD6353F818931A8F00168DEE /* View */,
-				BD62A336184D09A600A21125 /* Table View */,
-				BD75EB51184ACDE200B42FF5 /* Text View */,
-				BD6354061895632200168DEE /* Other */,
-				BD2926A31879014400CD136D /* Categories */,
+				BDFD69BD194E386C00799C33 /* LICENSE.md */,
+				BDFD69BE194E386C00799C33 /* README.md */,
+				BDFD69BF194E386C00799C33 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BDFD69C1194E388C00799C33 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD69F6194E38ED00799C33 /* General */,
+				BDFD69F9194E39A800799C33 /* Application */,
+				BDFD69F8194E396C00799C33 /* Categories */,
+				BDFD69DC194E388C00799C33 /* XUIButton.h */,
+				BDFD69DD194E388C00799C33 /* XUIButton.m */,
+				BDFD69DE194E388C00799C33 /* XUIInputView.h */,
+				BDFD69DF194E388C00799C33 /* XUIInputView.m */,
+				BDFD69E1194E388C00799C33 /* XUIKitDefines.h */,
+				BDFD69E2194E388C00799C33 /* XUILabel.h */,
+				BDFD69E3194E388C00799C33 /* XUILabel.m */,
+				BDFD69E4194E388C00799C33 /* XUITableView.h */,
+				BDFD69E5194E388C00799C33 /* XUITableView.m */,
+				BDFD69E6194E388C00799C33 /* XUITableViewCell.h */,
+				BDFD69E7194E388C00799C33 /* XUITableViewCell.m */,
+				BDFD69E8194E388C00799C33 /* XUITableViewController.h */,
+				BDFD69E9194E388C00799C33 /* XUITableViewController.m */,
+				BDFD69EA194E388C00799C33 /* XUITextStorage.h */,
+				BDFD69EB194E388C00799C33 /* XUITextStorage.m */,
+				BDFD69EC194E388C00799C33 /* XUITextView.h */,
+				BDFD69ED194E388C00799C33 /* XUITextView.m */,
+				BDFD69EE194E388C00799C33 /* XUITextViewController.h */,
+				BDFD69EF194E388C00799C33 /* XUITextViewController.m */,
+				BDFD69F0194E388C00799C33 /* XUIViewController.h */,
+				BDFD69F1194E388C00799C33 /* XUIViewController.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		BD733504183E9EB00064C74D /* Tests */ = {
+		BDFD69F2194E388C00799C33 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD6990194E377300799C33 /* Info.plist */,
-				BD733506183E9EB00064C74D /* XUIKitTests.m */,
+				BDFD69F3194E388C00799C33 /* Info.plist */,
+				BDFD69F4194E388C00799C33 /* XUIKitTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		BD75EB51184ACDE200B42FF5 /* Text View */ = {
+		BDFD69F6194E38ED00799C33 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				BD75EB52184ACE2E00B42FF5 /* XUITextView.h */,
-				BD75EB53184ACE2E00B42FF5 /* XUITextView.m */,
-				BDA1B7631840DCD600DA642E /* XUITextViewController.h */,
-				BDA1B7641840DCD600DA642E /* XUITextViewController.m */,
-				BD75EB5A184AF70500B42FF5 /* XUITextStorage.h */,
-				BD75EB5B184AF70500B42FF5 /* XUITextStorage.m */,
+				BDFD69E0194E388C00799C33 /* XUIKit.h */,
 			);
-			name = "Text View";
+			name = General;
 			sourceTree = "<group>";
 		};
-		BDFD6991194E377F00799C33 /* Resources */ = {
+		BDFD69F8194E396C00799C33 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD6994194E37A000799C33 /* Info.plist */,
-				BDFD6992194E37A000799C33 /* LICENSE.md */,
-				BDFD6993194E37A000799C33 /* README.md */,
+				BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */,
+				BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */,
+				BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */,
+				BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */,
+				BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */,
+				BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */,
+				BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */,
+				BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */,
+				BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */,
+				BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */,
+				BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */,
+				BDFD69CD194E388C00799C33 /* UICollectionView+XUIKit.m */,
+				BDFD69CE194E388C00799C33 /* UIImage+XUIKit.h */,
+				BDFD69CF194E388C00799C33 /* UIImage+XUIKit.m */,
+				BDFD69D0194E388C00799C33 /* UITableView+XUIKit.h */,
+				BDFD69D1194E388C00799C33 /* UITableView+XUIKit.m */,
+				BDFD69D2194E388C00799C33 /* UITextField+XUIKit.h */,
+				BDFD69D3194E388C00799C33 /* UITextField+XUIKit.m */,
+				BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */,
+				BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */,
+				BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */,
+				BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */,
 			);
-			name = Resources;
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BDFD69F9194E39A800799C33 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */,
+				BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */,
+				BDFD69DA194E388C00799C33 /* XUIApplication.h */,
+				BDFD69DB194E388C00799C33 /* XUIApplication.m */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BDFD6974194E36FC00799C33 /* Headers */ = {
+		BDFD699E194E383E00799C33 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD6995194E37CA00799C33 /* XUIKit.h in Headers */,
-				BDFD6996194E37D100799C33 /* XUIKitDefines.h in Headers */,
+				BDFD6A06194E39EB00799C33 /* UIImage+XUIKit.h in Headers */,
+				BDFD69F7194E390200799C33 /* XUIKit.h in Headers */,
+				BDFD6A0A194E39EB00799C33 /* UITextField+XUIKit.h in Headers */,
+				BDFD6A08194E39EB00799C33 /* UITableView+XUIKit.h in Headers */,
+				BDFD6A12194E3A2700799C33 /* XUIApplication.h in Headers */,
+				BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */,
+				BDFD6A10194E3A2700799C33 /* XUIAppDelegate.h in Headers */,
+				BDFD6A25194E3BE400799C33 /* XUITextViewController.h in Headers */,
+				BDFD6A0C194E39EB00799C33 /* UITextView+XUIKit.h in Headers */,
+				BDFD6A19194E3BE400799C33 /* XUILabel.h in Headers */,
+				BDFD6A1D194E3BE400799C33 /* XUITableViewCell.h in Headers */,
+				BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */,
+				BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */,
+				BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */,
+				BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */,
+				BDFD6A1B194E3BE400799C33 /* XUITableView.h in Headers */,
+				BDFD69FC194E39EB00799C33 /* NSFetchedResultsController+XUIKit.h in Headers */,
+				BDFD69FA194E39EB00799C33 /* NSBundle+XUIKit.h in Headers */,
+				BDFD6A00194E39EB00799C33 /* NSTextStorage+XUIKit.h in Headers */,
+				BDFD69FE194E39EB00799C33 /* NSMutableAttributedString+XUIKit.h in Headers */,
+				BDFD6A14194E3BE400799C33 /* XUIButton.h in Headers */,
+				BDFD6A18194E3BE400799C33 /* XUIKitDefines.h in Headers */,
+				BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */,
+				BDFD6A21194E3BE400799C33 /* XUITextStorage.h in Headers */,
+				BDFD6A1F194E3BE400799C33 /* XUITableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BDFD6976194E36FC00799C33 /* XUIKit */ = {
+		BDFD69A0194E383E00799C33 /* XUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD698A194E36FC00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */;
+			buildConfigurationList = BDFD69B7194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */;
 			buildPhases = (
-				BDFD6972194E36FC00799C33 /* Sources */,
-				BDFD6973194E36FC00799C33 /* Frameworks */,
-				BDFD6974194E36FC00799C33 /* Headers */,
-				BDFD6975194E36FC00799C33 /* Resources */,
+				BDFD699C194E383E00799C33 /* Sources */,
+				BDFD699D194E383E00799C33 /* Frameworks */,
+				BDFD699E194E383E00799C33 /* Headers */,
+				BDFD699F194E383E00799C33 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -270,72 +316,72 @@
 			);
 			name = XUIKit;
 			productName = XUIKit;
-			productReference = BDFD6977194E36FC00799C33 /* XUIKit.framework */;
+			productReference = BDFD69A1194E383E00799C33 /* XUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BDFD6980194E36FC00799C33 /* XUIKitTests */ = {
+		BDFD69AB194E383E00799C33 /* XUIKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD698D194E36FC00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */;
+			buildConfigurationList = BDFD69BA194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */;
 			buildPhases = (
-				BDFD697D194E36FC00799C33 /* Sources */,
-				BDFD697E194E36FC00799C33 /* Frameworks */,
-				BDFD697F194E36FC00799C33 /* Resources */,
+				BDFD69A8194E383E00799C33 /* Sources */,
+				BDFD69A9194E383E00799C33 /* Frameworks */,
+				BDFD69AA194E383E00799C33 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BDFD6984194E36FC00799C33 /* PBXTargetDependency */,
+				BDFD69AF194E383E00799C33 /* PBXTargetDependency */,
 			);
 			name = XUIKitTests;
 			productName = XUIKitTests;
-			productReference = BDFD6981194E36FC00799C33 /* XUIKitTests.xctest */;
+			productReference = BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BD7334D1183E9E4A0064C74D /* Project object */ = {
+		BDFD6998194E383E00799C33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Felix Gabel";
 				TargetAttributes = {
-					BDFD6976194E36FC00799C33 = {
+					BDFD69A0194E383E00799C33 = {
 						CreatedOnToolsVersion = 6.0;
 					};
-					BDFD6980194E36FC00799C33 = {
+					BDFD69AB194E383E00799C33 = {
 						CreatedOnToolsVersion = 6.0;
-						TestTargetID = BDFD6976194E36FC00799C33;
+						TestTargetID = BDFD69A0194E383E00799C33;
 					};
 				};
 			};
-			buildConfigurationList = BD7334D4183E9E4A0064C74D /* Build configuration list for PBXProject "XUIKit" */;
+			buildConfigurationList = BDFD699B194E383E00799C33 /* Build configuration list for PBXProject "XUIKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = BD7334D0183E9E4A0064C74D;
-			productRefGroup = BD7334DA183E9E4A0064C74D /* Products */;
+			mainGroup = BDFD6997194E383E00799C33;
+			productRefGroup = BDFD69A2194E383E00799C33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDFD6976194E36FC00799C33 /* XUIKit */,
-				BDFD6980194E36FC00799C33 /* XUIKitTests */,
+				BDFD69A0194E383E00799C33 /* XUIKit */,
+				BDFD69AB194E383E00799C33 /* XUIKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BDFD6975194E36FC00799C33 /* Resources */ = {
+		BDFD699F194E383E00799C33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD697F194E36FC00799C33 /* Resources */ = {
+		BDFD69AA194E383E00799C33 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,32 +391,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BDFD6972194E36FC00799C33 /* Sources */ = {
+		BDFD699C194E383E00799C33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFD6A26194E3BE400799C33 /* XUITextViewController.m in Sources */,
+				BDFD6A05194E39EB00799C33 /* UICollectionView+XUIKit.m in Sources */,
+				BDFD6A09194E39EB00799C33 /* UITableView+XUIKit.m in Sources */,
+				BDFD6A13194E3A2700799C33 /* XUIApplication.m in Sources */,
+				BDFD69FB194E39EB00799C33 /* NSBundle+XUIKit.m in Sources */,
+				BDFD6A1E194E3BE400799C33 /* XUITableViewCell.m in Sources */,
+				BDFD6A28194E3BE400799C33 /* XUIViewController.m in Sources */,
+				BDFD6A17194E3BE400799C33 /* XUIInputView.m in Sources */,
+				BDFD6A01194E39EB00799C33 /* NSTextStorage+XUIKit.m in Sources */,
+				BDFD69FF194E39EB00799C33 /* NSMutableAttributedString+XUIKit.m in Sources */,
+				BDFD6A24194E3BE400799C33 /* XUITextView.m in Sources */,
+				BDFD69FD194E39EB00799C33 /* NSFetchedResultsController+XUIKit.m in Sources */,
+				BDFD6A0F194E39EB00799C33 /* UIView+XUIKit.m in Sources */,
+				BDFD6A20194E3BE400799C33 /* XUITableViewController.m in Sources */,
+				BDFD6A22194E3BE400799C33 /* XUITextStorage.m in Sources */,
+				BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */,
+				BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */,
+				BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */,
+				BDFD6A15194E3BE400799C33 /* XUIButton.m in Sources */,
+				BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */,
+				BDFD6A11194E3A2700799C33 /* XUIAppDelegate.m in Sources */,
+				BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */,
+				BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD697D194E36FC00799C33 /* Sources */ = {
+		BDFD69A8194E383E00799C33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BDFD6984194E36FC00799C33 /* PBXTargetDependency */ = {
+		BDFD69AF194E383E00799C33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDFD6976194E36FC00799C33 /* XUIKit */;
-			targetProxy = BDFD6983194E36FC00799C33 /* PBXContainerItemProxy */;
+			target = BDFD69A0194E383E00799C33 /* XUIKit */;
+			targetProxy = BDFD69AE194E383E00799C33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		BD7334FA183E9E4A0064C74D /* Debug */ = {
+		BDFD69B5194E383E00799C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,8 +455,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -396,24 +470,22 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRIVATE_HEADERS_FOLDER_PATH = "private/${PRODUCT_NAME}";
-				PRODUCT_NAME = XUIKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		BD7334FB183E9E4A0064C74D /* Release */ = {
+		BDFD69B6194E383E00799C33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -428,87 +500,63 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRIVATE_HEADERS_FOLDER_PATH = "private/${PRODUCT_NAME}";
-				PRODUCT_NAME = XUIKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/${PRODUCT_NAME}";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BDFD698B194E36FC00799C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BDFD698C194E36FC00799C33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		BDFD698E194E36FC00799C33 /* Debug */ = {
+		BDFD69B8194E383E00799C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BDFD69B9194E383E00799C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BDFD69BB194E383E00799C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -517,27 +565,21 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		BDFD698F194E36FC00799C33 /* Release */ = {
+		BDFD69BC194E383E00799C33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,32 +589,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BD7334D4183E9E4A0064C74D /* Build configuration list for PBXProject "XUIKit" */ = {
+		BDFD699B194E383E00799C33 /* Build configuration list for PBXProject "XUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD7334FA183E9E4A0064C74D /* Debug */,
-				BD7334FB183E9E4A0064C74D /* Release */,
+				BDFD69B5194E383E00799C33 /* Debug */,
+				BDFD69B6194E383E00799C33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDFD698A194E36FC00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */ = {
+		BDFD69B7194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDFD698B194E36FC00799C33 /* Debug */,
-				BDFD698C194E36FC00799C33 /* Release */,
+				BDFD69B8194E383E00799C33 /* Debug */,
+				BDFD69B9194E383E00799C33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		BDFD698D194E36FC00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */ = {
+		BDFD69BA194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDFD698E194E36FC00799C33 /* Debug */,
-				BDFD698F194E36FC00799C33 /* Release */,
+				BDFD69BB194E383E00799C33 /* Debug */,
+				BDFD69BC194E383E00799C33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BD7334D1183E9E4A0064C74D /* Project object */;
+	rootObject = BDFD6998194E383E00799C33 /* Project object */;
 }
