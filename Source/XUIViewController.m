@@ -78,11 +78,4 @@
 	}
 }
 
-
-#pragma mark -
-
-- (UINavigationController *)contentNavigationController {
-	return XUIIdiomIsPad() ? [self.splitViewController.viewControllers lastObject] : [self navigationController];
-}
-
 @end
