@@ -23,7 +23,7 @@
 @property (nonatomic) UIEdgeInsets	textViewContentInsets;
 
 
-//this is where subclasses should create their textStorage, layoutManager and textContainer instances
+// This is where subclasses should create their textStorage, layoutManager and textContainer instances.
 //!!!: Should never be called directly.
 - (void)loadTextStack;
 
