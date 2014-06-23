@@ -10,7 +10,7 @@
 @import UIKit;
 
 
-@protocol NSFetchedDataSourceDelegate <NSFetchedResultsControllerDelegate, NSObject>
+@protocol XUIDataSourceDelegate <NSFetchedResultsControllerDelegate, NSObject>
 
 - (id)controller:(NSFetchedResultsController *)controller cellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
 
@@ -18,24 +18,31 @@
 
 
 #pragma mark -
-@protocol XUIFetchedDataSource <NSObject>
 
-@property (nonatomic, weak) id<NSFetchedDataSourceDelegate>	delegate;
+@protocol XUIDataSource <NSObject>
+
+@property (nonatomic, weak) id<XUIDataSourceDelegate>	delegate;
 
 @end
 
 
 #pragma mark -
-@interface NSFetchedResultsController (UITableViewDataSource) <UITableViewDataSource, XUIFetchedDataSource>
+
+@interface NSFetchedResultsController (UITableViewDataSource) <UITableViewDataSource, XUIDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
 #pragma mark -
-@interface NSFetchedResultsController (UICollectionViewDataSource) <UICollectionViewDataSource, XUIFetchedDataSource>
+
+@interface NSFetchedResultsController (UICollectionViewDataSource) <UICollectionViewDataSource, XUIDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
