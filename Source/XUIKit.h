@@ -10,10 +10,10 @@
 #import <XUIKit/XUIKitDefines.h>
 
 #import <XUIKit/XUIAppDelegate.h>
-#import <XUIKit/XUIApplication.h>
 #import <XUIKit/XUIButton.h>
 #import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
+#import <XUIKit/XUINavigationController.h>
 #import <XUIKit/XUITableViewCell.h>
 #import <XUIKit/XUITableViewController.h>
 #import <XUIKit/XUITableView.h>

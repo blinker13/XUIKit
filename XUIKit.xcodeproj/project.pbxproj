@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDF2FA421951F84D00E1897D /* XUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF2FA3C1951F13900E1897D /* XUINavigationController.m */; };
+		BDF2FA431951F85000E1897D /* XUINavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF2FA3B1951F13900E1897D /* XUINavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD69A1194E383E00799C33 /* XUIKit.framework */; };
 		BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F4194E388C00799C33 /* XUIKitTests.m */; };
 		BDFD69F7194E390200799C33 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E0194E388C00799C33 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDF2FA3B1951F13900E1897D /* XUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUINavigationController.h; sourceTree = "<group>"; };
+		BDF2FA3C1951F13900E1897D /* XUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUINavigationController.m; sourceTree = "<group>"; };
 		BDFD69A1194E383E00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD69BD194E386C00799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -183,6 +187,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		BDF2FA3A1951F12500E1897D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BDF2FA3B1951F13900E1897D /* XUINavigationController.h */,
+				BDF2FA3C1951F13900E1897D /* XUINavigationController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 		BDFD6997194E383E00799C33 = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +230,7 @@
 			children = (
 				BDFD69F6194E38ED00799C33 /* General */,
 				BDFD69F9194E39A800799C33 /* Application */,
+				BDF2FA3A1951F12500E1897D /* Navigation */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
 				BDE4AB77194ECFA500597AB3 /* Views */,
@@ -311,6 +325,7 @@
 				BDFD6A18194E3BE400799C33 /* XUIKitDefines.h in Headers */,
 				BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */,
 				BDFD6A21194E3BE400799C33 /* XUITextStorage.h in Headers */,
+				BDF2FA431951F85000E1897D /* XUINavigationController.h in Headers */,
 				BDFD6A1F194E3BE400799C33 /* XUITableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +443,7 @@
 				BDFD6A22194E3BE400799C33 /* XUITextStorage.m in Sources */,
 				BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */,
 				BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */,
+				BDF2FA421951F84D00E1897D /* XUINavigationController.m in Sources */,
 				BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */,
 				BDFD6A15194E3BE400799C33 /* XUIButton.m in Sources */,
 				BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */,
