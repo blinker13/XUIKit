@@ -213,7 +213,7 @@
 		BDFD69C1194E388C00799C33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD69F6194E38ED00799C33 /* General */,
+				BDFD69E0194E388C00799C33 /* XUIKit.h */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
 				BDE4AB77194ECFA500597AB3 /* Views */,
@@ -229,14 +229,6 @@
 				BDFD69F4194E388C00799C33 /* XUIKitTests.m */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		BDFD69F6194E38ED00799C33 /* General */ = {
-			isa = PBXGroup;
-			children = (
-				BDFD69E0194E388C00799C33 /* XUIKit.h */,
-			);
-			name = General;
 			sourceTree = "<group>";
 		};
 		BDFD69F8194E396C00799C33 /* Categories */ = {
