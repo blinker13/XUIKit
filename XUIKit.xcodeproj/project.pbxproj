@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */; };
 		BDF2FA421951F84D00E1897D /* XUINavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF2FA3C1951F13900E1897D /* XUINavigationController.m */; };
 		BDF2FA431951F85000E1897D /* XUINavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF2FA3B1951F13900E1897D /* XUINavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD69A1194E383E00799C33 /* XUIKit.framework */; };
@@ -34,8 +36,6 @@
 		BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */; };
 		BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD6A0F194E39EB00799C33 /* UIView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */; };
-		BDFD6A10194E3A2700799C33 /* XUIAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A11194E3A2700799C33 /* XUIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */; };
 		BDFD6A14194E3BE400799C33 /* XUIButton.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DC194E388C00799C33 /* XUIButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDFD6A15194E3BE400799C33 /* XUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DD194E388C00799C33 /* XUIButton.m */; };
 		BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DE194E388C00799C33 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+XUIKit.h"; sourceTree = "<group>"; };
+		BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XUIKit.m"; sourceTree = "<group>"; };
 		BDF2FA3B1951F13900E1897D /* XUINavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUINavigationController.h; sourceTree = "<group>"; };
 		BDF2FA3C1951F13900E1897D /* XUINavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUINavigationController.m; sourceTree = "<group>"; };
 		BDFD69A1194E383E00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +101,6 @@
 		BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+XUIKit.m"; sourceTree = "<group>"; };
 		BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XUIKit.h"; sourceTree = "<group>"; };
 		BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XUIKit.m"; sourceTree = "<group>"; };
-		BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIAppDelegate.h; sourceTree = "<group>"; };
-		BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIAppDelegate.m; sourceTree = "<group>"; };
 		BDFD69DC194E388C00799C33 /* XUIButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIButton.h; sourceTree = "<group>"; };
 		BDFD69DD194E388C00799C33 /* XUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XUIButton.m; sourceTree = "<group>"; };
 		BDFD69DE194E388C00799C33 /* XUIInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XUIInputView.h; sourceTree = "<group>"; };
@@ -229,7 +229,6 @@
 			isa = PBXGroup;
 			children = (
 				BDFD69F6194E38ED00799C33 /* General */,
-				BDFD69F9194E39A800799C33 /* Application */,
 				BDF2FA3A1951F12500E1897D /* Navigation */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
@@ -268,6 +267,8 @@
 				BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */,
 				BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */,
 				BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */,
+				BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */,
+				BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */,
 				BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */,
 				BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */,
 				BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */,
@@ -286,15 +287,6 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		BDFD69F9194E39A800799C33 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				BDFD69D8194E388C00799C33 /* XUIAppDelegate.h */,
-				BDFD69D9194E388C00799C33 /* XUIAppDelegate.m */,
-			);
-			name = Application;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -307,7 +299,6 @@
 				BDFD6A0A194E39EB00799C33 /* UITextField+XUIKit.h in Headers */,
 				BDFD6A08194E39EB00799C33 /* UITableView+XUIKit.h in Headers */,
 				BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */,
-				BDFD6A10194E3A2700799C33 /* XUIAppDelegate.h in Headers */,
 				BDFD6A25194E3BE400799C33 /* XUITextViewController.h in Headers */,
 				BDFD6A0C194E39EB00799C33 /* UITextView+XUIKit.h in Headers */,
 				BDFD6A19194E3BE400799C33 /* XUILabel.h in Headers */,
@@ -315,6 +306,7 @@
 				BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */,
 				BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */,
 				BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */,
+				BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */,
 				BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */,
 				BDFD6A1B194E3BE400799C33 /* XUITableView.h in Headers */,
 				BDFD69FC194E39EB00799C33 /* NSFetchedResultsController+XUIKit.h in Headers */,
@@ -447,7 +439,7 @@
 				BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */,
 				BDFD6A15194E3BE400799C33 /* XUIButton.m in Sources */,
 				BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */,
-				BDFD6A11194E3A2700799C33 /* XUIAppDelegate.m in Sources */,
+				BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */,
 				BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */,
 				BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */,
 			);

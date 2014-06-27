@@ -12,7 +12,7 @@
 
 @protocol XUIDataSourceDelegate <NSFetchedResultsControllerDelegate, NSObject>
 
-- (id)controller:(NSFetchedResultsController *)controller cellForItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
+- (id)controller:(NSFetchedResultsController *)controller cellForItem:(NSManagedObject *)item atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

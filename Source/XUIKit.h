@@ -6,10 +6,6 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-
-#import <XUIKit/XUIKitDefines.h>
-
-#import <XUIKit/XUIAppDelegate.h>
 #import <XUIKit/XUIButton.h>
 #import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
@@ -26,6 +22,7 @@
 #import <XUIKit/NSFetchedResultsController+XUIKit.h>
 #import <XUIKit/NSMutableAttributedString+XUIKit.h>
 #import <XUIKit/NSTextStorage+XUIKit.h>
+#import <XUIKit/UIApplication+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
 #import <XUIKit/UICollectionView+XUIKit.h>
 #import <XUIKit/UIImage+XUIKit.h>
