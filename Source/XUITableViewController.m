@@ -7,7 +7,6 @@
 //
 
 #import "XUITableViewController.h"
-#import "XUIKitDefines.h"
 #import "XUILabel.h"
 
 

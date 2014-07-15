@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import <XUIKit/XUIButton.h>
 #import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
 #import <XUIKit/XUITableViewCell.h>

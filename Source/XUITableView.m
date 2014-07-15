@@ -7,7 +7,6 @@
 //
 
 #import "XUITableView.h"
-#import "XUIKitDefines.h"
 #import "XUILabel.h"
 
 
@@ -22,7 +21,7 @@ const CGFloat XUITableViewDeSelectionDuration	=	0.4;
 		UIColor *backgroundColor = [UIColor whiteColor];
 		
 		[self setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-		[self setAutoresizingMask:XUIViewFlexibleSize];
+		[self setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
 		[self setBackgroundColor:backgroundColor];
 	}
 	return self;
