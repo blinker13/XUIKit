@@ -12,9 +12,9 @@
 
 @interface UIView (XUIKit)
 
-@property (nonatomic) UIColor	*borderColor IB_DESIGNABLE;
-@property (nonatomic) CGFloat	cornerRadius IB_DESIGNABLE;
-@property (nonatomic) CGFloat	borderWidth  IB_DESIGNABLE;
+@property (nonatomic) IBInspectable UIColor	*borderColor;
+@property (nonatomic) IBInspectable CGFloat	cornerRadius;
+@property (nonatomic) IBInspectable CGFloat	borderWidth;
 
 
 + (instancetype)viewWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle owner:(id)owner;

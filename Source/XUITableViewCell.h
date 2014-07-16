@@ -11,6 +11,6 @@
 
 @interface XUITableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIColor	*selectedBackgroundColor;
+@property (nonatomic, strong) IBInspectable UIColor	*selectedBackgroundColor;
 
 @end
