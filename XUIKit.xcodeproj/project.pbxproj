@@ -136,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD4BDA261977A80E003C81EA /* General */ = {
+			isa = PBXGroup;
+			children = (
+				BDFD69E0194E388C00799C33 /* XUIKit.h */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
 		BDE4AB75194ECF3A00597AB3 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +215,7 @@
 		BDFD69C1194E388C00799C33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD69E0194E388C00799C33 /* XUIKit.h */,
+				BD4BDA261977A80E003C81EA /* General */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
 				BDE4AB77194ECFA500597AB3 /* Views */,
