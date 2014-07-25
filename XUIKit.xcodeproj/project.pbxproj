@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */; };
+		BD4BDA311977B68B003C81EA /* XUIDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */; };
+		BD4BDA321977B68B003C81EA /* XUIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4BDA301977B68B003C81EA /* XUIDataSource.m */; };
 		BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD69A1194E383E00799C33 /* XUIKit.framework */; };
 		BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F4194E388C00799C33 /* XUIKitTests.m */; };
 		BDFD69F7194E390200799C33 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E0194E388C00799C33 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +69,8 @@
 /* Begin PBXFileReference section */
 		BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+XUIKit.h"; sourceTree = "<group>"; };
 		BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XUIKit.m"; sourceTree = "<group>"; };
+		BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDataSource.h; sourceTree = "<group>"; };
+		BD4BDA301977B68B003C81EA /* XUIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSource.m; sourceTree = "<group>"; };
 		BDFD69A1194E383E00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD69BD194E386C00799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -144,6 +148,15 @@
 			name = General;
 			sourceTree = "<group>";
 		};
+		BD4BDA2E1977B664003C81EA /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */,
+				BD4BDA301977B68B003C81EA /* XUIDataSource.m */,
+			);
+			name = "Data Source";
+			sourceTree = "<group>";
+		};
 		BDE4AB75194ECF3A00597AB3 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4BDA261977A80E003C81EA /* General */,
+				BD4BDA2E1977B664003C81EA /* Data Source */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
 				BDE4AB77194ECFA500597AB3 /* Views */,
@@ -282,6 +296,7 @@
 				BDFD6A1D194E3BE400799C33 /* XUITableViewCell.h in Headers */,
 				BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */,
 				BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */,
+				BD4BDA311977B68B003C81EA /* XUIDataSource.h in Headers */,
 				BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */,
 				BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */,
 				BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */,
@@ -410,6 +425,7 @@
 				BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */,
 				BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */,
 				BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */,
+				BD4BDA321977B68B003C81EA /* XUIDataSource.m in Sources */,
 				BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */,
 				BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */,
 				BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */,
