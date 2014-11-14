@@ -13,6 +13,6 @@
 
 + (NSString *)mainBundleVersion;
 
-- (UINib *)nibWithName:(NSString *)name;
+- (UINib *)existingNibWithName:(NSString *)name;
 
 @end

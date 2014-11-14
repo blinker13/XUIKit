@@ -14,7 +14,8 @@
 
 - (void)registerCellClass:(Class)cellClass {
 	NSString *identifier = NSStringFromClass(cellClass);
-	UINib *nib = [[NSBundle mainBundle] nibWithName:identifier];
+	UINib *nib = [[NSBundle mainBundle] existingNibWithName:identifier];
+	
 	if (nib) [self registerNib:nib forCellReuseIdentifier:identifier];
 	else [self registerClass:cellClass forCellReuseIdentifier:identifier];
 }

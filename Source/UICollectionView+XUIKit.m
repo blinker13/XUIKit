@@ -14,7 +14,7 @@
 
 - (void)registerCellClass:(Class)cellClass {
 	NSString *identifier = NSStringFromClass(cellClass);
-	UINib *nib = [[NSBundle mainBundle] nibWithName:identifier];
+	UINib *nib = [[NSBundle mainBundle] existingNibWithName:identifier];
 	if (nib) [self registerNib:nib forCellWithReuseIdentifier:identifier];
 	else [self registerClass:cellClass forCellWithReuseIdentifier:identifier];
 }
@@ -26,7 +26,7 @@
 
 - (void)registerHeaderClass:(Class)headerClass {
 	NSString *identifier = NSStringFromClass(headerClass);
-	UINib *nib = [[NSBundle mainBundle] nibWithName:identifier];
+	UINib *nib = [[NSBundle mainBundle] existingNibWithName:identifier];
 	if (nib) [self registerNib:nib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:identifier];
 	else [self registerClass:headerClass forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:identifier];
 }
@@ -39,7 +39,7 @@
 
 - (void)registerFooterClass:(Class)footerClass {
 	NSString *identifier = NSStringFromClass(footerClass);
-	UINib *nib = [[NSBundle mainBundle] nibWithName:identifier];
+	UINib *nib = [[NSBundle mainBundle] existingNibWithName:identifier];
 	if (nib) [self registerNib:nib forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:identifier];
 	else [self registerClass:footerClass forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:identifier];
 }

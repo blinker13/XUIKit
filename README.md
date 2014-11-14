@@ -1,4 +1,3 @@
-XUIKit
-======
+#XUIKit
 
-Convenient Classes and Categories for UIKit
+Convenient Classes and Categories on top of UIKit

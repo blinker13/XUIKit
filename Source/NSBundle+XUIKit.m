@@ -9,19 +9,16 @@
 #import "NSBundle+XUIKit.h"
 
 
-NSString *const XUINibSuffix	=	@"nib";
-
-
 @implementation NSBundle (XUIKit)
 
 + (NSString *)mainBundleVersion {
 	NSBundle *mainBundle = [self mainBundle];
 	NSDictionary *info = [mainBundle infoDictionary];
-	return [info objectForKey:@"CFBundleVersion"];
+	return [info objectForKey:(__bridge NSString *)kCFBundleVersionKey];
 }
 
-- (UINib *)nibWithName:(NSString *)name {
-	if ([self pathForResource:name ofType:XUINibSuffix]) {
+- (UINib *)existingNibWithName:(NSString *)name {
+	if ([self pathForResource:name ofType:@"nib"]) {
 		return [UINib nibWithNibName:name bundle:self];
 	}
 	return nil;

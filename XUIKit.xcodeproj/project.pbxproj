@@ -7,61 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */; };
-		BD4BDA311977B68B003C81EA /* XUIDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */; };
-		BD4BDA321977B68B003C81EA /* XUIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4BDA301977B68B003C81EA /* XUIDataSource.m */; };
-		BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFD69A1194E383E00799C33 /* XUIKit.framework */; };
-		BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F4194E388C00799C33 /* XUIKitTests.m */; };
-		BDFD69F7194E390200799C33 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E0194E388C00799C33 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD69FA194E39EB00799C33 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD69FB194E39EB00799C33 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */; };
-		BDFD69FC194E39EB00799C33 /* NSFetchedResultsController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD69FD194E39EB00799C33 /* NSFetchedResultsController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */; };
-		BDFD69FE194E39EB00799C33 /* NSMutableAttributedString+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD69FF194E39EB00799C33 /* NSMutableAttributedString+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */; };
-		BDFD6A00194E39EB00799C33 /* NSTextStorage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A01194E39EB00799C33 /* NSTextStorage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */; };
-		BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */; };
-		BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A05194E39EB00799C33 /* UICollectionView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CD194E388C00799C33 /* UICollectionView+XUIKit.m */; };
-		BDFD6A06194E39EB00799C33 /* UIImage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CE194E388C00799C33 /* UIImage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CF194E388C00799C33 /* UIImage+XUIKit.m */; };
-		BDFD6A08194E39EB00799C33 /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D0194E388C00799C33 /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A09194E39EB00799C33 /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D1194E388C00799C33 /* UITableView+XUIKit.m */; };
-		BDFD6A0A194E39EB00799C33 /* UITextField+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D2194E388C00799C33 /* UITextField+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D3194E388C00799C33 /* UITextField+XUIKit.m */; };
-		BDFD6A0C194E39EB00799C33 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */; };
-		BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A0F194E39EB00799C33 /* UIView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */; };
-		BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DE194E388C00799C33 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A17194E3BE400799C33 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DF194E388C00799C33 /* XUIInputView.m */; };
-		BDFD6A19194E3BE400799C33 /* XUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E2194E388C00799C33 /* XUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E3194E388C00799C33 /* XUILabel.m */; };
-		BDFD6A1B194E3BE400799C33 /* XUITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E4194E388C00799C33 /* XUITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E5194E388C00799C33 /* XUITableView.m */; };
-		BDFD6A1D194E3BE400799C33 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E6194E388C00799C33 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A1E194E3BE400799C33 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E7194E388C00799C33 /* XUITableViewCell.m */; };
-		BDFD6A1F194E3BE400799C33 /* XUITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E8194E388C00799C33 /* XUITableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A20194E3BE400799C33 /* XUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E9194E388C00799C33 /* XUITableViewController.m */; };
-		BDFD6A21194E3BE400799C33 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EA194E388C00799C33 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A22194E3BE400799C33 /* XUITextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EB194E388C00799C33 /* XUITextStorage.m */; };
-		BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EC194E388C00799C33 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A24194E3BE400799C33 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69ED194E388C00799C33 /* XUITextView.m */; };
-		BDFD6A25194E3BE400799C33 /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EE194E388C00799C33 /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A26194E3BE400799C33 /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EF194E388C00799C33 /* XUITextViewController.m */; };
-		BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69F0194E388C00799C33 /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD6A28194E3BE400799C33 /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F1194E388C00799C33 /* XUIViewController.m */; };
+		BDC45E2E1A15FBAB00662D74 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E231A15FBAA00662D74 /* XUIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BDFD69AE194E383E00799C33 /* PBXContainerItemProxy */ = {
+		BDC45E2F1A15FBAB00662D74 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDFD6998194E383E00799C33 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BDFD69A0194E383E00799C33;
+			remoteGlobalIDString = BDC45E221A15FBAA00662D74;
 			remoteInfo = XUIKit;
 		};
 /* End PBXContainerItemProxy section */
@@ -71,15 +25,14 @@
 		BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XUIKit.m"; sourceTree = "<group>"; };
 		BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDataSource.h; sourceTree = "<group>"; };
 		BD4BDA301977B68B003C81EA /* XUIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSource.m; sourceTree = "<group>"; };
-		BDFD69A1194E383E00799C33 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45E231A15FBAA00662D74 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45E2D1A15FBAB00662D74 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFD69BD194E386C00799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BDFD69BE194E386C00799C33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BDFD69BF194E386C00799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XUIKit.h"; sourceTree = "<group>"; };
 		BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XUIKit.m"; sourceTree = "<group>"; };
-		BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+XUIKit.h"; sourceTree = "<group>"; };
-		BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+XUIKit.m"; sourceTree = "<group>"; };
 		BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+XUIKit.h"; sourceTree = "<group>"; };
 		BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+XUIKit.m"; sourceTree = "<group>"; };
 		BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextStorage+XUIKit.h"; sourceTree = "<group>"; };
@@ -122,18 +75,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BDFD699D194E383E00799C33 /* Frameworks */ = {
+		BDC45E1F1A15FBAA00662D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD69A9194E383E00799C33 /* Frameworks */ = {
+		BDC45E2A1A15FBAA00662D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD69AD194E383E00799C33 /* XUIKit.framework in Frameworks */,
+				BDC45E2E1A15FBAB00662D74 /* XUIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +108,14 @@
 				BD4BDA301977B68B003C81EA /* XUIDataSource.m */,
 			);
 			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		BDC45E1B1A15FA6500662D74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BDE4AB75194ECF3A00597AB3 /* TextView */ = {
@@ -202,6 +163,7 @@
 				BDFD69C0194E387A00799C33 /* Resources */,
 				BDFD69C1194E388C00799C33 /* Source */,
 				BDFD69F2194E388C00799C33 /* Tests */,
+				BDC45E1B1A15FA6500662D74 /* Frameworks */,
 				BDFD69A2194E383E00799C33 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -209,8 +171,8 @@
 		BDFD69A2194E383E00799C33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDFD69A1194E383E00799C33 /* XUIKit.framework */,
-				BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */,
+				BDC45E231A15FBAA00662D74 /* XUIKit.framework */,
+				BDC45E2D1A15FBAB00662D74 /* XUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,8 +214,6 @@
 			children = (
 				BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */,
 				BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */,
-				BDFD69C4194E388C00799C33 /* NSFetchedResultsController+XUIKit.h */,
-				BDFD69C5194E388C00799C33 /* NSFetchedResultsController+XUIKit.m */,
 				BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */,
 				BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */,
 				BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */,
@@ -281,47 +241,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BDFD699E194E383E00799C33 /* Headers */ = {
+		BDC45E201A15FBAA00662D74 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD6A06194E39EB00799C33 /* UIImage+XUIKit.h in Headers */,
-				BDFD69F7194E390200799C33 /* XUIKit.h in Headers */,
-				BDFD6A0A194E39EB00799C33 /* UITextField+XUIKit.h in Headers */,
-				BDFD6A08194E39EB00799C33 /* UITableView+XUIKit.h in Headers */,
-				BDFD6A16194E3BE400799C33 /* XUIInputView.h in Headers */,
-				BDFD6A25194E3BE400799C33 /* XUITextViewController.h in Headers */,
-				BDFD6A0C194E39EB00799C33 /* UITextView+XUIKit.h in Headers */,
-				BDFD6A19194E3BE400799C33 /* XUILabel.h in Headers */,
-				BDFD6A1D194E3BE400799C33 /* XUITableViewCell.h in Headers */,
-				BDFD6A02194E39EB00799C33 /* UIBarButtonItem+XUIKit.h in Headers */,
-				BDFD6A23194E3BE400799C33 /* XUITextView.h in Headers */,
-				BD4BDA311977B68B003C81EA /* XUIDataSource.h in Headers */,
-				BDFD6A04194E39EB00799C33 /* UICollectionView+XUIKit.h in Headers */,
-				BD10D51D195DBE1600BDC86E /* UIApplication+XUIKit.h in Headers */,
-				BDFD6A27194E3BE400799C33 /* XUIViewController.h in Headers */,
-				BDFD6A1B194E3BE400799C33 /* XUITableView.h in Headers */,
-				BDFD69FC194E39EB00799C33 /* NSFetchedResultsController+XUIKit.h in Headers */,
-				BDFD69FA194E39EB00799C33 /* NSBundle+XUIKit.h in Headers */,
-				BDFD6A00194E39EB00799C33 /* NSTextStorage+XUIKit.h in Headers */,
-				BDFD69FE194E39EB00799C33 /* NSMutableAttributedString+XUIKit.h in Headers */,
-				BDFD6A0E194E39EB00799C33 /* UIView+XUIKit.h in Headers */,
-				BDFD6A21194E3BE400799C33 /* XUITextStorage.h in Headers */,
-				BDFD6A1F194E3BE400799C33 /* XUITableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BDFD69A0194E383E00799C33 /* XUIKit */ = {
+		BDC45E221A15FBAA00662D74 /* XUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD69B7194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */;
+			buildConfigurationList = BDC45E361A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKit" */;
 			buildPhases = (
-				BDFD699C194E383E00799C33 /* Sources */,
-				BDFD699D194E383E00799C33 /* Frameworks */,
-				BDFD699E194E383E00799C33 /* Headers */,
-				BDFD699F194E383E00799C33 /* Resources */,
+				BDC45E1E1A15FBAA00662D74 /* Sources */,
+				BDC45E1F1A15FBAA00662D74 /* Frameworks */,
+				BDC45E201A15FBAA00662D74 /* Headers */,
+				BDC45E211A15FBAA00662D74 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -329,25 +266,25 @@
 			);
 			name = XUIKit;
 			productName = XUIKit;
-			productReference = BDFD69A1194E383E00799C33 /* XUIKit.framework */;
+			productReference = BDC45E231A15FBAA00662D74 /* XUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BDFD69AB194E383E00799C33 /* XUIKitTests */ = {
+		BDC45E2C1A15FBAA00662D74 /* XUIKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDFD69BA194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */;
+			buildConfigurationList = BDC45E391A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKitTests" */;
 			buildPhases = (
-				BDFD69A8194E383E00799C33 /* Sources */,
-				BDFD69A9194E383E00799C33 /* Frameworks */,
-				BDFD69AA194E383E00799C33 /* Resources */,
+				BDC45E291A15FBAA00662D74 /* Sources */,
+				BDC45E2A1A15FBAA00662D74 /* Frameworks */,
+				BDC45E2B1A15FBAA00662D74 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BDFD69AF194E383E00799C33 /* PBXTargetDependency */,
+				BDC45E301A15FBAB00662D74 /* PBXTargetDependency */,
 			);
 			name = XUIKitTests;
 			productName = XUIKitTests;
-			productReference = BDFD69AC194E383E00799C33 /* XUIKitTests.xctest */;
+			productReference = BDC45E2D1A15FBAB00662D74 /* XUIKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -359,12 +296,11 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Felix Gabel";
 				TargetAttributes = {
-					BDFD69A0194E383E00799C33 = {
-						CreatedOnToolsVersion = 6.0;
+					BDC45E221A15FBAA00662D74 = {
+						CreatedOnToolsVersion = 6.1;
 					};
-					BDFD69AB194E383E00799C33 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = BDFD69A0194E383E00799C33;
+					BDC45E2C1A15FBAA00662D74 = {
+						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -380,21 +316,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDFD69A0194E383E00799C33 /* XUIKit */,
-				BDFD69AB194E383E00799C33 /* XUIKitTests */,
+				BDC45E221A15FBAA00662D74 /* XUIKit */,
+				BDC45E2C1A15FBAA00662D74 /* XUIKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BDFD699F194E383E00799C33 /* Resources */ = {
+		BDC45E211A15FBAA00662D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD69AA194E383E00799C33 /* Resources */ = {
+		BDC45E2B1A15FBAA00662D74 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -404,54 +340,103 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BDFD699C194E383E00799C33 /* Sources */ = {
+		BDC45E1E1A15FBAA00662D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD6A26194E3BE400799C33 /* XUITextViewController.m in Sources */,
-				BDFD6A05194E39EB00799C33 /* UICollectionView+XUIKit.m in Sources */,
-				BDFD6A09194E39EB00799C33 /* UITableView+XUIKit.m in Sources */,
-				BDFD69FB194E39EB00799C33 /* NSBundle+XUIKit.m in Sources */,
-				BDFD6A1E194E3BE400799C33 /* XUITableViewCell.m in Sources */,
-				BDFD6A28194E3BE400799C33 /* XUIViewController.m in Sources */,
-				BDFD6A17194E3BE400799C33 /* XUIInputView.m in Sources */,
-				BDFD6A01194E39EB00799C33 /* NSTextStorage+XUIKit.m in Sources */,
-				BDFD69FF194E39EB00799C33 /* NSMutableAttributedString+XUIKit.m in Sources */,
-				BDFD6A24194E3BE400799C33 /* XUITextView.m in Sources */,
-				BDFD69FD194E39EB00799C33 /* NSFetchedResultsController+XUIKit.m in Sources */,
-				BDFD6A0F194E39EB00799C33 /* UIView+XUIKit.m in Sources */,
-				BDFD6A20194E3BE400799C33 /* XUITableViewController.m in Sources */,
-				BDFD6A22194E3BE400799C33 /* XUITextStorage.m in Sources */,
-				BDFD6A07194E39EB00799C33 /* UIImage+XUIKit.m in Sources */,
-				BDFD6A0B194E39EB00799C33 /* UITextField+XUIKit.m in Sources */,
-				BDFD6A1A194E3BE400799C33 /* XUILabel.m in Sources */,
-				BD4BDA321977B68B003C81EA /* XUIDataSource.m in Sources */,
-				BDFD6A1C194E3BE400799C33 /* XUITableView.m in Sources */,
-				BD10D51E195DBE1600BDC86E /* UIApplication+XUIKit.m in Sources */,
-				BDFD6A03194E39EB00799C33 /* UIBarButtonItem+XUIKit.m in Sources */,
-				BDFD6A0D194E39EB00799C33 /* UITextView+XUIKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDFD69A8194E383E00799C33 /* Sources */ = {
+		BDC45E291A15FBAA00662D74 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDFD69F5194E389800799C33 /* XUIKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BDFD69AF194E383E00799C33 /* PBXTargetDependency */ = {
+		BDC45E301A15FBAB00662D74 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDFD69A0194E383E00799C33 /* XUIKit */;
-			targetProxy = BDFD69AE194E383E00799C33 /* PBXContainerItemProxy */;
+			target = BDC45E221A15FBAA00662D74 /* XUIKit */;
+			targetProxy = BDC45E2F1A15FBAB00662D74 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		BDC45E371A15FBAB00662D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BDC45E381A15FBAB00662D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BDC45E3A1A15FBAB00662D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BDC45E3B1A15FBAB00662D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		BDFD69B5194E383E00799C33 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -536,94 +521,30 @@
 			};
 			name = Release;
 		};
-		BDFD69B8194E383E00799C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		BDFD69B9194E383E00799C33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		BDFD69BB194E383E00799C33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		BDFD69BC194E383E00799C33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BDC45E361A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC45E371A15FBAB00662D74 /* Debug */,
+				BDC45E381A15FBAB00662D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BDC45E391A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC45E3A1A15FBAB00662D74 /* Debug */,
+				BDC45E3B1A15FBAB00662D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BDFD699B194E383E00799C33 /* Build configuration list for PBXProject "XUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDFD69B5194E383E00799C33 /* Debug */,
 				BDFD69B6194E383E00799C33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDFD69B7194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDFD69B8194E383E00799C33 /* Debug */,
-				BDFD69B9194E383E00799C33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDFD69BA194E383E00799C33 /* Build configuration list for PBXNativeTarget "XUIKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDFD69BB194E383E00799C33 /* Debug */,
-				BDFD69BC194E383E00799C33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
