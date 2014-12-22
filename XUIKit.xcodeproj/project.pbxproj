@@ -8,6 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		BDC45E2E1A15FBAB00662D74 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E231A15FBAA00662D74 /* XUIKit.framework */; };
+		BDC45E3C1A15FFC700662D74 /* XUIDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E3D1A15FFCD00662D74 /* XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E0194E388C00799C33 /* XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E3E1A15FFE000662D74 /* XUIDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4BDA301977B68B003C81EA /* XUIDataSource.m */; };
+		BDC45E3F1A15FFE000662D74 /* XUITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E8194E388C00799C33 /* XUITableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E401A15FFE000662D74 /* XUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E9194E388C00799C33 /* XUITableViewController.m */; };
+		BDC45E411A15FFE000662D74 /* XUITableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E4194E388C00799C33 /* XUITableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E421A15FFE000662D74 /* XUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E5194E388C00799C33 /* XUITableView.m */; };
+		BDC45E431A15FFE000662D74 /* XUITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E6194E388C00799C33 /* XUITableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E441A15FFE000662D74 /* XUITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E7194E388C00799C33 /* XUITableViewCell.m */; };
+		BDC45E451A15FFE000662D74 /* XUITextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EE194E388C00799C33 /* XUITextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E461A15FFE000662D74 /* XUITextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EF194E388C00799C33 /* XUITextViewController.m */; };
+		BDC45E471A15FFE000662D74 /* XUITextStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EA194E388C00799C33 /* XUITextStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E481A15FFE000662D74 /* XUITextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69EB194E388C00799C33 /* XUITextStorage.m */; };
+		BDC45E491A15FFE000662D74 /* XUITextView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69EC194E388C00799C33 /* XUITextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E4A1A15FFE000662D74 /* XUITextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69ED194E388C00799C33 /* XUITextView.m */; };
+		BDC45E4B1A15FFE000662D74 /* XUIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69F0194E388C00799C33 /* XUIViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E4C1A15FFE000662D74 /* XUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69F1194E388C00799C33 /* XUIViewController.m */; };
+		BDC45E4D1A15FFE000662D74 /* XUIInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69DE194E388C00799C33 /* XUIInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E4E1A15FFE000662D74 /* XUIInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69DF194E388C00799C33 /* XUIInputView.m */; };
+		BDC45E4F1A15FFE000662D74 /* XUILabel.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69E2194E388C00799C33 /* XUILabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E501A15FFE000662D74 /* XUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69E3194E388C00799C33 /* XUILabel.m */; };
+		BDC45E511A15FFE000662D74 /* NSBundle+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C2194E388C00799C33 /* NSBundle+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E521A15FFE000662D74 /* NSBundle+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C3194E388C00799C33 /* NSBundle+XUIKit.m */; };
+		BDC45E531A15FFE000662D74 /* NSMutableAttributedString+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C6194E388C00799C33 /* NSMutableAttributedString+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E541A15FFE000662D74 /* NSMutableAttributedString+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C7194E388C00799C33 /* NSMutableAttributedString+XUIKit.m */; };
+		BDC45E551A15FFE000662D74 /* NSTextStorage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69C8194E388C00799C33 /* NSTextStorage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E561A15FFE000662D74 /* NSTextStorage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69C9194E388C00799C33 /* NSTextStorage+XUIKit.m */; };
+		BDC45E571A15FFE000662D74 /* UIApplication+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD10D51B195DBE1600BDC86E /* UIApplication+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E581A15FFE000662D74 /* UIApplication+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */; };
+		BDC45E591A15FFE000662D74 /* UIBarButtonItem+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E5A1A15FFE000662D74 /* UIBarButtonItem+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */; };
+		BDC45E5B1A15FFE000662D74 /* UICollectionView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CC194E388C00799C33 /* UICollectionView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E5C1A15FFE000662D74 /* UICollectionView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CD194E388C00799C33 /* UICollectionView+XUIKit.m */; };
+		BDC45E5D1A15FFE000662D74 /* UIImage+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69CE194E388C00799C33 /* UIImage+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E5E1A15FFE000662D74 /* UIImage+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69CF194E388C00799C33 /* UIImage+XUIKit.m */; };
+		BDC45E5F1A15FFE000662D74 /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D0194E388C00799C33 /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E601A15FFE000662D74 /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D1194E388C00799C33 /* UITableView+XUIKit.m */; };
+		BDC45E611A15FFE000662D74 /* UITextField+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D2194E388C00799C33 /* UITextField+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E621A15FFE000662D74 /* UITextField+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D3194E388C00799C33 /* UITextField+XUIKit.m */; };
+		BDC45E631A15FFE000662D74 /* UITextView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E641A15FFE000662D74 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */; };
+		BDC45E651A15FFE000662D74 /* UIView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E661A15FFE000662D74 /* UIView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */; };
+		BDC45E6F1A16067600662D74 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */; };
+		BDC45E871A166DA300662D74 /* XUIDataSource+TableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E851A166DA300662D74 /* XUIDataSource+TableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E881A166DA300662D74 /* XUIDataSource+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E861A166DA300662D74 /* XUIDataSource+TableView.m */; };
+		BDC45E8B1A16707400662D74 /* XUIDataSource+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E891A16707400662D74 /* XUIDataSource+CollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E8C1A16707400662D74 /* XUIDataSource+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E8A1A16707400662D74 /* XUIDataSource+CollectionView.m */; };
+		BDC45E8F1A16709700662D74 /* XUIDataSource+Restoration.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E8D1A16709700662D74 /* XUIDataSource+Restoration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDC45E901A16709700662D74 /* XUIDataSource+Restoration.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E8E1A16709700662D74 /* XUIDataSource+Restoration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +78,12 @@
 		BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC45E231A15FBAA00662D74 /* XUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC45E2D1A15FBAB00662D74 /* XUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC45E851A166DA300662D74 /* XUIDataSource+TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XUIDataSource+TableView.h"; sourceTree = "<group>"; };
+		BDC45E861A166DA300662D74 /* XUIDataSource+TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XUIDataSource+TableView.m"; sourceTree = "<group>"; };
+		BDC45E891A16707400662D74 /* XUIDataSource+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XUIDataSource+CollectionView.h"; sourceTree = "<group>"; };
+		BDC45E8A1A16707400662D74 /* XUIDataSource+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XUIDataSource+CollectionView.m"; sourceTree = "<group>"; };
+		BDC45E8D1A16709700662D74 /* XUIDataSource+Restoration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XUIDataSource+Restoration.h"; sourceTree = "<group>"; };
+		BDC45E8E1A16709700662D74 /* XUIDataSource+Restoration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XUIDataSource+Restoration.m"; sourceTree = "<group>"; };
 		BDFD69BD194E386C00799C33 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BDFD69BE194E386C00799C33 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BDFD69BF194E386C00799C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC45E6F1A16067600662D74 /* CoreDataKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,19 +150,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD4BDA261977A80E003C81EA /* General */ = {
-			isa = PBXGroup;
-			children = (
-				BDFD69E0194E388C00799C33 /* XUIKit.h */,
-			);
-			name = General;
-			sourceTree = "<group>";
-		};
 		BD4BDA2E1977B664003C81EA /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
 				BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */,
 				BD4BDA301977B68B003C81EA /* XUIDataSource.m */,
+				BDC45E7A1A16625A00662D74 /* Categories */,
 			);
 			name = "Data Source";
 			sourceTree = "<group>";
@@ -116,6 +166,19 @@
 				BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDC45E7A1A16625A00662D74 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BDC45E851A166DA300662D74 /* XUIDataSource+TableView.h */,
+				BDC45E861A166DA300662D74 /* XUIDataSource+TableView.m */,
+				BDC45E891A16707400662D74 /* XUIDataSource+CollectionView.h */,
+				BDC45E8A1A16707400662D74 /* XUIDataSource+CollectionView.m */,
+				BDC45E8D1A16709700662D74 /* XUIDataSource+Restoration.h */,
+				BDC45E8E1A16709700662D74 /* XUIDataSource+Restoration.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		BDE4AB75194ECF3A00597AB3 /* TextView */ = {
@@ -190,7 +253,7 @@
 		BDFD69C1194E388C00799C33 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BD4BDA261977A80E003C81EA /* General */,
+				BDFD69E0194E388C00799C33 /* XUIKit.h */,
 				BD4BDA2E1977B664003C81EA /* Data Source */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
@@ -245,6 +308,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC45E8F1A16709700662D74 /* XUIDataSource+Restoration.h in Headers */,
+				BDC45E871A166DA300662D74 /* XUIDataSource+TableView.h in Headers */,
+				BDC45E4F1A15FFE000662D74 /* XUILabel.h in Headers */,
+				BDC45E3D1A15FFCD00662D74 /* XUIKit.h in Headers */,
+				BDC45E631A15FFE000662D74 /* UITextView+XUIKit.h in Headers */,
+				BDC45E611A15FFE000662D74 /* UITextField+XUIKit.h in Headers */,
+				BDC45E491A15FFE000662D74 /* XUITextView.h in Headers */,
+				BDC45E451A15FFE000662D74 /* XUITextViewController.h in Headers */,
+				BDC45E531A15FFE000662D74 /* NSMutableAttributedString+XUIKit.h in Headers */,
+				BDC45E5B1A15FFE000662D74 /* UICollectionView+XUIKit.h in Headers */,
+				BDC45E591A15FFE000662D74 /* UIBarButtonItem+XUIKit.h in Headers */,
+				BDC45E411A15FFE000662D74 /* XUITableView.h in Headers */,
+				BDC45E5D1A15FFE000662D74 /* UIImage+XUIKit.h in Headers */,
+				BDC45E551A15FFE000662D74 /* NSTextStorage+XUIKit.h in Headers */,
+				BDC45E4B1A15FFE000662D74 /* XUIViewController.h in Headers */,
+				BDC45E3C1A15FFC700662D74 /* XUIDataSource.h in Headers */,
+				BDC45E8B1A16707400662D74 /* XUIDataSource+CollectionView.h in Headers */,
+				BDC45E511A15FFE000662D74 /* NSBundle+XUIKit.h in Headers */,
+				BDC45E571A15FFE000662D74 /* UIApplication+XUIKit.h in Headers */,
+				BDC45E3F1A15FFE000662D74 /* XUITableViewController.h in Headers */,
+				BDC45E651A15FFE000662D74 /* UIView+XUIKit.h in Headers */,
+				BDC45E471A15FFE000662D74 /* XUITextStorage.h in Headers */,
+				BDC45E431A15FFE000662D74 /* XUITableViewCell.h in Headers */,
+				BDC45E5F1A15FFE000662D74 /* UITableView+XUIKit.h in Headers */,
+				BDC45E4D1A15FFE000662D74 /* XUIInputView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +432,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC45E621A15FFE000662D74 /* UITextField+XUIKit.m in Sources */,
+				BDC45E461A15FFE000662D74 /* XUITextViewController.m in Sources */,
+				BDC45E4E1A15FFE000662D74 /* XUIInputView.m in Sources */,
+				BDC45E5E1A15FFE000662D74 /* UIImage+XUIKit.m in Sources */,
+				BDC45E5C1A15FFE000662D74 /* UICollectionView+XUIKit.m in Sources */,
+				BDC45E4A1A15FFE000662D74 /* XUITextView.m in Sources */,
+				BDC45E421A15FFE000662D74 /* XUITableView.m in Sources */,
+				BDC45E541A15FFE000662D74 /* NSMutableAttributedString+XUIKit.m in Sources */,
+				BDC45E561A15FFE000662D74 /* NSTextStorage+XUIKit.m in Sources */,
+				BDC45E641A15FFE000662D74 /* UITextView+XUIKit.m in Sources */,
+				BDC45E4C1A15FFE000662D74 /* XUIViewController.m in Sources */,
+				BDC45E661A15FFE000662D74 /* UIView+XUIKit.m in Sources */,
+				BDC45E601A15FFE000662D74 /* UITableView+XUIKit.m in Sources */,
+				BDC45E501A15FFE000662D74 /* XUILabel.m in Sources */,
+				BDC45E521A15FFE000662D74 /* NSBundle+XUIKit.m in Sources */,
+				BDC45E401A15FFE000662D74 /* XUITableViewController.m in Sources */,
+				BDC45E8C1A16707400662D74 /* XUIDataSource+CollectionView.m in Sources */,
+				BDC45E581A15FFE000662D74 /* UIApplication+XUIKit.m in Sources */,
+				BDC45E481A15FFE000662D74 /* XUITextStorage.m in Sources */,
+				BDC45E441A15FFE000662D74 /* XUITableViewCell.m in Sources */,
+				BDC45E901A16709700662D74 /* XUIDataSource+Restoration.m in Sources */,
+				BDC45E3E1A15FFE000662D74 /* XUIDataSource.m in Sources */,
+				BDC45E5A1A15FFE000662D74 /* UIBarButtonItem+XUIKit.m in Sources */,
+				BDC45E881A166DA300662D74 /* XUIDataSource+TableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +643,7 @@
 				BDC45E381A15FBAB00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC45E391A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +652,7 @@
 				BDC45E3B1A15FBAB00662D74 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDFD699B194E383E00799C33 /* Build configuration list for PBXProject "XUIKit" */ = {
 			isa = XCConfigurationList;

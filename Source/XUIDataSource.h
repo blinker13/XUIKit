@@ -12,30 +12,15 @@
 @class XUIDataSource;
 
 
-@protocol XUIDataSourceDelegate <NSObject>
+@protocol XUIDataSourceDelegate <CDKDataSourceDelegate>
 
-- (UITableViewCell *)dataSource:(XUIDataSource *)dataSource cellForObject:(NSManagedObject *)item atIndexPath:(NSIndexPath *)indexPath;
-
-@optional
-- (void)dataSourceWillChangeContent:(XUIDataSource *)dataSource;
-
-- (void)dataSource:(XUIDataSource *)dataSource didInsertObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataSource:(XUIDataSource *)dataSource didDeleteObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataSource:(XUIDataSource *)dataSource didMoveObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)destination;
-- (void)dataSource:(XUIDataSource *)dataSource didUpdateObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-
-- (void)dataSourceDidChangeContent:(XUIDataSource *)dataSource;
+- (UIView *)dataSource:(XUIDataSource *)dataSource cellForObject:(NSManagedObject *)item atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 
-@interface XUIDataSource : NSObject
+@interface XUIDataSource : CDKDataSource
 
 @property (nonatomic, weak) id<XUIDataSourceDelegate>	delegate;
-
-
-+ (NSString *)cacheName;
-
-- (instancetype)initWithContext:(NSManagedObjectContext *)context request:(NSFetchRequest *)request NS_DESIGNATED_INITIALIZER;
 
 @end

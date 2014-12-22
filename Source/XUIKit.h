@@ -6,6 +6,14 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
+@import UIKit;
+
+
+#import <XUIKit/XUIDataSource.h>
+#import <XUIKit/XUIDataSource+TableView.h>
+#import <XUIKit/XUIDataSource+CollectionView.h>
+#import <XUIKit/XUIDataSource+Restoration.h>
+
 #import <XUIKit/XUIInputView.h>
 #import <XUIKit/XUILabel.h>
 #import <XUIKit/XUITableViewCell.h>
@@ -17,7 +25,6 @@
 #import <XUIKit/XUIViewController.h>
 
 #import <XUIKit/NSBundle+XUIKit.h>
-#import <XUIKit/NSFetchedResultsController+XUIKit.h>
 #import <XUIKit/NSMutableAttributedString+XUIKit.h>
 #import <XUIKit/NSTextStorage+XUIKit.h>
 #import <XUIKit/UIApplication+XUIKit.h>
