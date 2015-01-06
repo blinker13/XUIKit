@@ -5,6 +5,6 @@
       location = "container:XUIKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../CoreDataKit/CoreDataKit.xcodeproj">
+      location = "group:Dependencies/CoreDataKit/CoreDataKit.xcodeproj">
    </FileRef>
 </Workspace>

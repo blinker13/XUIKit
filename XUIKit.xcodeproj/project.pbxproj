@@ -386,6 +386,7 @@
 				TargetAttributes = {
 					BDC45E221A15FBAA00662D74 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = MMDS6BCK8S;
 					};
 					BDC45E2C1A15FBAA00662D74 = {
 						CreatedOnToolsVersion = 6.1;
@@ -480,6 +481,7 @@
 		BDC45E371A15FBAB00662D74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -501,6 +503,7 @@
 		BDC45E381A15FBAB00662D74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
