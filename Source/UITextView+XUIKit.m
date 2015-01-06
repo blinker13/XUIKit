@@ -15,26 +15,6 @@ const CGFloat XUITextViewScrollDuration	=	0.13;
 
 @implementation UITextView (XUIKit)
 
-- (UIColor *)keyboardBlendColor {
-	if ([self.inputAccessoryView isKindOfClass:[XUIInputView class]]) {
-		return [(XUIInputView *)self.inputAccessoryView blendColor];
-	}
-	return nil;
-}
-
-- (void)setKeyboardBlendColor:(UIColor *)keyboardBlendColor {
-	if ([self.inputAccessoryView isKindOfClass:[XUIInputView class]]) {
-		[(XUIInputView *)self.inputAccessoryView setBlendColor:keyboardBlendColor];
-		
-	} else {
-		XUIInputView *inputView = [[XUIInputView alloc] init];
-		[inputView setBlendColor:keyboardBlendColor];
-		[self setInputAccessoryView:inputView];
-	}
-}
-
-#pragma mark - Content Inset
-
 - (UIEdgeInsets)textContentInsets {
 	UIEdgeInsets contentInsets = [self contentInset];
 	UIEdgeInsets containerInsets = [self textContainerInset];

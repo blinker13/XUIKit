@@ -11,10 +11,6 @@
 
 @implementation UIBarButtonItem (XUIKit)
 
-+ (instancetype)composeItemWithTarget:(id)target action:(SEL)action {
-	return [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:target action:action];
-}
-
 + (instancetype)fixedSpaceItemWithWidth:(CGFloat)width {
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
 	[item setWidth:width];

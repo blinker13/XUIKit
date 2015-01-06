@@ -11,7 +11,6 @@
 
 @interface UITextView (XUIKit)
 
-@property (nonatomic, strong) UIColor	*keyboardBlendColor;
 @property (nonatomic) UIEdgeInsets		textContentInsets;
 
 
