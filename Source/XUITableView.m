@@ -7,7 +7,6 @@
 //
 
 #import "XUITableView.h"
-#import "XUILabel.h"
 
 
 const CGFloat XUITableViewDeSelectionDuration	=	0.4;

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) UIColor	*textColor;
 @property (nonatomic, readonly) NSArray	*allPatterns;
 
+
 - (void)setHighlightingColor:(UIColor *)color forPattern:(NSString *)pattern;
 - (void)removeHighlightingColorForPattern:(NSString *)pattern;
 - (UIColor *)highlightingColorForPattern:(NSString *)pattern;

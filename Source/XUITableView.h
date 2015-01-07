@@ -8,9 +8,5 @@
 
 @import UIKit;
 
-@class XUILabel;
 
-
-@interface XUITableView : UITableView
-
-@end
+@interface XUITableView : UITableView @end

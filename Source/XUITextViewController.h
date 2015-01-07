@@ -6,13 +6,12 @@
 //  Copyright (c) 2013 Felix Gabel. All rights reserved.
 //
 
-#import "XUIViewController.h"
 #import "XUITextView.h"
 
 @class XUITextStorage;
 
 
-@interface XUITextViewController : XUIViewController <UITextViewDelegate>
+@interface XUITextViewController : UIViewController <UITextViewDelegate>
 
 @property (nonatomic, strong) NSTextContainer	*textContainer;
 @property (nonatomic, strong) XUITextStorage	*textStorage;
