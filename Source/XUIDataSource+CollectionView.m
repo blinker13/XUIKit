@@ -30,37 +30,37 @@
 
 @implementation UICollectionViewController (DataSource)
 
-- (void)dataSourceWillChangeContent:(CDKDataSource *)dataSource {
+- (void)dataSourceWillChangeContent:(XUIDataSource *)dataSource {
 //	[self.collectionView ]
 }
 
-- (void)dataSourceDidChangeContent:(CDKDataSource *)dataSource {
+- (void)dataSourceDidChangeContent:(XUIDataSource *)dataSource {
 	
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didInsertSection:(NSUInteger)section {
+- (void)dataSource:(XUIDataSource *)dataSource didInsertSection:(NSUInteger)section {
 	NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:section];
 	[self.collectionView insertSections:indexes];
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didDeleteSection:(NSUInteger)section {
+- (void)dataSource:(XUIDataSource *)dataSource didDeleteSection:(NSUInteger)section {
 	NSIndexSet *indexes = [NSIndexSet indexSetWithIndex:section];
 	[self.collectionView deleteSections:indexes];
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didInsertObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
+- (void)dataSource:(XUIDataSource *)dataSource didInsertObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
 	[self.collectionView insertItemsAtIndexPaths:@[indexPath]];
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didUpdateObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
+- (void)dataSource:(XUIDataSource *)dataSource didUpdateObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
 	[self.collectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didDeleteObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
+- (void)dataSource:(XUIDataSource *)dataSource didDeleteObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath {
 	[self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 
-- (void)dataSource:(CDKDataSource *)dataSource didMoveObject:(NSManagedObject *)object fromIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)dataSource:(XUIDataSource *)dataSource didMoveObject:(NSManagedObject *)object fromIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath {
 	[self.collectionView moveItemAtIndexPath:indexPath toIndexPath:toIndexPath];
 }
 

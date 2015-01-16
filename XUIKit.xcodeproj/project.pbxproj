@@ -43,7 +43,6 @@
 		BDC45E641A15FFE000662D74 /* UITextView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */; };
 		BDC45E651A15FFE000662D74 /* UIView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC45E661A15FFE000662D74 /* UIView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFD69D7194E388C00799C33 /* UIView+XUIKit.m */; };
-		BDC45E6F1A16067600662D74 /* CoreDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */; };
 		BDC45E871A166DA300662D74 /* XUIDataSource+TableView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E851A166DA300662D74 /* XUIDataSource+TableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDC45E881A166DA300662D74 /* XUIDataSource+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC45E861A166DA300662D74 /* XUIDataSource+TableView.m */; };
 		BDC45E8B1A16707400662D74 /* XUIDataSource+CollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC45E891A16707400662D74 /* XUIDataSource+CollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,14 +114,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BDC45E1F1A15FBAA00662D74 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC45E6F1A16067600662D74 /* CoreDataKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BDC45E2A1A15FBAA00662D74 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,7 +307,6 @@
 			buildConfigurationList = BDC45E361A15FBAB00662D74 /* Build configuration list for PBXNativeTarget "XUIKit" */;
 			buildPhases = (
 				BDC45E1E1A15FBAA00662D74 /* Sources */,
-				BDC45E1F1A15FBAA00662D74 /* Frameworks */,
 				BDC45E201A15FBAA00662D74 /* Headers */,
 				BDC45E211A15FBAA00662D74 /* Resources */,
 			);

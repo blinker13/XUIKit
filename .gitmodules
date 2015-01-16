@@ -1,3 +1,0 @@
-[submodule "Dependencies/CoreDataKit"]
-	path = Dependencies/CoreDataKit
-	url = git@github.com:blinker13/CoreDataKit.git

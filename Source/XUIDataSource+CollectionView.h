@@ -22,16 +22,16 @@
 
 @interface UICollectionViewController (DataSource) <XUIDataSourceDelegate>
 
-- (void)dataSourceWillChangeContent:(CDKDataSource *)dataSource;
-- (void)dataSourceDidChangeContent:(CDKDataSource *)dataSource;
+- (void)dataSourceWillChangeContent:(XUIDataSource *)dataSource;
+- (void)dataSourceDidChangeContent:(XUIDataSource *)dataSource;
 
-- (void)dataSource:(CDKDataSource *)dataSource didInsertSection:(NSUInteger)section;
-- (void)dataSource:(CDKDataSource *)dataSource didDeleteSection:(NSUInteger)section;
+- (void)dataSource:(XUIDataSource *)dataSource didInsertSection:(NSUInteger)section;
+- (void)dataSource:(XUIDataSource *)dataSource didDeleteSection:(NSUInteger)section;
 
-- (void)dataSource:(CDKDataSource *)dataSource didInsertObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataSource:(CDKDataSource *)dataSource didUpdateObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataSource:(CDKDataSource *)dataSource didDeleteObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataSource:(CDKDataSource *)dataSource didMoveObject:(NSManagedObject *)object fromIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath;
+- (void)dataSource:(XUIDataSource *)dataSource didInsertObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)dataSource:(XUIDataSource *)dataSource didUpdateObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)dataSource:(XUIDataSource *)dataSource didDeleteObject:(NSManagedObject *)object atIndexPath:(NSIndexPath *)indexPath;
+- (void)dataSource:(XUIDataSource *)dataSource didMoveObject:(NSManagedObject *)object fromIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)toIndexPath;
 
 - (UICollectionViewCell *)dataSource:(XUIDataSource *)dataSource cellForObject:(NSManagedObject *)item atIndexPath:(NSIndexPath *)indexPath;
 
