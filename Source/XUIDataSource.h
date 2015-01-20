@@ -30,6 +30,8 @@
 @end
 
 
+#pragma mark -
+
 @interface XUIDataSource : NSObject
 
 @property (nonatomic, weak) id<XUIDataSourceDelegate>	delegate;

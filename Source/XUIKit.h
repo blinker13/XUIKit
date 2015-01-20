@@ -30,6 +30,7 @@
 #import <XUIKit/NSTextStorage+XUIKit.h>
 #import <XUIKit/UIApplication+XUIKit.h>
 #import <XUIKit/UIBarButtonItem+XUIKit.h>
+#import <XUIKit/UITableView+XUIKit.h>
 #import <XUIKit/UITextView+XUIKit.h>
 #import <XUIKit/UIView+XUIKit.h>
 #import <XUIKit/UIViewController+XUIKit.h>

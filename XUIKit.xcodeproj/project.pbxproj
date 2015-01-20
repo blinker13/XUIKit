@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDB7C7A01A5D7FD50000D992 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7C79E1A5D7FD50000D992 /* UIViewController+XUIKit.h */; };
+		BD567D8F1A6EFA5700C9495F /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD567D8D1A6EFA5700C9495F /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD567D901A6EFA5700C9495F /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD567D8E1A6EFA5700C9495F /* UITableView+XUIKit.m */; };
+		BDB7C7A01A5D7FD50000D992 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7C79E1A5D7FD50000D992 /* UIViewController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDB7C7A11A5D7FD50000D992 /* UIViewController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C79F1A5D7FD50000D992 /* UIViewController+XUIKit.m */; };
 		BDC45E2E1A15FBAB00662D74 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E231A15FBAA00662D74 /* XUIKit.framework */; };
 		BDC45E3C1A15FFC700662D74 /* XUIDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -66,6 +68,8 @@
 		BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XUIKit.m"; sourceTree = "<group>"; };
 		BD4BDA2F1977B68B003C81EA /* XUIDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDataSource.h; sourceTree = "<group>"; };
 		BD4BDA301977B68B003C81EA /* XUIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSource.m; sourceTree = "<group>"; };
+		BD567D8D1A6EFA5700C9495F /* UITableView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XUIKit.h"; sourceTree = "<group>"; };
+		BD567D8E1A6EFA5700C9495F /* UITableView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XUIKit.m"; sourceTree = "<group>"; };
 		BDB7C79E1A5D7FD50000D992 /* UIViewController+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XUIKit.h"; sourceTree = "<group>"; };
 		BDB7C79F1A5D7FD50000D992 /* UIViewController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XUIKit.m"; sourceTree = "<group>"; };
 		BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,6 +262,8 @@
 				BD10D51C195DBE1600BDC86E /* UIApplication+XUIKit.m */,
 				BDFD69CA194E388C00799C33 /* UIBarButtonItem+XUIKit.h */,
 				BDFD69CB194E388C00799C33 /* UIBarButtonItem+XUIKit.m */,
+				BD567D8D1A6EFA5700C9495F /* UITableView+XUIKit.h */,
+				BD567D8E1A6EFA5700C9495F /* UITableView+XUIKit.m */,
 				BDFD69D4194E388C00799C33 /* UITextView+XUIKit.h */,
 				BDFD69D5194E388C00799C33 /* UITextView+XUIKit.m */,
 				BDFD69D6194E388C00799C33 /* UIView+XUIKit.h */,
@@ -279,6 +285,7 @@
 				BDC45E871A166DA300662D74 /* XUIDataSource+TableView.h in Headers */,
 				BDC45E4F1A15FFE000662D74 /* XUILabel.h in Headers */,
 				BDC45E3D1A15FFCD00662D74 /* XUIKit.h in Headers */,
+				BD567D8F1A6EFA5700C9495F /* UITableView+XUIKit.h in Headers */,
 				BDC45E631A15FFE000662D74 /* UITextView+XUIKit.h in Headers */,
 				BDC45E491A15FFE000662D74 /* XUITextView.h in Headers */,
 				BDC45E451A15FFE000662D74 /* XUITextViewController.h in Headers */,
@@ -404,6 +411,7 @@
 				BDC45E641A15FFE000662D74 /* UITextView+XUIKit.m in Sources */,
 				BDC45E661A15FFE000662D74 /* UIView+XUIKit.m in Sources */,
 				BDC45E501A15FFE000662D74 /* XUILabel.m in Sources */,
+				BD567D901A6EFA5700C9495F /* UITableView+XUIKit.m in Sources */,
 				BDC45E521A15FFE000662D74 /* NSBundle+XUIKit.m in Sources */,
 				BDC45E401A15FFE000662D74 /* XUITableViewController.m in Sources */,
 				BDC45E8C1A16707400662D74 /* XUIDataSource+CollectionView.m in Sources */,
