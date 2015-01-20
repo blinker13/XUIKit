@@ -42,6 +42,8 @@
 @property (nonatomic, readonly) NSString	*sectionKey;
 @property (nonatomic, readonly) NSString	*cacheName;
 
+@property (nonatomic) BOOL	shouldSaveAfterDelete;
+
 
 - (instancetype)initWithRequest:(NSFetchRequest *)request context:(NSManagedObjectContext *)context shouldSectionResults:(BOOL)shouldSectionResults cacheName:(NSString *)cacheName NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithRequest:(NSFetchRequest *)request context:(NSManagedObjectContext *)context shouldSectionResults:(BOOL)shouldSectionResults;
@@ -53,6 +55,8 @@
 
 - (NSIndexPath *)indexPathForObject:(NSManagedObject *)object;
 - (id)objectAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

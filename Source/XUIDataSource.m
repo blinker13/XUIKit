@@ -7,6 +7,7 @@
 //
 
 #import "XUIDataSource.h"
+#import "XUIDefines.h"
 
 
 @interface XUIDataSource () <NSFetchedResultsControllerDelegate>
@@ -67,6 +68,17 @@
 	return [self.results objectAtIndexPath:indexPath];
 }
 
+- (void)deleteObjectAtIndexPath:(NSIndexPath *)indexPath {
+	id object = [self objectAtIndexPath:indexPath];
+	[self.context deleteObject:object];
+	
+	if (self.shouldSaveAfterDelete) {
+		NSError *error = nil;
+		[self.context save:&error];
+		XUIThrowError(error);
+	}
+}
+
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
@@ -108,7 +120,7 @@
 		
 		NSError *error = nil;
 		[_results performFetch:&error];
-		NSAssert(!error, error.localizedDescription);
+		XUIThrowError(error);
 	}
 	return _results;
 }
