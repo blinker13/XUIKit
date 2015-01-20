@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD567D8F1A6EFA5700C9495F /* UITableView+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BD567D8D1A6EFA5700C9495F /* UITableView+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD567D901A6EFA5700C9495F /* UITableView+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BD567D8E1A6EFA5700C9495F /* UITableView+XUIKit.m */; };
+		BD567D921A6EFCAB00C9495F /* XUIDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = BD567D911A6EFCAB00C9495F /* XUIDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDB7C7A01A5D7FD50000D992 /* UIViewController+XUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7C79E1A5D7FD50000D992 /* UIViewController+XUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BDB7C7A11A5D7FD50000D992 /* UIViewController+XUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB7C79F1A5D7FD50000D992 /* UIViewController+XUIKit.m */; };
 		BDC45E2E1A15FBAB00662D74 /* XUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC45E231A15FBAA00662D74 /* XUIKit.framework */; };
@@ -70,6 +71,7 @@
 		BD4BDA301977B68B003C81EA /* XUIDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XUIDataSource.m; sourceTree = "<group>"; };
 		BD567D8D1A6EFA5700C9495F /* UITableView+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+XUIKit.h"; sourceTree = "<group>"; };
 		BD567D8E1A6EFA5700C9495F /* UITableView+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+XUIKit.m"; sourceTree = "<group>"; };
+		BD567D911A6EFCAB00C9495F /* XUIDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XUIDefines.h; sourceTree = "<group>"; };
 		BDB7C79E1A5D7FD50000D992 /* UIViewController+XUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XUIKit.h"; sourceTree = "<group>"; };
 		BDB7C79F1A5D7FD50000D992 /* UIViewController+XUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XUIKit.m"; sourceTree = "<group>"; };
 		BDC45E1C1A15FAAD00662D74 /* CoreDataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFD69E0194E388C00799C33 /* XUIKit.h */,
+				BD567D911A6EFCAB00C9495F /* XUIDefines.h */,
 				BD4BDA2E1977B664003C81EA /* Data Source */,
 				BDE4AB76194ECF5B00597AB3 /* TableView */,
 				BDE4AB75194ECF3A00597AB3 /* TextView */,
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC45E8F1A16709700662D74 /* XUIDataSource+Restoration.h in Headers */,
+				BD567D921A6EFCAB00C9495F /* XUIDefines.h in Headers */,
 				BDC45E871A166DA300662D74 /* XUIDataSource+TableView.h in Headers */,
 				BDC45E4F1A15FFE000662D74 /* XUILabel.h in Headers */,
 				BDC45E3D1A15FFCD00662D74 /* XUIKit.h in Headers */,
