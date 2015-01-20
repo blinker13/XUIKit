@@ -23,6 +23,13 @@
 	return (UITableViewCell *)[self.delegate dataSource:self cellForObject:self[indexPath] atIndexPath:indexPath];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		[self deleteObjectAtIndexPath:indexPath];
+	}
+}
+
 @end
 
 
